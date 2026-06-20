@@ -3,7 +3,10 @@
 [ext_resource type="Script" uid="uid://dgaik5htmueqn" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="Texture2D" uid="uid://b30mgxncei765" path="res://icon.svg" id="2_btcbx"]
 
-[node name="Player" type="Node2D" unique_id=952234042]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edw11"]
+size = Vector2(121, 120)
+
+[node name="Player" type="CharacterBody2D" unique_id=226948684]
 script = ExtResource("1_4ntmi")
 
 [node name="PlayerSprite" type="Sprite2D" parent="." unique_id=346647138]
@@ -17,4 +20,12 @@ zoom = Vector2(0.75, 0.75)
 
 [node name="CrashedTimer" type="Timer" parent="." unique_id=1795844274]
 
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=926309153]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_edw11")
+
+[node name="PlayerArea" type="Area2D" parent="." unique_id=327271821]
+collision_mask = 2
+
 [connection signal="timeout" from="CrashedTimer" to="." method="_on_crashed_timer_timeout"]
+[connection signal="area_entered" from="PlayerArea" to="." method="_on_player_area_area_entered"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://cxltmmh3fy8xg"]
+
+[ext_resource type="Script" uid="uid://c7rt5ai3vor8f" path="res://Objects/death_object.gd" id="1_8gdvq"]
+
+[node name="DeathObject" type="Node2D" unique_id=1246131004]
+script = ExtResource("1_8gdvq")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=742387692]
+
+[node name="DeathObjectArea" type="Area2D" parent="." unique_id=863283214]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathObjectArea" unique_id=800245286]
+
+[connection signal="body_entered" from="DeathObjectArea" to="." method="_on_death_object_area_body_entered"]

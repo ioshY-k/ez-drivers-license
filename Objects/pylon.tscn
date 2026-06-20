@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cnk2mdvilya2w"]
+
+[ext_resource type="PackedScene" uid="uid://cxltmmh3fy8xg" path="res://Objects/death_object.tscn" id="1_fat2m"]
+[ext_resource type="Texture2D" uid="uid://bjnyu607c1ggg" path="res://Resources/pylon.png" id="2_fn500"]
+[ext_resource type="Script" uid="uid://b200xksy4t6df" path="res://Objects/pylon.gd" id="2_prmxb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8gdvq"]
+size = Vector2(93, 154)
+
+[node name="Pylon" unique_id=1246131004 instance=ExtResource("1_fat2m")]
+script = ExtResource("2_prmxb")
+
+[node name="Sprite2D" parent="." index="0" unique_id=742387692]
+visible = true
+texture = ExtResource("2_fn500")
+
+[node name="CollisionShape2D" parent="DeathObjectArea" parent_id_path=PackedInt32Array(863283214) index="0" unique_id=800245286]
+position = Vector2(3, 7)
+shape = SubResource("RectangleShape2D_8gdvq")

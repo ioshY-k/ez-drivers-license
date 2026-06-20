@@ -1,4 +1,4 @@
-extends Node2D
+class_name Player extends Node2D
 
 @onready var player_camera: Camera2D = $Camera2D
 @onready var player_sprite: Sprite2D = $PlayerSprite

@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://xb50dxebnb0p"]
 
+[ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_jyvk6"]
 [ext_resource type="Texture2D" uid="uid://66pbfdmjxr56" path="res://Resources/Parking lot.webp" id="1_uib4f"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="2_iqcmb"]
+[ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="3_y1yrn"]
 
 [node name="TestLevel" type="Node2D" unique_id=238132011]
+script = ExtResource("1_jyvk6")
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
 position = Vector2(4301, -369.99994)
@@ -13,3 +16,15 @@ texture = ExtResource("1_uib4f")
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("2_iqcmb")]
 position = Vector2(673, 503)
 rotation = -4.7682395
+
+[node name="Pylon" parent="." unique_id=1246131004 instance=ExtResource("3_y1yrn")]
+position = Vector2(1084, 473)
+
+[node name="Pylon2" parent="." unique_id=1570670863 instance=ExtResource("3_y1yrn")]
+position = Vector2(1930, 452)
+
+[node name="Pylon3" parent="." unique_id=406770589 instance=ExtResource("3_y1yrn")]
+position = Vector2(2702, 514)
+
+[node name="Pylon4" parent="." unique_id=718796045 instance=ExtResource("3_y1yrn")]
+position = Vector2(3267, 367)
