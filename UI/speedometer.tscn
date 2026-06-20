@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b5dq2qpj4orwi"]
+
+[ext_resource type="Script" uid="uid://b5kw2s7q33r1u" path="res://UI/speedometer.gd" id="1_wtp57"]
+[ext_resource type="Texture2D" uid="uid://cau34ghvmj03f" path="res://Resources/Speedometer.jpg" id="1_wy6hf"]
+[ext_resource type="Texture2D" uid="uid://bmswn1favtolt" path="res://Resources/Speedometer Needle.webp" id="2_h8g8o"]
+
+[node name="Speedometer" type="Node2D" unique_id=1646272472]
+scale = Vector2(0.46, 0.46)
+script = ExtResource("1_wtp57")
+
+[node name="Instrument" type="Sprite2D" parent="." unique_id=143650373]
+texture = ExtResource("1_wy6hf")
+
+[node name="Needle" type="Sprite2D" parent="." unique_id=1293662634]
+position = Vector2(-4.3478394, -3.8146973e-06)
+rotation = -0.64751714
+scale = Vector2(0.45374653, 0.45374656)
+texture = ExtResource("2_h8g8o")
+centered = false
+offset = Vector2(-555.75946, -95.82058)

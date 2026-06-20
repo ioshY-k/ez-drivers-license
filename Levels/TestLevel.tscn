@@ -14,6 +14,7 @@ scale = Vector2(17.294426, 17.29442)
 texture = ExtResource("1_uib4f")
 
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("2_iqcmb")]
+z_index = 0
 position = Vector2(673, 503)
 rotation = -4.7682395
 
