@@ -7,11 +7,13 @@ class_name Player extends CharacterBody2D
 var speed = 0
 var rotation_modifier = 0
 var player_crashed = false
+var is_first_acceleration = true
 
 func _ready() -> void:
 	player_camera.make_current()
 
 func _process(delta: float) -> void:
+	turn_player(delta)
 	if not player_crashed:
 		move_player(delta)
 	animate_player()
@@ -19,8 +21,9 @@ func _process(delta: float) -> void:
 	print(velocity, speed)
 	
 	
-	
-func move_player(delta):
+func turn_player(delta):
+	if is_first_acceleration:
+		return
 	# Turn Player
 	if Input.is_action_pressed("TurnLeft"):
 		if speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
@@ -44,6 +47,8 @@ func move_player(delta):
 	rotation = fmod(rotation + rotation_modifier, 2*PI)
 	
 	
+func move_player(delta):	
+	
 	# Move Player	
 	if Input.is_action_just_pressed("Accelerate"):
 		speed += GameConsts.PLAYER_ACCELERATION_VALUE * delta
@@ -55,6 +60,7 @@ func move_player(delta):
 		player_sprite.modulate = Color(0.931, 0.397, 0.462, 1.0)
 		print("speedy ")
 	elif speed > GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
+		is_first_acceleration = false
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)
 		player_sprite.modulate = Color(1, 1, 1)
 		print("normal ")
@@ -68,6 +74,8 @@ func move_player(delta):
 		
 	#Max Speed	
 	speed = min(speed, GameConsts.PLAYER_MAX_VELOCITY)
+	if speed == 0:
+		is_first_acceleration = true
 	
 	velocity = Vector2(0, -1).rotated(rotation) * speed
 	
@@ -85,6 +93,7 @@ func animate_player():
 		player_sprite.propeller_stop_animation()
 	else:
 		player_sprite.propeller_spin_animation(speed)
+
 
 func crash_player():
 	player_crashed = true
