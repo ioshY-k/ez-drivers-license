@@ -1,7 +1,4 @@
 extends Node
 
+@warning_ignore("unused_signal")
 signal player_dies
-
-#
-#func emit_player_dies():
-	#player_dies.emit()

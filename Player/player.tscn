@@ -7,6 +7,7 @@
 size = Vector2(121, 120)
 
 [node name="Player" type="CharacterBody2D" unique_id=226948684]
+motion_mode = 1
 script = ExtResource("1_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=794997672]
