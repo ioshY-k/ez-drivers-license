@@ -1,7 +1,7 @@
 class_name Player extends Node2D
 
 @onready var player_camera: Camera2D = $Camera2D
-@onready var player_sprite: Sprite2D = $PlayerSprite
+@onready var player_sprite: PlayerSprite = $PlayerSprite
 @onready var crashed_timer: Timer = $CrashedTimer
 
 var speed = 0
@@ -14,6 +14,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if not player_crashed:
 		move_player(delta)
+	animate_player()
 	
 	print(speed)
 	
@@ -66,7 +67,14 @@ func move_player(delta):
 		
 	position += Vector2(0, -1).rotated(rotation) * speed
 		
-	
+func animate_player():
+	if Input.is_action_just_released("TurnLeft") or Input.is_action_just_released("TurnRight"):
+		player_sprite.go_straight_animation()
+	if Input.is_action_just_pressed("TurnLeft"):
+		player_sprite.turn_left_animation()
+	if Input.is_action_just_pressed("TurnRight"):
+		player_sprite.turn_right_animation()
+
 func crash_player():
 	player_crashed = true
 	speed = 0
