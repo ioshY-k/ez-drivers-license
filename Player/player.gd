@@ -1,4 +1,4 @@
-class_name Player extends Node2D
+class_name Player extends CharacterBody2D
 
 @onready var player_camera: Camera2D = $Camera2D
 @onready var player_sprite: PlayerSprite = $PlayerSprite
@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		move_player(delta)
 	animate_player()
 	
-	print(speed)
+	print(velocity, speed)
 	
 	
 	
@@ -44,28 +44,35 @@ func move_player(delta):
 	rotation = fmod(rotation + rotation_modifier, 2*PI)
 	
 	
-	# Move Player
+	# Move Player	
 	if Input.is_action_just_pressed("Accelerate"):
 		speed += GameConsts.PLAYER_ACCELERATION_VALUE * delta
 	elif Input.is_action_just_pressed("Decelerate"):
 		speed -= GameConsts.PLAYER_ACCELERATION_VALUE * delta
 	
 	if speed > GameConsts.PLAYER_SPEED_THRESHOLD_FAST:
-		speed = max(0, speed - 2 * delta)
+		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE  * delta, 0)
 		player_sprite.modulate = Color(0.931, 0.397, 0.462, 1.0)
+		print("speedy ")
 	elif speed > GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
-		speed = max(0, speed - 4 * delta)
+		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)
 		player_sprite.modulate = Color(1, 1, 1)
-	elif speed > 0:
-		speed = max(0, speed - 6 * delta)
+		print("normal ")
+	elif speed >= 0:
+		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 3  * delta, 0)
 		player_sprite.modulate = Color(0.015, 0.645, 0.806, 1.0)
+		print("slowy ")
 	else:
-		speed = min(0, speed + 10 * delta)
+		speed = min(speed + GameConsts.PLAYER_FRICTION_VALUE * 5  * delta, 0)
+		print("reverse ")
 		
-	# Max Speed
-	speed = min(speed, 20)
-		
-	position += Vector2(0, -1).rotated(rotation) * speed
+	#Max Speed	
+	speed = min(speed, GameConsts.PLAYER_MAX_VELOCITY)
+	
+	velocity = Vector2(0, -1).rotated(rotation) * speed
+	
+	move_and_slide()
+	
 		
 func animate_player():
 	if Input.is_action_just_released("TurnLeft") or Input.is_action_just_released("TurnRight"):
