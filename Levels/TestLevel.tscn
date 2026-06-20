@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://xb50dxebnb0p"]
+
+[ext_resource type="Texture2D" uid="uid://66pbfdmjxr56" path="res://Resources/Parking lot.webp" id="1_uib4f"]
+[ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="2_iqcmb"]
+
+[node name="TestLevel" type="Node2D" unique_id=238132011]
+
+[node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
+position = Vector2(3201, -248)
+scale = Vector2(12.031699, 12.031696)
+texture = ExtResource("1_uib4f")
+
+[node name="Player" parent="." unique_id=952234042 instance=ExtResource("2_iqcmb")]
+position = Vector2(673, 503)
+rotation = -4.7682395

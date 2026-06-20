@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://be246vh2glg7k"]
+
+[ext_resource type="Script" uid="uid://dgaik5htmueqn" path="res://Player/player.gd" id="1_4ntmi"]
+[ext_resource type="Texture2D" uid="uid://b30mgxncei765" path="res://icon.svg" id="2_btcbx"]
+
+[node name="Player" type="Node2D" unique_id=952234042]
+script = ExtResource("1_4ntmi")
+
+[node name="PlayerSprite" type="Sprite2D" parent="." unique_id=346647138]
+texture = ExtResource("2_btcbx")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=794997672]
+position = Vector2(-942, -739)
+anchor_mode = 0
+ignore_rotation = false
