@@ -17,9 +17,6 @@ texture = ExtResource("1_uib4f")
 position = Vector2(673, 503)
 rotation = -4.7682395
 
-[node name="Pylon" parent="." unique_id=1246131004 instance=ExtResource("3_y1yrn")]
-position = Vector2(1084, 473)
-
 [node name="Pylon2" parent="." unique_id=1570670863 instance=ExtResource("3_y1yrn")]
 position = Vector2(1930, 452)
 

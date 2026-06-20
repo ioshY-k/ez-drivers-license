@@ -74,6 +74,10 @@ func animate_player():
 		player_sprite.turn_left_animation()
 	if Input.is_action_just_pressed("TurnRight"):
 		player_sprite.turn_right_animation()
+	if speed == 0:
+		player_sprite.propeller_stop_animation()
+	else:
+		player_sprite.propeller_spin_animation(speed)
 
 func crash_player():
 	player_crashed = true
