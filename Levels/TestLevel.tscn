@@ -6,8 +6,8 @@
 [node name="TestLevel" type="Node2D" unique_id=238132011]
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
-position = Vector2(3201, -248)
-scale = Vector2(12.031699, 12.031696)
+position = Vector2(4301, -369.99994)
+scale = Vector2(17.294426, 17.29442)
 texture = ExtResource("1_uib4f")
 
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("2_iqcmb")]

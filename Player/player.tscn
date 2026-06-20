@@ -10,6 +10,11 @@ script = ExtResource("1_4ntmi")
 texture = ExtResource("2_btcbx")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=794997672]
-position = Vector2(-942, -739)
+position = Vector2(-1254, -1044)
 anchor_mode = 0
 ignore_rotation = false
+zoom = Vector2(0.75, 0.75)
+
+[node name="CrashedTimer" type="Timer" parent="." unique_id=1795844274]
+
+[connection signal="timeout" from="CrashedTimer" to="." method="_on_crashed_timer_timeout"]
