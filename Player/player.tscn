@@ -25,10 +25,7 @@ motion_mode = 1
 script = ExtResource("1_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=794997672]
-position = Vector2(-1254, -1044)
-anchor_mode = 0
 ignore_rotation = false
-zoom = Vector2(0.75, 0.75)
 
 [node name="CrashedTimer" type="Timer" parent="." unique_id=1795844274]
 one_shot = true

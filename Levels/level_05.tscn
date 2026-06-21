@@ -1,0 +1,227 @@
+[gd_scene format=3 uid="uid://boj8d267mqrdu"]
+
+[ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_td6ov"]
+[ext_resource type="Texture2D" uid="uid://c71he3i38b4oa" path="res://Resources/Highway.svg" id="2_b6t52"]
+[ext_resource type="PackedScene" uid="uid://b77oxf6milxqp" path="res://Objects/car.tscn" id="3_br6mg"]
+[ext_resource type="Script" uid="uid://fyr2dda1kwhj" path="res://Levels/animation_player.gd" id="3_ydpeq"]
+
+[sub_resource type="Animation" id="Animation_ydpeq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(753, 4124)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Car2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(793, 4224)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Car3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(140, 4326)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Car4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(163, 4238)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Car5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(752, 4816)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Car6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(717, 4447)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Car7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(772, 4366)]
+}
+
+[sub_resource type="Animation" id="Animation_4t8un"]
+resource_name = "drive"
+length = 20.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Car:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10, 10.1, 20),
+"transitions": PackedFloat32Array(1, 0, 1, 0),
+"update": 0,
+"values": [Vector2(753, 4124), Vector2(753, -19850), Vector2(753, 4124), Vector2(753, -19850)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Car2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9, 2, 12, 12.1),
+"transitions": PackedFloat32Array(0, 1, 0, 1),
+"update": 0,
+"values": [Vector2(793, -19934), Vector2(793, 4224), Vector2(793, -19934), Vector2(793, 4224)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Car3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 8, 8.1, 16, 16.1),
+"transitions": PackedFloat32Array(1, 0, 1, 0, 1),
+"update": 0,
+"values": [Vector2(140, 4326), Vector2(140, -20032), Vector2(140, 4326), Vector2(140, -20032), Vector2(140, 4326)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Car4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2, 10, 10.1, 18, 18.1),
+"transitions": PackedFloat32Array(1, 0, 1, 0, 1),
+"update": 0,
+"values": [Vector2(163, 4238), Vector2(163, -19985), Vector2(163, 4238), Vector2(163, -19985), Vector2(163, 4238)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Car5:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.90000004, 1, 11, 11.1),
+"transitions": PackedFloat32Array(0, 1, 0, 1),
+"update": 0,
+"values": [Vector2(752, -20102), Vector2(752, 4816), Vector2(752, -20102), Vector2(752, 4816)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Car6:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(3.7, 3.8, 13.8, 13.900001),
+"transitions": PackedFloat32Array(0, 1, 0, 1),
+"update": 0,
+"values": [Vector2(717, -20580), Vector2(717, 4447), Vector2(717, -20580), Vector2(717, 4447)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Car7:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(6.8, 6.9, 16.9, 17),
+"transitions": PackedFloat32Array(0, 1, 0, 1),
+"update": 0,
+"values": [Vector2(772, -20090), Vector2(772, 4366), Vector2(772, -20090), Vector2(772, 4366)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_af376"]
+_data = {
+&"RESET": SubResource("Animation_ydpeq"),
+&"drive": SubResource("Animation_4t8un")
+}
+
+[node name="Level05" unique_id=525293221 instance=ExtResource("1_td6ov")]
+camera_zoom = 0.25
+
+[node name="LevelSprite" parent="." index="0" unique_id=1581375976]
+position = Vector2(662, -7099)
+scale = Vector2(9.66247, 9.662467)
+texture = ExtResource("2_b6t52")
+
+[node name="Player" parent="." index="1" unique_id=226948684]
+position = Vector2(3709.9995, 1892)
+rotation = -7.791139
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=2079149038]
+libraries/ = SubResource("AnimationLibrary_af376")
+speed_scale = 0.9
+script = ExtResource("3_ydpeq")
+
+[node name="Car" parent="." index="3" unique_id=1246131004 instance=ExtResource("3_br6mg")]
+position = Vector2(753, 4124)
+
+[node name="Car2" parent="." index="4" unique_id=396960612 instance=ExtResource("3_br6mg")]
+position = Vector2(793, 4224)
+
+[node name="Car3" parent="." index="5" unique_id=637852338 instance=ExtResource("3_br6mg")]
+position = Vector2(140, 4326)
+
+[node name="Car4" parent="." index="6" unique_id=1989961392 instance=ExtResource("3_br6mg")]
+position = Vector2(163, 4238)
+
+[node name="Car5" parent="." index="7" unique_id=1400575690 instance=ExtResource("3_br6mg")]
+position = Vector2(752, 4816)
+
+[node name="Car6" parent="." index="8" unique_id=1189339891 instance=ExtResource("3_br6mg")]
+position = Vector2(717, 4447)
+
+[node name="Car7" parent="." index="9" unique_id=1317447956 instance=ExtResource("3_br6mg")]
+position = Vector2(772, 4366)

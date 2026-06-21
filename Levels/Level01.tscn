@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://dugyrmw88lsdj"]
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_ruw55"]
-[ext_resource type="Texture2D" uid="uid://dkwu1ie8bsyiw" path="res://Levels/Level1.svg" id="2_ruw55"]
+[ext_resource type="Texture2D" uid="uid://rqtofx63psxa" path="res://Levels/Level1.svg" id="2_ruw55"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_c8o6p"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_s42oh"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_6m3et"]
 [ext_resource type="Script" uid="uid://c3n1k2l25athm" path="res://Levels/dialog01.gd" id="7_c8o6p"]
-[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
 [ext_resource type="PackedScene" uid="uid://dabbknjqm7m8y" path="res://Objects/DeathZone.tscn" id="7_v44il"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
 [ext_resource type="Script" uid="uid://d2ppta76mlill" path="res://Levels/dialog02.gd" id="10_rg61p"]
 [ext_resource type="Texture2D" uid="uid://cwqj1i5jehijp" path="res://UI/TutorialMouse.svg" id="11_jgx74"]
 [ext_resource type="Texture2D" uid="uid://b4iwa6fv63bde" path="res://UI/TutorialMouseReversed.svg" id="12_6m3et"]
@@ -133,6 +133,7 @@ size = Vector2(3115, 121)
 [node name="Level1" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_ruw55")
 goals = [NodePath("FinalGoal")]
+camera_zoom = 0.7
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
 scale = Vector2(2.4066217, 2.4066212)
