@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://ce5vxovhmcpf"]
+
+[ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_hia0g"]
+[ext_resource type="Texture2D" uid="uid://rqtofx63psxa" path="res://Levels/Level1.svg" id="1_q1mvm"]
+[ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="2_hia0g"]
+[ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="3_0nsvq"]
+[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="4_sl3bh"]
+[ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_c6h1j"]
+
+[node name="Level02" type="Node2D" unique_id=752677405 node_paths=PackedStringArray("goals")]
+script = ExtResource("1_hia0g")
+goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("FinalGoal")]
+
+[node name="ParkingLot" type="Sprite2D" parent="." unique_id=586640640]
+position = Vector2(3580.0002, 1165)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="Player" parent="." unique_id=226948684 instance=ExtResource("2_hia0g")]
+z_index = 0
+position = Vector2(718, 1418.0001)
+rotation = -4.7682395
+
+[node name="Barrier" parent="." unique_id=1505908857 instance=ExtResource("3_0nsvq")]
+position = Vector2(1995.0001, 2016.0001)
+rotation = -1.5707964
+scale = Vector2(2.5200024, 0.84000003)
+
+[node name="Barrier2" parent="." unique_id=2096588233 instance=ExtResource("3_0nsvq")]
+position = Vector2(4031.9998, 2002)
+rotation = -1.5707964
+scale = Vector2(2.8124754, 0.96319604)
+
+[node name="Goal" parent="." unique_id=1373093036 instance=ExtResource("4_sl3bh")]
+position = Vector2(3704, 1462)
+
+[node name="Goal2" parent="." unique_id=206343919 instance=ExtResource("4_sl3bh")]
+position = Vector2(2604, 1898)
+
+[node name="FinalGoal" parent="." unique_id=1351538883 instance=ExtResource("5_c6h1j")]
+position = Vector2(2918, 1884)

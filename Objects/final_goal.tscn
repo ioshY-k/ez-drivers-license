@@ -3,9 +3,19 @@
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="1_0v25u"]
 [ext_resource type="Texture2D" uid="uid://bk0nhgabxdd3m" path="res://Resources/Star.svg" id="2_r55q3"]
 
+[sub_resource type="Gradient" id="Gradient_r55q3"]
+offsets = PackedFloat32Array(0.00882353)
+colors = PackedColorArray(0.93, 0.558, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_v44il"]
+gradient = SubResource("Gradient_r55q3")
+
 [node name="FinalGoal" unique_id=1373093036 instance=ExtResource("1_0v25u")]
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite2D" parent_id_path=PackedInt32Array(294341241) index="0" unique_id=1601007547]
+[node name="Sprite2D" parent="." index="0" unique_id=294341241]
+texture = SubResource("GradientTexture2D_v44il")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite2D" index="0" unique_id=1601007547]
 position = Vector2(0, 0.05871582)
 scale = Vector2(0.39476633, 1.7191926)
 amount = 52

@@ -26,16 +26,16 @@ func _process(delta: float) -> void:
 	
 	
 func turn_player(delta):
-	if is_first_acceleration:
+	if speed >= 0 and is_first_acceleration:
 		return
 		
 	if Input.is_action_pressed("TurnLeft"):
-		if speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
+		if speed > 0 and speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 			crash_player()
 			return
 		rotation_modifier -= GameConsts.PLAYER_ROTATION_VALUE * delta
 	elif Input.is_action_pressed("TurnRight"):
-		if speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
+		if speed > 0 and speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 			crash_player()
 			return
 		rotation_modifier += GameConsts.PLAYER_ROTATION_VALUE * delta

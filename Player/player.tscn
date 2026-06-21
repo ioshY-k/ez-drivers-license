@@ -20,7 +20,7 @@ colors = PackedColorArray(0.44136548, 0.4413655, 0.4413655, 1, 1, 1, 1, 1)
 
 [node name="Player" type="CharacterBody2D" unique_id=226948684]
 z_index = 10
-collision_mask = 0
+collision_mask = 17
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 

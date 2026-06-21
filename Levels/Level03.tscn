@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dh0dei3tysdtp"]
+
+[ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_8o1xt"]
+[ext_resource type="Texture2D" uid="uid://b1sxtick8fiul" path="res://Resources/Racing Track.png" id="2_d5gt1"]
+
+[node name="AbstractLevel" unique_id=525293221 instance=ExtResource("1_8o1xt")]
+
+[node name="LevelSprite" parent="." index="0" unique_id=1581375976]
+position = Vector2(1655, -2720)
+scale = Vector2(8.923834, 8.923832)
+texture = ExtResource("2_d5gt1")
+
+[node name="Player" parent="." index="1" unique_id=226948684]
+rotation = -7.8544064
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." index="2" unique_id=1980845400]
+collision_layer = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0" unique_id=888457704]
+polygon = PackedVector2Array(-5915, 3107, 9903, 2802, 9553, -5676, 7291, -4310, 7961, -3517, 8128, -2172, 7540, -1040, 6720, -546, 5704, -402, 5118, 308, 4812, 1128, 4089, 1760, 3509, 1897, -2905, 1884, -3589, 1630, -4175, 731, -4761, -754, -4696, -1627, -4123, -2167, -3166, -2343, -2469, -1861, -2065, -1093, -1499, -800, 767, -930, 1940, -559, 2311, -773, 2382, -1106, -294, -3795, -672, -3847, -3062, -3684, -3726, -3899, -4358, -4427, -4657, -5208, -4690, -5931, -4013, -6908, -2925, -7318, 930, -6771, 1575, -6237, 2799, -4837, 3340, -4668, 6387, -4655, 7293, -4310, 9559, -5731, 7977, -7619, -5857, -8555)
