@@ -81,7 +81,7 @@ func move_player(delta):
 	
 	move_and_slide()
 	
-		
+
 func animate_player():
 	if Input.is_action_just_released("TurnLeft") or Input.is_action_just_released("TurnRight"):
 		player_sprite.go_straight_animation()
@@ -89,10 +89,18 @@ func animate_player():
 		player_sprite.turn_left_animation()
 	if Input.is_action_just_pressed("TurnRight"):
 		player_sprite.turn_right_animation()
+		
 	if speed == 0:
 		player_sprite.propeller_stop_animation()
+		player_sprite.feet_stand_anim()
 	else:
 		player_sprite.propeller_spin_animation(speed)
+	
+	if Input.is_action_just_pressed("Accelerate"):
+		player_sprite.feet_accelerate_anim()
+		player_sprite.reset_dash_timer()
+	
+	
 
 
 func crash_player():

@@ -2,16 +2,25 @@ class_name PlayerSprite extends Node2D
 
 @onready var body: AnimatedSprite2D = $Body
 @onready var propeller: Sprite2D = $Body/Propeller
-@onready var propeller_animation_player: AnimationPlayer = $PropellerAnimationPlayer
+
+func _ready() -> void:
+	%LegsAnimationPlayer.speed_scale = 2
 
 func propeller_spin_animation(speed):
-	if propeller_animation_player.current_animation != "Spin":
-		propeller_animation_player.play("Spin")
-	propeller_animation_player.speed_scale = abs(speed) / GameConsts.PLAYER_ACCELERATION_VALUE * 3
+	if %PropellerAnimationPlayer.current_animation != "Spin":
+		%PropellerAnimationPlayer.play("Spin")
+	%PropellerAnimationPlayer.speed_scale = abs(speed) / GameConsts.PLAYER_ACCELERATION_VALUE * 3
 
 func propeller_stop_animation():
-	propeller_animation_player.speed_scale = 1
-	propeller_animation_player.play("Idle")
+	%PropellerAnimationPlayer.speed_scale = 1
+	%PropellerAnimationPlayer.play("Idle")
+
+func feet_accelerate_anim():
+	if not %LegsAnimationPlayer.current_animation == "Accelerate":
+		%LegsAnimationPlayer.play("Accelerate")
+	
+func feet_stand_anim():
+	%LegsAnimationPlayer.play("Stand")
 
 func turn_left_animation():
 	body.frame = 2
@@ -34,7 +43,14 @@ func go_straight_animation():
 	body.scale.x = 0.4
 	tween.tween_property(body, "scale:x", 0.465, 0.2)
 
+func reset_dash_timer():
+	%FeetDashTimer.start()
+
 func change_right_foot(below: bool):
 	%FootRight.frame = below
 func change_left_foot(below: bool):
 	%FootLeft.frame = below
+
+
+func _on_feet_dash_timer_timeout() -> void:
+	%LegsAnimationPlayer.play("Fly")
