@@ -1,0 +1,190 @@
+[gd_scene format=3 uid="uid://b32lcy5a8y0fi"]
+
+[ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_57vux"]
+[ext_resource type="Texture2D" uid="uid://cw2gwfkvsaf47" path="res://Levels/Levelslalom.svg" id="2_3ng75"]
+[ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_04scf"]
+[ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_ldv1n"]
+[ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="6_cqnk6"]
+[ext_resource type="Script" uid="uid://dglhg1ggiiq4g" path="res://Dialog/Dialog05.gd" id="7_6dloo"]
+[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="8_xlx4b"]
+[ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="9_3ng75"]
+[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="9_mbeth"]
+[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="10_6dloo"]
+
+[node name="Level1" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
+script = ExtResource("1_57vux")
+goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("Goal3"), NodePath("Goal4"), NodePath("Goal5"), NodePath("Goal6"), NodePath("Goal7"), NodePath("Goal8"), NodePath("Goal9"), NodePath("Goal10"), NodePath("Goal11"), NodePath("FinalGoal")]
+camera_zoom = 0.45
+
+[node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
+position = Vector2(17789, 309.00006)
+scale = Vector2(2.4066217, 2.4066212)
+texture = ExtResource("2_3ng75")
+
+[node name="Player" parent="." unique_id=952234042 instance=ExtResource("3_04scf")]
+z_index = 0
+position = Vector2(-1336, 1137)
+rotation = -6.2831855
+
+[node name="Barrier2" parent="." unique_id=1055646237 instance=ExtResource("4_ldv1n")]
+position = Vector2(13186.001, -1014.99994)
+rotation = -1.5707964
+scale = Vector2(0.945, 30.125)
+
+[node name="Barrier4" parent="." unique_id=1505908857 instance=ExtResource("4_ldv1n")]
+position = Vector2(13118.001, 1608)
+rotation = -1.5707964
+scale = Vector2(0.945, 30.125)
+
+[node name="Barrier3" parent="." unique_id=1526119120 instance=ExtResource("4_ldv1n")]
+position = Vector2(-1895.9996, 810)
+rotation = -3.1415927
+scale = Vector2(0.83965796, 2.9702802)
+
+[node name="Barrier5" parent="." unique_id=1461967412 instance=ExtResource("4_ldv1n")]
+position = Vector2(19295, 570.0001)
+rotation = -3.1415927
+scale = Vector2(0.83965796, 2.9702802)
+
+[node name="FinalGoal" parent="." unique_id=1373093036 instance=ExtResource("6_cqnk6")]
+position = Vector2(19199, 467)
+rotation = 1.5705956
+scale = Vector2(1.6523592, 3.820308)
+
+[node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=402335558]
+script = ExtResource("7_6dloo")
+
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas1" unique_id=264914267]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("8_xlx4b")
+
+[node name="DialogText" type="Label" parent="DialogCanvas1" unique_id=2101077533]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("9_mbeth")
+theme_override_font_sizes/font_size = 46
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=577276413]
+custom_minimum_size = Vector2(500, 100)
+offset_left = -35.0
+offset_top = 866.0
+offset_right = 465.0
+offset_bottom = 966.0
+color = Color(0.59666675, 0.56, 1, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect" unique_id=1350669183]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_mbeth")
+theme_override_font_sizes/font_size = 71
+text = "Test 01/10"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Pylon" parent="." unique_id=1246131004 instance=ExtResource("9_3ng75")]
+position = Vector2(-626, 338)
+
+[node name="Pylon2" parent="." unique_id=178084624 instance=ExtResource("9_3ng75")]
+position = Vector2(2434, 338)
+
+[node name="Pylon3" parent="." unique_id=1333161943 instance=ExtResource("9_3ng75")]
+position = Vector2(5492, 338)
+
+[node name="Pylon4" parent="." unique_id=1508205617 instance=ExtResource("9_3ng75")]
+position = Vector2(7816, 338)
+
+[node name="Pylon5" parent="." unique_id=78795911 instance=ExtResource("9_3ng75")]
+position = Vector2(9999, 338)
+
+[node name="Pylon6" parent="." unique_id=921470548 instance=ExtResource("9_3ng75")]
+position = Vector2(11888, 338)
+
+[node name="Pylon7" parent="." unique_id=382175390 instance=ExtResource("9_3ng75")]
+position = Vector2(13355, 323)
+
+[node name="Pylon8" parent="." unique_id=1126615333 instance=ExtResource("9_3ng75")]
+position = Vector2(14655, 323)
+
+[node name="Pylon9" parent="." unique_id=488715581 instance=ExtResource("9_3ng75")]
+position = Vector2(15885, 323)
+
+[node name="Pylon10" parent="." unique_id=1591436918 instance=ExtResource("9_3ng75")]
+position = Vector2(17151, 323)
+
+[node name="Pylon11" parent="." unique_id=148072240 instance=ExtResource("9_3ng75")]
+position = Vector2(18432, 323)
+
+[node name="Pylon12" parent="." unique_id=2025381799 instance=ExtResource("9_3ng75")]
+position = Vector2(19034, 323)
+
+[node name="Goal" parent="." unique_id=1037399301 instance=ExtResource("10_6dloo")]
+position = Vector2(-386, -912.00006)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal2" parent="." unique_id=1677124049 instance=ExtResource("10_6dloo")]
+position = Vector2(2811, 445)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal3" parent="." unique_id=2065123070 instance=ExtResource("10_6dloo")]
+position = Vector2(5880, -910.99994)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal4" parent="." unique_id=1718799823 instance=ExtResource("10_6dloo")]
+position = Vector2(8221, 439.99994)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal5" parent="." unique_id=455446563 instance=ExtResource("10_6dloo")]
+position = Vector2(10406, -910.9998)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal6" parent="." unique_id=463693225 instance=ExtResource("10_6dloo")]
+position = Vector2(12280, 445.99982)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal7" parent="." unique_id=1263036251 instance=ExtResource("10_6dloo")]
+position = Vector2(13742, -921.9998)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal8" parent="." unique_id=1890673752 instance=ExtResource("10_6dloo")]
+position = Vector2(15049, 434.99982)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal9" parent="." unique_id=656629044 instance=ExtResource("10_6dloo")]
+position = Vector2(16289, -932.9998)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal10" parent="." unique_id=862188576 instance=ExtResource("10_6dloo")]
+position = Vector2(17546, 434.99994)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)
+
+[node name="Goal11" parent="." unique_id=458269193 instance=ExtResource("10_6dloo")]
+position = Vector2(18830, -924.0001)
+rotation = 1.5707964
+scale = Vector2(1.7787346, 1.7704622)

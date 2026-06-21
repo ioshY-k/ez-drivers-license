@@ -1,21 +1,17 @@
 [gd_scene format=3 uid="uid://cnk2mdvilya2w"]
 
 [ext_resource type="PackedScene" uid="uid://cxltmmh3fy8xg" path="res://Objects/death_object.tscn" id="1_fat2m"]
-[ext_resource type="Texture2D" uid="uid://bjnyu607c1ggg" path="res://Resources/pylon.png" id="2_fn500"]
 [ext_resource type="Script" uid="uid://b200xksy4t6df" path="res://Objects/pylon.gd" id="2_prmxb"]
+[ext_resource type="Texture2D" uid="uid://dbtfwx3gxk53g" path="res://Objects/Pylone.svg" id="3_prmxb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8gdvq"]
-size = Vector2(93, 154)
+size = Vector2(150, 150)
 
 [node name="Pylon" unique_id=1246131004 instance=ExtResource("1_fat2m")]
 script = ExtResource("2_prmxb")
 
 [node name="Sprite2D" parent="." index="0" unique_id=742387692]
-texture = ExtResource("2_fn500")
+texture = ExtResource("3_prmxb")
 
-[node name="DeathObjectArea" parent="." index="1" unique_id=863283214]
-collision_layer = 2
-
-[node name="CollisionShape2D" parent="DeathObjectArea" index="0" unique_id=800245286]
-position = Vector2(3, 7)
+[node name="CollisionShape2D" parent="DeathObjectArea" parent_id_path=PackedInt32Array(863283214) index="0" unique_id=800245286]
 shape = SubResource("RectangleShape2D_8gdvq")
