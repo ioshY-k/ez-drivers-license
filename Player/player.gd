@@ -83,7 +83,7 @@ func move_player(delta):
 		
 	#Max Speed	
 	speed = min(speed, GameConsts.PLAYER_MAX_VELOCITY)
-	speed = max(speed, -GameConsts.PLAYER_MAX_VELOCITY)
+	speed = max(speed, -GameConsts.PLAYER_MAX_VELOCITY / 2)
 	if speed == 0:
 		is_first_acceleration = true
 	

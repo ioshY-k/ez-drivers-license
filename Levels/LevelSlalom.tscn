@@ -6,15 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_ldv1n"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="6_cqnk6"]
 [ext_resource type="Script" uid="uid://dglhg1ggiiq4g" path="res://Dialog/Dialog05.gd" id="7_6dloo"]
-[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="8_xlx4b"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="8_xlx4b"]
 [ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="9_3ng75"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="9_mbeth"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="9_mbeth"]
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="10_6dloo"]
 
-[node name="Level1" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
+[node name="Level Slalom" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_57vux")
 goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("Goal3"), NodePath("Goal4"), NodePath("Goal5"), NodePath("Goal6"), NodePath("Goal7"), NodePath("Goal8"), NodePath("Goal9"), NodePath("Goal10"), NodePath("Goal11"), NodePath("FinalGoal")]
-camera_zoom = 0.45
+camera_zoom = 0.35
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
 position = Vector2(17789, 309.00006)

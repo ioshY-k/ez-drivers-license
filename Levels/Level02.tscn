@@ -27,15 +27,15 @@ rotation = -1.5707964
 scale = Vector2(2.5200024, 0.84000003)
 
 [node name="Barrier2" parent="." unique_id=2096588233 instance=ExtResource("3_0nsvq")]
-position = Vector2(4031.9998, 2002)
+position = Vector2(4341.9995, 2002)
 rotation = -1.5707964
 scale = Vector2(2.8124754, 0.96319604)
 
 [node name="Goal" parent="." unique_id=1373093036 instance=ExtResource("4_sl3bh")]
-position = Vector2(3704, 1462)
+position = Vector2(4014, 1462)
 
 [node name="Goal2" parent="." unique_id=206343919 instance=ExtResource("4_sl3bh")]
 position = Vector2(2604, 1898)
 
 [node name="FinalGoal" parent="." unique_id=1351538883 instance=ExtResource("5_c6h1j")]
-position = Vector2(2918, 1884)
+position = Vector2(3228, 1884)
