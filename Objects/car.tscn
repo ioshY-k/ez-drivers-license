@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b77oxf6milxqp"]
+
+[ext_resource type="PackedScene" uid="uid://cxltmmh3fy8xg" path="res://Objects/death_object.tscn" id="1_js2rq"]
+[ext_resource type="Texture2D" uid="uid://dxealy66dpwuk" path="res://Resources/Car.png" id="2_p0u6b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b6t52"]
+radius = 166.0
+height = 686.0
+
+[node name="Car" unique_id=1246131004 instance=ExtResource("1_js2rq")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=742387692]
+texture = ExtResource("2_p0u6b")
+
+[node name="CollisionShape2D" parent="DeathObjectArea" parent_id_path=PackedInt32Array(863283214) index="0" unique_id=800245286]
+shape = SubResource("CapsuleShape2D_b6t52")
