@@ -95,6 +95,7 @@ func animate_player():
 		
 	if speed == 0:
 		player_sprite.propeller_stop_animation()
+		
 		player_sprite.feet_stand_anim()
 	else:
 		player_sprite.propeller_spin_animation(speed)
@@ -111,13 +112,11 @@ func crash_player():
 	player_crashed = true
 	speed = 0
 	rotation_modifier = 0
-	player_sprite.modulate = Color(0.12, 0.12, 0.12, 1.0)
 	player_sprite.fall_right_animation()
 	crashed_timer.start()
 
 
 func _on_crashed_timer_timeout() -> void:
-	player_sprite.modulate = Color(1, 1, 1)
 	player_crashed = false
 	player_sprite.is_falling = false
 	player_sprite.feet_stand_anim()

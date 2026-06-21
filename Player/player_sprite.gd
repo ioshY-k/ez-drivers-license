@@ -26,11 +26,12 @@ func feet_accelerate_anim():
 		%LegsAnimationPlayer.play("Accelerate")
 	
 func feet_stand_anim():
-	if not is_standing:
+	if not is_standing and not is_falling:
 		is_standing = true
 		%LegsAnimationPlayer.play("Stand")
 		body.frame = 0
 		propeller.show()
+		propeller.position = Vector2(-2, -187)
 		%LegLeft.show()
 		%LegRight.show()
 		%FootLeft.show()
@@ -66,7 +67,6 @@ func go_straight_animation():
 func fall_right_animation():
 	if not is_falling:
 		is_falling = true
-		is_standing = false
 		propeller.hide()
 		%LegLeft.hide()
 		%LegRight.hide()
