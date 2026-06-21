@@ -7,6 +7,7 @@ var dialog_started: bool = false
 @onready var dialog_box: Sprite2D = $DialogBox
 
 signal start_dialog
+signal dialog_ended
 
 func _ready():
 	dialog_text.modulate.a = 0
@@ -38,6 +39,7 @@ func close_dialog():
 	tween.tween_property(dialog_box,"scale", Vector2.ZERO, 0.4)
 	tween.tween_property(dialog_text,"modulate:a", 0, 0.2)
 	SignalBus.unfreeze_player.emit()
+	dialog_ended.emit()
 	await tween.finished
 	queue_free()
 	

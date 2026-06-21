@@ -1,9 +1,27 @@
 [gd_scene format=3 uid="uid://dh0dei3tysdtp"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_8o1xt"]
-[ext_resource type="Texture2D" uid="uid://b1sxtick8fiul" path="res://Resources/Racing Track.png" id="2_d5gt1"]
+[ext_resource type="Texture2D" uid="uid://dgokt6x2kkmrv" path="res://Resources/Racing Track.png" id="2_d5gt1"]
+[ext_resource type="Script" uid="uid://dacuppaktthj0" path="res://Dialog/dialog04.gd" id="3_x7q1b"]
+[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="4_mei6w"]
+[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="5_tbwc5"]
+[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="6_tbwc5"]
+[ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_2yvhy"]
+[ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
 
-[node name="AbstractLevel" unique_id=525293221 instance=ExtResource("1_8o1xt")]
+[sub_resource type="Curve2D" id="Curve2D_hd63s"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -9, 1428, 822.16815, 219.78752, -822.16815, -219.78752, -3107, 1472, -162.80557, 252.34865, 162.80557, -252.34865, -4343, -1367, -333.75143, 146.52502, 333.75143, -146.52502, -3887, -1963, -154.6653, -195.3667, 154.6653, 195.3667, -2782, -1714, -439.57504, -130.24446, 439.57504, 130.24446, -2100, -403, -390.7334, -81.40279, 390.7334, 81.40279, 847, -489, -431.43478, 24.420837, 431.43478, -24.420837, 1952, -56, -146.52502, 138.38474, 146.52502, -138.38474, 2657, -359, 211.64725, 211.64725, -211.64725, -211.64725, 2733, -1562, 350.03198, 284.90976, -350.03198, -284.90976, -128, -4314, 423.2945, 244.20836, -423.2945, -244.20836, -3227, -4206, 65.12223, 390.7334, -65.12223, -390.7334, -4169, -5148, -341.89172, 301.1903, 341.89172, -301.1903, -3920, -6503, -675.6431, 0, 675.6431, 0, -2641, -7034, -626.80145, -407.01395, 626.80145, 407.01395, 836, -6427, -927.99176, -317.4709, 927.99176, 317.4709, 2830, -4325, -1066.3765, -236.06808, 1066.3765, 236.06808, 6720, -4162, 24.420837, -691.9237, -24.420837, 691.9237, 7641, -2635, 732.6251, -179.08614, -732.6251, 179.08614, 6666, -1009, 561.67926, -382.5931, -561.67926, 382.5931, 5311, -598, 789.60706, -244.20836, -789.60706, 244.20836, 4022, 1374, 0, 0, 0, 0, 176, 1428)
+}
+point_count = 23
+
+[sub_resource type="Curve" id="Curve_bv6uq"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.17712179, 1), 0.0, 0.0, 0, 0, Vector2(0.82287824, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="AbstractLevel" unique_id=525293221 node_paths=PackedStringArray("goals") instance=ExtResource("1_8o1xt")]
+goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("Goal3"), NodePath("Goal4"), NodePath("FinalGoal")]
+camera_zoom = 0.45
 
 [node name="LevelSprite" parent="." index="0" unique_id=1581375976]
 position = Vector2(1655, -2720)
@@ -18,3 +36,77 @@ collision_layer = 16
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" index="0" unique_id=888457704]
 polygon = PackedVector2Array(-5915, 3107, 9903, 2802, 9553, -5676, 7291, -4310, 7961, -3517, 8128, -2172, 7540, -1040, 6720, -546, 5704, -402, 5118, 308, 4812, 1128, 4089, 1760, 3509, 1897, -2905, 1884, -3589, 1630, -4175, 731, -4761, -754, -4696, -1627, -4123, -2167, -3166, -2343, -2469, -1861, -2065, -1093, -1499, -800, 767, -930, 1940, -559, 2311, -773, 2382, -1106, -294, -3795, -672, -3847, -3062, -3684, -3726, -3899, -4358, -4427, -4657, -5208, -4690, -5931, -4013, -6908, -2925, -7318, 930, -6771, 1575, -6237, 2799, -4837, 3340, -4668, 6387, -4655, 7293, -4310, 9559, -5731, 7977, -7619, -5857, -8555)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." index="3" unique_id=184016112]
+position = Vector2(1068, 5508)
+collision_layer = 16
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2" index="0" unique_id=1195357131]
+position = Vector2(-4680, -6912)
+polygon = PackedVector2Array(316, -11, 739, 682, 1172, 1170, 1876, 1549, 2418, 1582, 3426, 1441, 4390, 1376, 5224, 1722, 5766, 1744, 6438, 1506, 6752, 942, 6893, 173, 6655, -412, 6178, -878, 3881, -3132, 3242, -3370, 2646, -3305, 858, -3207, 316, -3294, -41, -3673, -193, -4237, 110, -4800, 544, -5038, 2234, -4865, 4130, -4573, 5593, -2893, 6351, -2438, 6839, -2341, 9959, -2341, 10382, -2167, 10663, -1831, 10783, -1105, 10674, -553, 10219, -76, 9873, 11, 9277, 65, 8616, 390, 8171, 834, 7857, 1343, 7641, 2037, 7240, 2383, 761, 2405, 414, 2177, -269, 444, -193, 86, 78, -44)
+
+[node name="DialogCanvas1" type="CanvasLayer" parent="." index="4" unique_id=235990229]
+script = ExtResource("3_x7q1b")
+
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas1" index="0" unique_id=1787380022]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("4_mei6w")
+
+[node name="DialogText" type="Label" parent="DialogCanvas1" index="1" unique_id=57156486]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("5_tbwc5")
+theme_override_font_sizes/font_size = 46
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Goal" parent="." index="5" unique_id=1373093036 instance=ExtResource("6_tbwc5")]
+position = Vector2(-4331.0005, 210)
+rotation = -0.45397565
+scale = Vector2(1.2727997, 2.1893866)
+
+[node name="Goal2" parent="." index="6" unique_id=1079176198 instance=ExtResource("6_tbwc5")]
+position = Vector2(1050, -2525)
+rotation = -0.78160655
+scale = Vector2(1.2727997, 2.1893866)
+
+[node name="Goal3" parent="." index="7" unique_id=154616795 instance=ExtResource("6_tbwc5")]
+position = Vector2(-283.00012, -6198)
+rotation = -1.3628358
+scale = Vector2(1.2727997, 2.1893866)
+
+[node name="Goal4" parent="." index="8" unique_id=1423390316 instance=ExtResource("6_tbwc5")]
+position = Vector2(7292.001, -2527)
+rotation = 0.28755474
+scale = Vector2(1.2727997, 2.1893866)
+
+[node name="FinalGoal" parent="." index="9" unique_id=1211964796 instance=ExtResource("7_2yvhy")]
+position = Vector2(-554, 1776)
+rotation = -1.5732765
+scale = Vector2(1.112031, 3.7202227)
+
+[node name="TimeChallengePath" type="Path2D" parent="." index="10" unique_id=79783818]
+unique_name_in_owner = true
+curve = SubResource("Curve2D_hd63s")
+script = ExtResource("8_2yvhy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="TimeChallengePath" index="0" unique_id=102530847]
+position = Vector2(-9, 1428)
+rotation = 3.0261993
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="TimeChallengePath/PathFollow2D" index="0" unique_id=1508291176]
+amount = 54
+speed_scale = 5.96
+emission_shape = 1
+emission_sphere_radius = 36.15
+gravity = Vector2(0, 0)
+scale_amount_min = 8.04
+scale_amount_max = 8.04
+scale_amount_curve = SubResource("Curve_bv6uq")

@@ -133,6 +133,7 @@ size = Vector2(3115, 121)
 [node name="Level2" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_n6dkh")
 goals = [NodePath("Barriers/Goal"), NodePath("Barriers/Goal2"), NodePath("Barriers/Goal3"), NodePath("Barriers/Goal4"), NodePath("Barriers/FinalGoal")]
+camera_zoom = 0.495
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
 position = Vector2(10361.001, -11548.001)
@@ -191,26 +192,26 @@ scale = Vector2(0.83965796, 33.755)
 [node name="FinalGoal" parent="Barriers" unique_id=1373093036 instance=ExtResource("6_yqeoj")]
 position = Vector2(33522.383, -1987.562)
 rotation = 1.0628265
-scale = Vector2(4.8921967, 1.7799826)
+scale = Vector2(5.5797563, 7.5179725)
 
 [node name="Goal" parent="Barriers" unique_id=661221782 instance=ExtResource("12_n6dkh")]
-position = Vector2(-400.49747, -38082.09)
-scale = Vector2(1.4141911, 1.1999642)
+position = Vector2(-656.7164, -38099.504)
+scale = Vector2(2.0927913, 4.0943685)
 
 [node name="Goal2" parent="Barriers" unique_id=1330651724 instance=ExtResource("12_n6dkh")]
-position = Vector2(19942.785, -62238.805)
+position = Vector2(20485.074, -62194.027)
 rotation = 1.6263001
-scale = Vector2(2.484639, 1.9166716)
+scale = Vector2(2.653026, 7.7486715)
 
 [node name="Goal3" parent="Barriers" unique_id=1868544799 instance=ExtResource("12_n6dkh")]
 position = Vector2(60808.453, -53676.62)
 rotation = 2.7993402
-scale = Vector2(2.4846387, 1.9166718)
+scale = Vector2(2.6193702, 6.376971)
 
 [node name="Goal4" parent="Barriers" unique_id=1821332003 instance=ExtResource("12_n6dkh")]
-position = Vector2(27950.25, -17281.094)
+position = Vector2(28159.205, -16696.518)
 rotation = 2.7993402
-scale = Vector2(2.4846387, 1.9166718)
+scale = Vector2(2.5399153, 6.137442)
 
 [node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=402335558]
 script = ExtResource("6_slvgb")
@@ -279,10 +280,10 @@ shape = SubResource("RectangleShape2D_bv6uq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=577276413]
 custom_minimum_size = Vector2(500, 100)
-offset_left = -1096.0
-offset_top = 858.0
-offset_right = -596.0
-offset_bottom = 958.0
+offset_left = -820.0
+offset_top = 1189.0
+offset_right = -320.0
+offset_bottom = 1289.0
 color = Color(0.65605485, 0.6442711, 0.37604374, 1)
 
 [node name="DialogText" type="Label" parent="ColorRect" unique_id=1350669183]
