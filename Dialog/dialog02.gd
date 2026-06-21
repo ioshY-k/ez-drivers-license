@@ -4,15 +4,11 @@ extends Dialog
 func _ready() -> void:
 	super._ready()
 	sentences = [
-		"Not gonna lie kid, this hurts to watch.",
-		"using your short bean fingers ain't gonna bring you far",
-		"Now stop joking around and place that mouse wheel on the tabletop.",
-		"That's right - park it right there upside down",
-		"How else would you generate enough spin?",
-		"Now come over here before your bike turns to rust halfway!",
-		
+		"I sure hope you know how to do turns cause thats...",
+		"well that's what comping up now. Turns.",
+		"Just lean right into them and you will follow them eazy peezy",
+		"You heard me: Lean your mouse left and right to make turns...",
 	]
-
 
 func _on_dialog_trigger_body_entered(body: Node2D) -> void:
 	start_dialog.emit()
