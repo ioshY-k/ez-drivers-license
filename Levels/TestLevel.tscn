@@ -5,9 +5,12 @@
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="2_iqcmb"]
 [ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="3_y1yrn"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_2yvdw"]
+[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="6_voj1p"]
+[ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_kxr0u"]
 
-[node name="TestLevel" type="Node2D" unique_id=238132011]
+[node name="TestLevel" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_jyvk6")
+goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("FinalGoal")]
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
 position = Vector2(4301, -369.99994)
@@ -16,7 +19,7 @@ texture = ExtResource("1_uib4f")
 
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("2_iqcmb")]
 z_index = 0
-position = Vector2(673, 503)
+position = Vector2(718, 1418.0001)
 rotation = -4.7682395
 
 [node name="Pylon2" parent="." unique_id=1570670863 instance=ExtResource("3_y1yrn")]
@@ -33,13 +36,22 @@ position = Vector2(1070, 1850)
 rotation = -1.5707964
 
 [node name="Barrier2" parent="." unique_id=1055646237 instance=ExtResource("5_2yvdw")]
-position = Vector2(2388, 1850)
+position = Vector2(2311, 1850)
 rotation = -1.5707964
 
 [node name="Barrier3" parent="." unique_id=332296758 instance=ExtResource("5_2yvdw")]
-position = Vector2(3703, 1847)
+position = Vector2(3557, 1850)
 rotation = -1.5707964
 
 [node name="Barrier4" parent="." unique_id=1878571704 instance=ExtResource("5_2yvdw")]
-position = Vector2(4982, 1850)
+position = Vector2(4797, 1850)
 rotation = -1.5707964
+
+[node name="Goal" parent="." unique_id=1373093036 instance=ExtResource("6_voj1p")]
+position = Vector2(3229, 1279)
+
+[node name="Goal2" parent="." unique_id=1920335274 instance=ExtResource("6_voj1p")]
+position = Vector2(4374, 1288)
+
+[node name="FinalGoal" parent="." unique_id=561790101 instance=ExtResource("7_kxr0u")]
+position = Vector2(5688, 1310)

@@ -3,9 +3,20 @@
 [ext_resource type="Script" uid="uid://dgaik5htmueqn" path="res://Player/player.gd" id="1_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://cy2cb7shxky4j" path="res://Player/player_sprite.tscn" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://b5dq2qpj4orwi" path="res://UI/speedometer.tscn" id="3_btcbx"]
+[ext_resource type="Texture2D" uid="uid://c277tpnvhyean" path="res://Resources/Speed Particle.png" id="4_gwnis"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_edw11"]
-size = Vector2(121, 120)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
+radius = 39.5
+height = 350.0
+
+[sub_resource type="Curve" id="Curve_btcbx"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.229572, 0.5931559), 0.0, 0.0, 0, 0, Vector2(0.5233463, 0.88973385), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_gwnis"]
+colors = PackedColorArray(0.44136548, 0.4413655, 0.4413655, 1, 1, 1, 1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_podkt"]
 
 [node name="Player" type="CharacterBody2D" unique_id=226948684]
 z_index = 2
@@ -19,10 +30,11 @@ ignore_rotation = false
 zoom = Vector2(0.75, 0.75)
 
 [node name="CrashedTimer" type="Timer" parent="." unique_id=1795844274]
+one_shot = true
 
 [node name="Hitbox" type="CollisionShape2D" parent="." unique_id=926309153]
-position = Vector2(-0.5, -1)
-shape = SubResource("RectangleShape2D_edw11")
+position = Vector2(-0.5, 4)
+shape = SubResource("CapsuleShape2D_gwnis")
 
 [node name="PlayerSprite" parent="." unique_id=1891064485 instance=ExtResource("2_4ntmi")]
 
@@ -31,5 +43,41 @@ shape = SubResource("RectangleShape2D_edw11")
 [node name="Speedometer" parent="CanvasLayer" unique_id=1646272472 instance=ExtResource("3_btcbx")]
 position = Vector2(1630.0001, 778.00006)
 scale = Vector2(1.015, 1.015)
+
+[node name="SpeedParticles" type="CPUParticles2D" parent="." unique_id=1691356526]
+position = Vector2(0, 26)
+amount = 20
+texture = ExtResource("4_gwnis")
+lifetime = 2.5
+speed_scale = 4.58
+randomness = 0.15
+emission_shape = 3
+emission_rect_extents = Vector2(120, 0)
+particle_flag_align_y = true
+direction = Vector2(0, 1)
+spread = 2.76
+gravity = Vector2(0, 0)
+initial_velocity_min = 102.89
+initial_velocity_max = 229.24
+scale_amount_min = 0.4
+scale_amount_max = 0.7
+scale_amount_curve = SubResource("Curve_btcbx")
+color_initial_ramp = SubResource("Gradient_gwnis")
+
+[node name="GoalCheckFront" type="Area2D" parent="." unique_id=1284778011]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalCheckFront" unique_id=2055844592]
+position = Vector2(0, -169)
+shape = SubResource("CircleShape2D_podkt")
+
+[node name="GoalCheckBack" type="Area2D" parent="." unique_id=780558770]
+collision_layer = 8
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GoalCheckBack" unique_id=1541944303]
+position = Vector2(0, 183)
+shape = SubResource("CircleShape2D_podkt")
 
 [connection signal="timeout" from="CrashedTimer" to="." method="_on_crashed_timer_timeout"]

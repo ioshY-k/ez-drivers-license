@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://d4iomupoenli1"]
+
+[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="1_0v25u"]
+[ext_resource type="Texture2D" uid="uid://bk0nhgabxdd3m" path="res://Resources/Star.svg" id="2_r55q3"]
+
+[node name="FinalGoal" unique_id=1373093036 instance=ExtResource("1_0v25u")]
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite2D" parent_id_path=PackedInt32Array(294341241) index="0" unique_id=1601007547]
+position = Vector2(0, 0.05871582)
+scale = Vector2(0.39476633, 1.7191926)
+amount = 52
+texture = ExtResource("2_r55q3")
+emission_shape = 3
+emission_rect_extents = Vector2(80.58, 18.26)
+gravity = Vector2(0, 0)
+radial_accel_min = 79.78
+radial_accel_max = 79.78
+angle_min = -319.7
+angle_max = 59.8
+scale_amount_min = 0.01
+scale_amount_max = 0.05
+color = Color(0.6957926, 0.49344128, 5.7756904e-07, 1)

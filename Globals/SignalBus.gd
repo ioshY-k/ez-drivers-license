@@ -1,4 +1,4 @@
 extends Node
 
-@warning_ignore("unused_signal")
 signal player_dies
+signal goal_entered(goal_object: Goal)

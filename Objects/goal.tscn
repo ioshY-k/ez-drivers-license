@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://bb4rp1s6w4u8f"]
+
+[ext_resource type="Script" uid="uid://c1wy2k6c06c1k" path="res://goal.gd" id="1_bhrk7"]
+
+[sub_resource type="Gradient" id="Gradient_kyyj3"]
+offsets = PackedFloat32Array(0.6009804)
+colors = PackedColorArray(0.47787845, 0.6497108, 0.21876487, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_edw11"]
+gradient = SubResource("Gradient_kyyj3")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edw11"]
+size = Vector2(160, 47)
+
+[node name="Goal" type="Node2D" unique_id=1373093036]
+script = ExtResource("1_bhrk7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=294341241]
+position = Vector2(321, 136.75)
+scale = Vector2(10.03125, 4.2578125)
+texture = SubResource("GradientTexture2D_edw11")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=1478666127]
+position = Vector2(-27.999998, -18.382978)
+scale = Vector2(0.39999998, 1.3617021)
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=742051299]
+position = Vector2(69.99999, 13.5)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_edw11")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_exited"]

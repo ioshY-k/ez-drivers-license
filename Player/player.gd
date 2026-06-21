@@ -4,6 +4,7 @@ class_name Player extends CharacterBody2D
 @onready var player_sprite: PlayerSprite = $PlayerSprite
 @onready var crashed_timer: Timer = $CrashedTimer
 @onready var speedometer: Speedometer = $CanvasLayer/Speedometer
+@onready var speed_particles: CPUParticles2D = $SpeedParticles
 
 
 var speed = 0
@@ -21,7 +22,7 @@ func _process(delta: float) -> void:
 	animate_player()
 	animate_speedometer()
 	
-	print(velocity, speed)
+	#print(velocity, speed)
 	
 	
 func turn_player(delta):
@@ -58,20 +59,21 @@ func move_player(delta):
 	
 	if speed > GameConsts.PLAYER_SPEED_THRESHOLD_FAST:
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE  * delta, 0)
-		player_sprite.modulate = Color(0.931, 0.397, 0.462, 1.0)
-		print("speedy ")
+		speed_particles.emitting = true
+		#print("speedy ")
 	elif speed > GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 		is_first_acceleration = false
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)
-		player_sprite.modulate = Color(1, 1, 1)
-		print("normal ")
+		speed_particles.emitting = false
+		#print("normal ")
 	elif speed >= 0:
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 3  * delta, 0)
-		player_sprite.modulate = Color(0.015, 0.645, 0.806, 1.0)
-		print("slowy ")
-	else:
+		speed_particles.emitting = false
+		#print("slowy ")
+	else: #reverse
 		speed = min(speed + GameConsts.PLAYER_FRICTION_VALUE * 5  * delta, 0)
-		print("reverse ")
+		speed_particles.emitting = false
+		#print("reverse ")
 		
 	#Max Speed	
 	speed = min(speed, GameConsts.PLAYER_MAX_VELOCITY)
