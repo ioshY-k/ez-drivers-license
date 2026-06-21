@@ -8,9 +8,6 @@ var is_standing: bool = false
 func _ready() -> void:
 	%LegsAnimationPlayer.speed_scale = 2
 
-func _process(delta: float) -> void:
-	print(is_falling)
-
 func propeller_spin_animation(speed):
 	if %PropellerAnimationPlayer.current_animation != "Spin":
 		%PropellerAnimationPlayer.play("Spin")
