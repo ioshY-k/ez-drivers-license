@@ -606,11 +606,13 @@ texture = ExtResource("2_w3i27")
 offset = Vector2(2, 187)
 
 [node name="LegLeft" type="Sprite2D" parent="Body" unique_id=1268157994]
+unique_name_in_owner = true
 z_index = -1
 position = Vector2(-247.31184, 0)
 texture = ExtResource("6_os36s")
 
 [node name="LegRight" type="Sprite2D" parent="Body" unique_id=876487562]
+unique_name_in_owner = true
 z_index = -1
 position = Vector2(223.65593, 0)
 scale = Vector2(1, 0.39)
