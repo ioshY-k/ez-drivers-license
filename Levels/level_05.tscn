@@ -1,186 +1,19 @@
 [gd_scene format=3 uid="uid://boj8d267mqrdu"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_td6ov"]
-[ext_resource type="Texture2D" uid="uid://c71he3i38b4oa" path="res://Resources/Highway.svg" id="2_b6t52"]
+[ext_resource type="Texture2D" uid="uid://uqdn3xy0358r" path="res://Resources/Highway.svg" id="2_b6t52"]
 [ext_resource type="PackedScene" uid="uid://b77oxf6milxqp" path="res://Objects/car.tscn" id="3_br6mg"]
 [ext_resource type="Script" uid="uid://fyr2dda1kwhj" path="res://Levels/animation_player.gd" id="3_ydpeq"]
+[ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_4t8un"]
 
 [sub_resource type="Animation" id="Animation_ydpeq"]
 length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Car:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(753, 4124)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Car2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(793, 4224)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Car3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(140, 4326)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Car4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(163, 4238)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Car5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(752, 4816)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Car6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(717, 4447)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Car7:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(772, 4366)]
-}
 
 [sub_resource type="Animation" id="Animation_4t8un"]
 resource_name = "drive"
 length = 20.0
 loop_mode = 1
 step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Car:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 10, 10.1, 20),
-"transitions": PackedFloat32Array(1, 0, 1, 0),
-"update": 0,
-"values": [Vector2(753, 4124), Vector2(753, -19850), Vector2(753, 4124), Vector2(753, -19850)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Car2:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(1.9, 2, 12, 12.1),
-"transitions": PackedFloat32Array(0, 1, 0, 1),
-"update": 0,
-"values": [Vector2(793, -19934), Vector2(793, 4224), Vector2(793, -19934), Vector2(793, 4224)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("Car3:position")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0, 8, 8.1, 16, 16.1),
-"transitions": PackedFloat32Array(1, 0, 1, 0, 1),
-"update": 0,
-"values": [Vector2(140, 4326), Vector2(140, -20032), Vector2(140, 4326), Vector2(140, -20032), Vector2(140, 4326)]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Car4:position")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(2, 10, 10.1, 18, 18.1),
-"transitions": PackedFloat32Array(1, 0, 1, 0, 1),
-"update": 0,
-"values": [Vector2(163, 4238), Vector2(163, -19985), Vector2(163, 4238), Vector2(163, -19985), Vector2(163, 4238)]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Car5:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0.90000004, 1, 11, 11.1),
-"transitions": PackedFloat32Array(0, 1, 0, 1),
-"update": 0,
-"values": [Vector2(752, -20102), Vector2(752, 4816), Vector2(752, -20102), Vector2(752, 4816)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Car6:position")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(3.7, 3.8, 13.8, 13.900001),
-"transitions": PackedFloat32Array(0, 1, 0, 1),
-"update": 0,
-"values": [Vector2(717, -20580), Vector2(717, 4447), Vector2(717, -20580), Vector2(717, 4447)]
-}
-tracks/6/type = "value"
-tracks/6/imported = false
-tracks/6/enabled = true
-tracks/6/path = NodePath("Car7:position")
-tracks/6/interp = 1
-tracks/6/loop_wrap = true
-tracks/6/keys = {
-"times": PackedFloat32Array(6.8, 6.9, 16.9, 17),
-"transitions": PackedFloat32Array(0, 1, 0, 1),
-"update": 0,
-"values": [Vector2(772, -20090), Vector2(772, 4366), Vector2(772, -20090), Vector2(772, 4366)]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_af376"]
 _data = {
@@ -192,13 +25,13 @@ _data = {
 camera_zoom = 0.25
 
 [node name="LevelSprite" parent="." index="0" unique_id=1581375976]
-position = Vector2(662, -7099)
+position = Vector2(13136.959, 61131.273)
 scale = Vector2(9.66247, 9.662467)
 texture = ExtResource("2_b6t52")
 
 [node name="Player" parent="." index="1" unique_id=226948684]
-position = Vector2(3709.9995, 1892)
-rotation = -7.791139
+position = Vector2(15150, 97879)
+rotation = -6.2831855
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2" unique_id=2079149038]
 libraries/ = SubResource("AnimationLibrary_af376")
@@ -206,22 +39,694 @@ speed_scale = 0.9
 script = ExtResource("3_ydpeq")
 
 [node name="Car" parent="." index="3" unique_id=1246131004 instance=ExtResource("3_br6mg")]
-position = Vector2(753, 4124)
+position = Vector2(14431, 88880.95)
+is_reverse = false
 
-[node name="Car2" parent="." index="4" unique_id=396960612 instance=ExtResource("3_br6mg")]
-position = Vector2(793, 4224)
+[node name="Car2" parent="." index="4" unique_id=311731254 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 91814)
+is_reverse = false
 
-[node name="Car3" parent="." index="5" unique_id=637852338 instance=ExtResource("3_br6mg")]
-position = Vector2(140, 4326)
+[node name="Car3" parent="." index="5" unique_id=703209119 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 94109)
+is_reverse = false
 
-[node name="Car4" parent="." index="6" unique_id=1989961392 instance=ExtResource("3_br6mg")]
-position = Vector2(163, 4238)
+[node name="Car4" parent="." index="6" unique_id=462080499 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 98140)
+is_reverse = false
 
-[node name="Car5" parent="." index="7" unique_id=1400575690 instance=ExtResource("3_br6mg")]
-position = Vector2(752, 4816)
+[node name="Car5" parent="." index="7" unique_id=385588877 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 102913)
+is_reverse = false
 
-[node name="Car6" parent="." index="8" unique_id=1189339891 instance=ExtResource("3_br6mg")]
-position = Vector2(717, 4447)
+[node name="Car6" parent="." index="8" unique_id=1173797041 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 104570)
+is_reverse = false
 
-[node name="Car7" parent="." index="9" unique_id=1317447956 instance=ExtResource("3_br6mg")]
-position = Vector2(772, 4366)
+[node name="Car7" parent="." index="9" unique_id=321319911 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 106128)
+is_reverse = false
+
+[node name="Car8" parent="." index="10" unique_id=2118680724 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 108527)
+is_reverse = false
+
+[node name="Car9" parent="." index="11" unique_id=1337533649 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 113374)
+is_reverse = false
+
+[node name="Car10" parent="." index="12" unique_id=1862346416 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 116169)
+is_reverse = false
+
+[node name="Car11" parent="." index="13" unique_id=1910057875 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 117331)
+is_reverse = false
+
+[node name="Car13" parent="." index="14" unique_id=2086764799 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 89384.05)
+speed = 2500
+is_reverse = false
+
+[node name="Car14" parent="." index="15" unique_id=1258722503 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 92317.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car16" parent="." index="16" unique_id=1131863999 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 98643.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car17" parent="." index="17" unique_id=1133494917 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 103416.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car20" parent="." index="18" unique_id=1986604048 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 109030.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car21" parent="." index="19" unique_id=135965019 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 113877.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car23" parent="." index="20" unique_id=953892739 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 117834.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car24" parent="." index="21" unique_id=1327472265 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 120901.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car12" parent="." index="22" unique_id=1575098720 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 55102.953)
+is_reverse = false
+
+[node name="Car15" parent="." index="23" unique_id=444191955 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 58036)
+is_reverse = false
+
+[node name="Car18" parent="." index="24" unique_id=1985718431 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 60331)
+is_reverse = false
+
+[node name="Car19" parent="." index="25" unique_id=1411081338 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 64362)
+is_reverse = false
+
+[node name="Car22" parent="." index="26" unique_id=84005526 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 69135)
+is_reverse = false
+
+[node name="Car25" parent="." index="27" unique_id=39586024 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 70792)
+is_reverse = false
+
+[node name="Car26" parent="." index="28" unique_id=413344848 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 72350)
+is_reverse = false
+
+[node name="Car27" parent="." index="29" unique_id=30675665 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 74749)
+is_reverse = false
+
+[node name="Car28" parent="." index="30" unique_id=1242627334 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 79596)
+is_reverse = false
+
+[node name="Car29" parent="." index="31" unique_id=405636925 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 82391)
+is_reverse = false
+
+[node name="Car30" parent="." index="32" unique_id=558431962 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 83553)
+is_reverse = false
+
+[node name="Car31" parent="." index="33" unique_id=395028893 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 55606.047)
+speed = 2500
+is_reverse = false
+
+[node name="Car32" parent="." index="34" unique_id=1096347002 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 58539.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car33" parent="." index="35" unique_id=939242462 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 64865.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car34" parent="." index="36" unique_id=503897166 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 69638.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car35" parent="." index="37" unique_id=426934004 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 75252.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car36" parent="." index="38" unique_id=1987958571 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 80099.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car37" parent="." index="39" unique_id=278898397 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 84056.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car38" parent="." index="40" unique_id=2058134423 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 87123.09)
+speed = 2500
+is_reverse = false
+
+[node name="Car39" parent="." index="41" unique_id=900813757 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 20103.953)
+is_reverse = false
+
+[node name="Car40" parent="." index="42" unique_id=55146053 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 23037)
+is_reverse = false
+
+[node name="Car41" parent="." index="43" unique_id=1485809753 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 25332)
+is_reverse = false
+
+[node name="Car42" parent="." index="44" unique_id=2071769682 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 29363)
+is_reverse = false
+
+[node name="Car43" parent="." index="45" unique_id=620989991 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 34136)
+is_reverse = false
+
+[node name="Car44" parent="." index="46" unique_id=1637897366 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 35793)
+is_reverse = false
+
+[node name="Car45" parent="." index="47" unique_id=410618751 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 37351)
+is_reverse = false
+
+[node name="Car46" parent="." index="48" unique_id=1708436774 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 39750)
+is_reverse = false
+
+[node name="Car47" parent="." index="49" unique_id=142450047 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 44597)
+is_reverse = false
+
+[node name="Car48" parent="." index="50" unique_id=1401265166 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 47392)
+is_reverse = false
+
+[node name="Car49" parent="." index="51" unique_id=1929693307 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 48554)
+is_reverse = false
+
+[node name="Car50" parent="." index="52" unique_id=1270983173 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 20607.047)
+speed = 2500
+is_reverse = false
+
+[node name="Car51" parent="." index="53" unique_id=515132239 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 23540.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car52" parent="." index="54" unique_id=920537136 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 29866.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car53" parent="." index="55" unique_id=951143074 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 34639.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car54" parent="." index="56" unique_id=810869752 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 40253.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car55" parent="." index="57" unique_id=1191519127 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 45100.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car56" parent="." index="58" unique_id=1493843545 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 49057.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car57" parent="." index="59" unique_id=235994172 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 52124.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car62" parent="." index="60" unique_id=722261422 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 951)
+is_reverse = false
+
+[node name="Car63" parent="." index="61" unique_id=413708309 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 2608)
+is_reverse = false
+
+[node name="Car64" parent="." index="62" unique_id=105449823 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 4166)
+is_reverse = false
+
+[node name="Car65" parent="." index="63" unique_id=1541124852 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 6565)
+is_reverse = false
+
+[node name="Car66" parent="." index="64" unique_id=842484112 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 11412)
+is_reverse = false
+
+[node name="Car67" parent="." index="65" unique_id=1210132665 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 14207)
+is_reverse = false
+
+[node name="Car68" parent="." index="66" unique_id=816241126 instance=ExtResource("3_br6mg")]
+position = Vector2(14431, 15369)
+is_reverse = false
+
+[node name="Car72" parent="." index="67" unique_id=462028856 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 1454.0938)
+speed = 2500
+is_reverse = false
+
+[node name="Car73" parent="." index="68" unique_id=64946819 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 7068.0938)
+speed = 2500
+is_reverse = false
+
+[node name="Car74" parent="." index="69" unique_id=1910427935 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 11915.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car75" parent="." index="70" unique_id=414129105 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 15872.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car76" parent="." index="71" unique_id=853273211 instance=ExtResource("3_br6mg")]
+position = Vector2(13797.605, 18939.094)
+speed = 2500
+is_reverse = false
+
+[node name="Car58" parent="." index="72" unique_id=30111688 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 88880.95)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car59" parent="." index="73" unique_id=2103860210 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 91814)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car60" parent="." index="74" unique_id=426964339 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 94109)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car61" parent="." index="75" unique_id=588840158 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 98140)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car69" parent="." index="76" unique_id=1506262535 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 102913)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car70" parent="." index="77" unique_id=1219272007 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 104570)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car71" parent="." index="78" unique_id=941906046 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 106128)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car77" parent="." index="79" unique_id=69989273 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 108527)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car78" parent="." index="80" unique_id=1508925489 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 113374)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car79" parent="." index="81" unique_id=86017904 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 116169)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car80" parent="." index="82" unique_id=945377116 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 117331)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car81" parent="." index="83" unique_id=19822040 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 89384.05)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car82" parent="." index="84" unique_id=2091797351 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 92317.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car83" parent="." index="85" unique_id=606326448 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 98643.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car84" parent="." index="86" unique_id=1654559662 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 103416.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car85" parent="." index="87" unique_id=1155427958 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 109030.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car86" parent="." index="88" unique_id=698571221 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 113877.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car87" parent="." index="89" unique_id=972211291 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 117834.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car88" parent="." index="90" unique_id=1001377131 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 120901.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car89" parent="." index="91" unique_id=8235073 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 55102.953)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car90" parent="." index="92" unique_id=29334139 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 58036)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car91" parent="." index="93" unique_id=1994040549 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 60331)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car92" parent="." index="94" unique_id=1994183207 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 64362)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car93" parent="." index="95" unique_id=1771940793 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 69135)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car94" parent="." index="96" unique_id=690818853 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 70792)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car95" parent="." index="97" unique_id=701391257 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 72350)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car96" parent="." index="98" unique_id=848919829 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 74749)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car97" parent="." index="99" unique_id=436799161 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 79596)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car98" parent="." index="100" unique_id=67450582 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 82391)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car99" parent="." index="101" unique_id=281670175 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 83553)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car100" parent="." index="102" unique_id=797019852 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 55606.047)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car101" parent="." index="103" unique_id=1842159803 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 58539.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car102" parent="." index="104" unique_id=1503043709 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 64865.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car103" parent="." index="105" unique_id=924361462 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 69638.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car104" parent="." index="106" unique_id=1135304094 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 75252.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car105" parent="." index="107" unique_id=421776339 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 80099.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car106" parent="." index="108" unique_id=1984747854 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 84056.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car107" parent="." index="109" unique_id=830135787 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 87123.09)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car108" parent="." index="110" unique_id=1763727256 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 20103.953)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car109" parent="." index="111" unique_id=124367587 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 23037)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car110" parent="." index="112" unique_id=599191650 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 25332)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car111" parent="." index="113" unique_id=904913312 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 29363)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car112" parent="." index="114" unique_id=1151700068 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 34136)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car113" parent="." index="115" unique_id=1730879923 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 35793)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car114" parent="." index="116" unique_id=1099121066 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 37351)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car115" parent="." index="117" unique_id=874603995 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 39750)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car116" parent="." index="118" unique_id=1447827046 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 44597)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car117" parent="." index="119" unique_id=1854979373 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 47392)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car118" parent="." index="120" unique_id=1991024003 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 48554)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car119" parent="." index="121" unique_id=1173115938 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 20607.047)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car120" parent="." index="122" unique_id=1247502409 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 23540.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car121" parent="." index="123" unique_id=1364425623 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 29866.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car122" parent="." index="124" unique_id=512038211 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 34639.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car123" parent="." index="125" unique_id=1924000739 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 40253.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car124" parent="." index="126" unique_id=853750672 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 45100.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car125" parent="." index="127" unique_id=118338508 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 49057.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car126" parent="." index="128" unique_id=1797395686 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 52124.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car127" parent="." index="129" unique_id=2118718425 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 951)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car128" parent="." index="130" unique_id=326521183 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 2608)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car129" parent="." index="131" unique_id=1107082563 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 4166)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car130" parent="." index="132" unique_id=1084415048 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 6565)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car131" parent="." index="133" unique_id=1303554659 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 11412)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car132" parent="." index="134" unique_id=1203839803 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 14207)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car133" parent="." index="135" unique_id=1041279002 instance=ExtResource("3_br6mg")]
+position = Vector2(13129.395, 15369)
+rotation = 3.1415927
+is_reverse = true
+
+[node name="Car134" parent="." index="136" unique_id=901335292 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 1454.0938)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car135" parent="." index="137" unique_id=1155190571 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 7068.0938)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car136" parent="." index="138" unique_id=936097656 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 11915.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car137" parent="." index="139" unique_id=1347657568 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 15872.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Car138" parent="." index="140" unique_id=1956368770 instance=ExtResource("3_br6mg")]
+position = Vector2(12496, 18939.094)
+rotation = 3.1415927
+speed = 2500
+is_reverse = true
+
+[node name="Barrier" parent="." index="141" unique_id=1505908857 instance=ExtResource("5_4t8un")]
+position = Vector2(13458, 73251)
+rotation = 3.1415927
+scale = Vector2(0.56, 100)
+
+[node name="Barrier3" parent="." index="142" unique_id=749064968 instance=ExtResource("5_4t8un")]
+position = Vector2(12163.999, 73251)
+rotation = 3.1415927
+scale = Vector2(0.56, 100)
+
+[node name="Barrier2" parent="." index="143" unique_id=373625437 instance=ExtResource("5_4t8un")]
+position = Vector2(14754, 59911)
+scale = Vector2(0.56, 38)
