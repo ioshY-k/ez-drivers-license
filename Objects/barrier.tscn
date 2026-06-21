@@ -21,6 +21,7 @@ texture = SubResource("GradientTexture2D_edw11")
 [node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D" unique_id=1940333186]
 position = Vector2(0, -25.659443)
 scale = Vector2(1, 0.19814241)
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D" unique_id=1031620668]
 position = Vector2(0, 129.5)

@@ -11,9 +11,11 @@ size = Vector2(93, 154)
 script = ExtResource("2_prmxb")
 
 [node name="Sprite2D" parent="." index="0" unique_id=742387692]
-visible = true
 texture = ExtResource("2_fn500")
 
-[node name="CollisionShape2D" parent="DeathObjectArea" parent_id_path=PackedInt32Array(863283214) index="0" unique_id=800245286]
+[node name="DeathObjectArea" parent="." index="1" unique_id=863283214]
+collision_layer = 2
+
+[node name="CollisionShape2D" parent="DeathObjectArea" index="0" unique_id=800245286]
 position = Vector2(3, 7)
 shape = SubResource("RectangleShape2D_8gdvq")

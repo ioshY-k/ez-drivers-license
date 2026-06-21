@@ -1,57 +1,63 @@
 [gd_scene format=3 uid="uid://dugyrmw88lsdj"]
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_ruw55"]
-[ext_resource type="Texture2D" uid="uid://66pbfdmjxr56" path="res://Resources/Parking lot.webp" id="2_v44il"]
+[ext_resource type="Texture2D" uid="uid://dkwu1ie8bsyiw" path="res://Levels/Level1.svg" id="2_ruw55"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_c8o6p"]
-[ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="4_rg61p"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_s42oh"]
-[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="6_jgx74"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_6m3et"]
+[ext_resource type="Script" uid="uid://c3n1k2l25athm" path="res://Levels/dialog01.gd" id="7_c8o6p"]
+[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
+[ext_resource type="PackedScene" uid="uid://dabbknjqm7m8y" path="res://Objects/DeathZone.tscn" id="7_v44il"]
+[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
 
-[node name="TestLevel" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
+[node name="Level1" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_ruw55")
-goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("FinalGoal")]
+goals = [NodePath("FinalGoal")]
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
-position = Vector2(4301, -369.99994)
-scale = Vector2(17.294426, 17.29442)
-texture = ExtResource("2_v44il")
+scale = Vector2(2.4066217, 2.4066212)
+texture = ExtResource("2_ruw55")
 
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("3_c8o6p")]
 z_index = 0
-position = Vector2(718, 1418.0001)
-rotation = -4.7682395
-
-[node name="Pylon2" parent="." unique_id=1570670863 instance=ExtResource("4_rg61p")]
-position = Vector2(2805, 521)
-
-[node name="Pylon3" parent="." unique_id=406770589 instance=ExtResource("4_rg61p")]
-position = Vector2(4135, 514)
-
-[node name="Pylon4" parent="." unique_id=718796045 instance=ExtResource("4_rg61p")]
-position = Vector2(5234, 519)
-
-[node name="Barrier" parent="." unique_id=1505908857 instance=ExtResource("5_s42oh")]
-position = Vector2(1070, 1850)
-rotation = -1.5707964
+position = Vector2(-293, 937)
+rotation = -6.2831855
 
 [node name="Barrier2" parent="." unique_id=1055646237 instance=ExtResource("5_s42oh")]
-position = Vector2(2311, 1850)
-rotation = -1.5707964
+position = Vector2(-1980, 486)
+rotation = -3.1415927
+scale = Vector2(0.83965796, 2.9702802)
 
-[node name="Barrier3" parent="." unique_id=332296758 instance=ExtResource("5_s42oh")]
-position = Vector2(3557, 1850)
-rotation = -1.5707964
+[node name="Barrier3" parent="." unique_id=1505908857 instance=ExtResource("5_s42oh")]
+position = Vector2(1436.0001, 504)
+rotation = -3.1415927
+scale = Vector2(0.83965796, 2.9702802)
 
-[node name="Barrier4" parent="." unique_id=1878571704 instance=ExtResource("5_s42oh")]
-position = Vector2(4797, 1850)
-rotation = -1.5707964
+[node name="Pylon" parent="." unique_id=1246131004 instance=ExtResource("7_v44il")]
+position = Vector2(-301, 1415)
 
-[node name="Goal" parent="." unique_id=1373093036 instance=ExtResource("6_jgx74")]
-position = Vector2(3229, 1279)
+[node name="FinalGoal" parent="." unique_id=1373093036 instance=ExtResource("7_6m3et")]
+position = Vector2(-1833.0001, -1207)
+scale = Vector2(4.892196, 1.7799824)
 
-[node name="Goal2" parent="." unique_id=1920335274 instance=ExtResource("6_jgx74")]
-position = Vector2(4374, 1288)
+[node name="DialogCanvas" type="CanvasLayer" parent="." unique_id=402335558]
+script = ExtResource("7_c8o6p")
 
-[node name="FinalGoal" parent="." unique_id=561790101 instance=ExtResource("7_6m3et")]
-position = Vector2(5688, 1310)
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas" unique_id=264914267]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("7_ruw55")
+
+[node name="DialogText" type="Label" parent="DialogCanvas" unique_id=2101077533]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 27
+theme_override_fonts/font = ExtResource("8_v44il")
+theme_override_font_sizes/font_size = 46
+vertical_alignment = 1
+autowrap_mode = 2
