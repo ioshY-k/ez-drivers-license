@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://dugyrmw88lsdj"]
+
+[ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_ruw55"]
+[ext_resource type="Texture2D" uid="uid://66pbfdmjxr56" path="res://Resources/Parking lot.webp" id="2_v44il"]
+[ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_c8o6p"]
+[ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="4_rg61p"]
+[ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_s42oh"]
+[ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="6_jgx74"]
+[ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_6m3et"]
+
+[node name="TestLevel" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
+script = ExtResource("1_ruw55")
+goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("FinalGoal")]
+
+[node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
+position = Vector2(4301, -369.99994)
+scale = Vector2(17.294426, 17.29442)
+texture = ExtResource("2_v44il")
+
+[node name="Player" parent="." unique_id=952234042 instance=ExtResource("3_c8o6p")]
+z_index = 0
+position = Vector2(718, 1418.0001)
+rotation = -4.7682395
+
+[node name="Pylon2" parent="." unique_id=1570670863 instance=ExtResource("4_rg61p")]
+position = Vector2(2805, 521)
+
+[node name="Pylon3" parent="." unique_id=406770589 instance=ExtResource("4_rg61p")]
+position = Vector2(4135, 514)
+
+[node name="Pylon4" parent="." unique_id=718796045 instance=ExtResource("4_rg61p")]
+position = Vector2(5234, 519)
+
+[node name="Barrier" parent="." unique_id=1505908857 instance=ExtResource("5_s42oh")]
+position = Vector2(1070, 1850)
+rotation = -1.5707964
+
+[node name="Barrier2" parent="." unique_id=1055646237 instance=ExtResource("5_s42oh")]
+position = Vector2(2311, 1850)
+rotation = -1.5707964
+
+[node name="Barrier3" parent="." unique_id=332296758 instance=ExtResource("5_s42oh")]
+position = Vector2(3557, 1850)
+rotation = -1.5707964
+
+[node name="Barrier4" parent="." unique_id=1878571704 instance=ExtResource("5_s42oh")]
+position = Vector2(4797, 1850)
+rotation = -1.5707964
+
+[node name="Goal" parent="." unique_id=1373093036 instance=ExtResource("6_jgx74")]
+position = Vector2(3229, 1279)
+
+[node name="Goal2" parent="." unique_id=1920335274 instance=ExtResource("6_jgx74")]
+position = Vector2(4374, 1288)
+
+[node name="FinalGoal" parent="." unique_id=561790101 instance=ExtResource("7_6m3et")]
+position = Vector2(5688, 1310)
