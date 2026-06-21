@@ -3,6 +3,8 @@ class_name Player extends CharacterBody2D
 @onready var player_camera: Camera2D = $Camera2D
 @onready var player_sprite: PlayerSprite = $PlayerSprite
 @onready var crashed_timer: Timer = $CrashedTimer
+@onready var speedometer: Speedometer = $CanvasLayer/Speedometer
+
 
 var speed = 0
 var rotation_modifier = 0
@@ -17,6 +19,7 @@ func _process(delta: float) -> void:
 	if not player_crashed:
 		move_player(delta)
 	animate_player()
+	animate_speedometer()
 	
 	print(velocity, speed)
 	
@@ -24,7 +27,7 @@ func _process(delta: float) -> void:
 func turn_player(delta):
 	if is_first_acceleration:
 		return
-	# Turn Player
+		
 	if Input.is_action_pressed("TurnLeft"):
 		if speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 			crash_player()
@@ -48,8 +51,6 @@ func turn_player(delta):
 	
 	
 func move_player(delta):	
-	
-	# Move Player	
 	if Input.is_action_just_pressed("Accelerate"):
 		speed += GameConsts.PLAYER_ACCELERATION_VALUE * delta
 	elif Input.is_action_just_pressed("Decelerate"):
@@ -102,6 +103,10 @@ func animate_player():
 	
 	
 
+
+func animate_speedometer():
+	speedometer.animate_needle(speed)
+	
 
 func crash_player():
 	player_crashed = true
