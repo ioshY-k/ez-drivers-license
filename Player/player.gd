@@ -14,6 +14,12 @@ var is_first_acceleration = true
 
 func _ready() -> void:
 	player_camera.make_current()
+	SignalBus.freeze_player.connect(func():
+		set_process_mode(Node.PROCESS_MODE_DISABLED)
+		)
+	SignalBus.unfreeze_player.connect(func():
+		set_process_mode(Node.PROCESS_MODE_INHERIT)
+		)
 
 func _process(delta: float) -> void:
 	if not player_crashed:

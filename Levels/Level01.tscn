@@ -9,6 +9,126 @@
 [ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
 [ext_resource type="PackedScene" uid="uid://dabbknjqm7m8y" path="res://Objects/DeathZone.tscn" id="7_v44il"]
 [ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
+[ext_resource type="Script" uid="uid://d2ppta76mlill" path="res://Levels/dialog02.gd" id="10_rg61p"]
+[ext_resource type="Texture2D" uid="uid://cwqj1i5jehijp" path="res://UI/TutorialMouse.svg" id="11_jgx74"]
+[ext_resource type="Texture2D" uid="uid://b4iwa6fv63bde" path="res://UI/TutorialMouseReversed.svg" id="12_6m3et"]
+
+[sub_resource type="Animation" id="Animation_jgx74"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogCanvas2/MouseTutorialSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DialogCanvas2/MouseTutorialSprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1127, 631)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogCanvas2/MouseTutorialSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6m3et"]
+resource_name = "Tutorial"
+length = 12.0
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("DialogCanvas2/MouseTutorialSprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 11, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("DialogCanvas2/MouseTutorialSprite:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.3999996, 4.2, 4.6, 5.2000003, 6.2, 7, 7.3999996, 8, 9.2, 10, 10.400001, 11.000001, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1127, 631), Vector2(1127, 631), Vector2(1127, 482.48), Vector2(1127, 482.48), Vector2(1127, 631), Vector2(1127, 631), Vector2(1127, 482.48), Vector2(1127, 482.48), Vector2(1127, 631), Vector2(1127, 631), Vector2(1127, 482.48), Vector2(1127, 482.48), Vector2(1127, 631), Vector2(1127, 631)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("DialogCanvas2/MouseTutorialSprite:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1, 1.6, 2.2, 2.8, 3.3999996, 4, 4.4, 5.6, 6.2, 6.8, 7.2, 8.6, 9.2, 9.8, 10.200001, 12),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1e-05, 1), Vector2(1, 1), Vector2(1, 1), Vector2(0.825, 0.825), Vector2(0.825, 0.825), Vector2(1, 1), Vector2(1, 1), Vector2(0.825, 0.825), Vector2(0.825, 0.825), Vector2(1, 1), Vector2(1, 1), Vector2(0.825, 0.825), Vector2(0.825, 0.825), Vector2(1, 1), Vector2(1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogCanvas2")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.6),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"swap_mouse_frame"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fyt5t"]
+_data = {
+&"RESET": SubResource("Animation_jgx74"),
+&"Tutorial": SubResource("Animation_6m3et")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bv6uq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_jgx74")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_6m3et")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6uq"]
+size = Vector2(3115, 121)
 
 [node name="Level1" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_ruw55")
@@ -40,15 +160,15 @@ position = Vector2(-301, 1415)
 position = Vector2(-1833.0001, -1207)
 scale = Vector2(4.892196, 1.7799824)
 
-[node name="DialogCanvas" type="CanvasLayer" parent="." unique_id=402335558]
+[node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=402335558]
 script = ExtResource("7_c8o6p")
 
-[node name="DialogBox" type="Sprite2D" parent="DialogCanvas" unique_id=264914267]
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas1" unique_id=264914267]
 position = Vector2(844, 220)
 scale = Vector2(1.1805139, 0.61717284)
 texture = ExtResource("7_ruw55")
 
-[node name="DialogText" type="Label" parent="DialogCanvas" unique_id=2101077533]
+[node name="DialogText" type="Label" parent="DialogCanvas1" unique_id=2101077533]
 custom_minimum_size = Vector2(870.96, 200)
 offset_left = 442.0
 offset_top = 123.0
@@ -61,3 +181,48 @@ theme_override_fonts/font = ExtResource("8_v44il")
 theme_override_font_sizes/font_size = 46
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="DialogCanvas2" type="CanvasLayer" parent="." unique_id=1938387961]
+unique_name_in_owner = true
+script = ExtResource("10_rg61p")
+
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas2" unique_id=858218801]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("7_ruw55")
+
+[node name="DialogText" type="Label" parent="DialogCanvas2" unique_id=380820244]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("8_v44il")
+theme_override_font_sizes/font_size = 46
+text = "efwefewfefwbbbbb"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="TutorialAnimationPlayer" type="AnimationPlayer" parent="DialogCanvas2" unique_id=1851132559]
+unique_name_in_owner = true
+root_node = NodePath("../..")
+libraries/ = SubResource("AnimationLibrary_fyt5t")
+
+[node name="MouseTutorialSprite" type="AnimatedSprite2D" parent="DialogCanvas2" unique_id=634222569]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(1127, 631)
+sprite_frames = SubResource("SpriteFrames_bv6uq")
+
+[node name="DialogTrigger" type="Area2D" parent="." unique_id=752477591]
+collision_layer = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=194837207]
+position = Vector2(-285, 179)
+shape = SubResource("RectangleShape2D_bv6uq")
+
+[connection signal="area_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_area_entered"]
+[connection signal="body_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_body_entered"]

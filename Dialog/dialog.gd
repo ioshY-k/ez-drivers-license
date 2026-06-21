@@ -20,6 +20,7 @@ func _process(delta: float) -> void:
 func next_sentence():
 	if not dialog_started:
 		dialog_started = true
+		SignalBus.freeze_player.emit()
 		var tween = get_tree().create_tween().set_trans(Tween.TRANS_BACK). set_ease(Tween.EASE_IN)
 		tween.tween_property(dialog_box,"scale", Vector2(1.181,0.617), 0.4)
 		tween.tween_property(dialog_text,"modulate:a", 1, 0.2)
@@ -36,6 +37,9 @@ func close_dialog():
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_BACK). set_ease(Tween.EASE_IN).set_parallel(true)
 	tween.tween_property(dialog_box,"scale", Vector2.ZERO, 0.4)
 	tween.tween_property(dialog_text,"modulate:a", 0, 0.2)
+	SignalBus.unfreeze_player.emit()
+	await tween.finished
+	queue_free()
 	
 
 func wobble_box():

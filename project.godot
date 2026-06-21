@@ -72,6 +72,7 @@ Honk={
 2d_physics/layer_3="GoalObjects"
 2d_physics/layer_4="Goal"
 2d_physics/layer_5="Barriers"
+2d_physics/layer_6="DialogTrigger"
 
 [physics]
 
