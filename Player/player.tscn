@@ -8,7 +8,7 @@
 size = Vector2(121, 120)
 
 [node name="Player" type="CharacterBody2D" unique_id=226948684]
-z_index = 2
+z_index = 10
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 
@@ -25,6 +25,7 @@ position = Vector2(-0.5, -1)
 shape = SubResource("RectangleShape2D_edw11")
 
 [node name="PlayerSprite" parent="." unique_id=1891064485 instance=ExtResource("2_4ntmi")]
+z_index = 5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1446688658]
 

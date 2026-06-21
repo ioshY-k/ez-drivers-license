@@ -15,9 +15,9 @@ func _ready() -> void:
 	player_camera.make_current()
 
 func _process(delta: float) -> void:
-	turn_player(delta)
 	if not player_crashed:
 		move_player(delta)
+		turn_player(delta)
 	animate_player()
 	animate_speedometer()
 	
@@ -101,13 +101,10 @@ func animate_player():
 		player_sprite.feet_accelerate_anim()
 		player_sprite.reset_dash_timer()
 	
-	
-
 
 func animate_speedometer():
 	speedometer.animate_needle(speed)
 	
-
 func crash_player():
 	player_crashed = true
 	speed = 0
@@ -121,3 +118,4 @@ func _on_crashed_timer_timeout() -> void:
 	player_sprite.modulate = Color(1, 1, 1)
 	player_crashed = false
 	player_sprite.is_falling = false
+	player_sprite.feet_stand_anim()
