@@ -23,13 +23,16 @@ position = Vector2(718, 1418.0001)
 rotation = -4.7682395
 
 [node name="Pylon2" parent="." unique_id=1570670863 instance=ExtResource("3_y1yrn")]
-position = Vector2(2805, 521)
+position = Vector2(2831, -1666)
 
 [node name="Pylon3" parent="." unique_id=406770589 instance=ExtResource("3_y1yrn")]
-position = Vector2(4135, 514)
+position = Vector2(4172, -1673)
 
 [node name="Pylon4" parent="." unique_id=718796045 instance=ExtResource("3_y1yrn")]
-position = Vector2(5234, 519)
+position = Vector2(5727, -1694)
+
+[node name="Pylon5" parent="." unique_id=1246131004 instance=ExtResource("3_y1yrn")]
+position = Vector2(6885, -1668)
 
 [node name="Barrier" parent="." unique_id=1505908857 instance=ExtResource("5_2yvdw")]
 position = Vector2(1070, 1850)

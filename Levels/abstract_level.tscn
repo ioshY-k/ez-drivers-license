@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://bsyknb62rd6hb"]
+
+[ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_n8kll"]
+[ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="2_50kc2"]
+
+[node name="AbstractLevel" type="Node2D" unique_id=525293221]
+script = ExtResource("1_n8kll")
+
+[node name="LevelSprite" type="Sprite2D" parent="." unique_id=1581375976]
+position = Vector2(3580.0002, 1165)
+scale = Vector2(2.4778337, 2.4778333)
+
+[node name="Player" parent="." unique_id=226948684 instance=ExtResource("2_50kc2")]
+z_index = 0
+position = Vector2(718, 1418.0001)
+rotation = -4.7682395

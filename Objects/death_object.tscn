@@ -8,6 +8,7 @@ script = ExtResource("1_8gdvq")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=742387692]
 
 [node name="DeathObjectArea" type="Area2D" parent="." unique_id=863283214]
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeathObjectArea" unique_id=800245286]
 
