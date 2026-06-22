@@ -41,6 +41,16 @@ func close_dialog():
 	SignalBus.unfreeze_player.emit()
 	dialog_ended.emit()
 	await tween.finished
+	if name == "IntroDialog":
+		print("intro")
+		var dialog1 = preload("uid://dy00r01xoc7xb").instantiate()
+		var dialog2 = preload("uid://e7u53l1gbftq").instantiate()
+		var dialog3 = preload("uid://bwvxtyhyt8xel").instantiate()
+		get_parent().add_child(dialog1)
+		get_parent().add_child(dialog2)
+		get_parent().add_child(dialog3)
+		
+		
 	queue_free()
 	
 

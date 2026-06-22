@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bwvxtyhyt8xel"]
+
+[ext_resource type="Script" uid="uid://dqcw7hbqwyxvp" path="res://Levels/dialogWrongButton3.gd" id="1_4hpqb"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="2_g6egb"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="3_vhylp"]
+
+[node name="DialogCanvas5" type="CanvasLayer" unique_id=1549919762]
+script = ExtResource("1_4hpqb")
+
+[node name="DialogBox" type="Sprite2D" parent="." unique_id=1847583335]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("2_g6egb")
+
+[node name="DialogText" type="Label" parent="." unique_id=483029475]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_vhylp")
+theme_override_font_sizes/font_size = 46
+text = "efwefewfefwbbbbb"
+vertical_alignment = 1
+autowrap_mode = 2

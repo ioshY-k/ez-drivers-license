@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_2yvhy"]
 [ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="9_hd63s"]
+[ext_resource type="AudioStream" uid="uid://d0csqvsuoudsa" path="res://Sounds/Danger ahead.wav" id="10_mpd7r"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd63s"]
 _data = {
@@ -62,7 +63,7 @@ offset_right = 1312.96
 offset_bottom = 323.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 27
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("5_tbwc5")
 theme_override_font_sizes/font_size = 46
 vertical_alignment = 1
@@ -191,3 +192,8 @@ autowrap_mode = 2
 [node name="Honk" type="AudioStreamPlayer" parent="." index="13" unique_id=219199264]
 stream = ExtResource("9_hd63s")
 pitch_scale = 1.59
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="14" unique_id=1163643549]
+stream = ExtResource("10_mpd7r")
+volume_db = -10.0
+autoplay = true

@@ -17,6 +17,16 @@ point_count = 4
 [sub_resource type="Gradient" id="Gradient_gwnis"]
 colors = PackedColorArray(0.44136548, 0.4413655, 0.4413655, 1, 1, 1, 1, 1)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k53q1"]
+load_path = "res://.godot/imported/Speed Particle.png-910cfc00cf47c4fad81cc49d93ad4f5b.ctex"
+
+[sub_resource type="Curve" id="Curve_fhl08"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.229572, 0.5931559), 0.0, 0.0, 0, 0, Vector2(0.5233463, 0.88973385), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_vtle1"]
+colors = PackedColorArray(0.22937626, 0.6837274, 0.88113135, 1, 1, 1, 1, 1)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_podkt"]
 
 [node name="Player" type="CharacterBody2D" unique_id=226948684]
@@ -45,17 +55,28 @@ position = Vector2(1564, 831)
 scale = Vector2(1.14, 1.14)
 
 [node name="Restart Info" type="Label" parent="CanvasLayer" unique_id=1031473705]
-offset_left = 807.0
-offset_top = 953.0
-offset_right = 1317.0
-offset_bottom = 1031.0
-theme_override_constants/outline_size = 41
+offset_left = 10.0
+offset_top = 1031.0
+offset_right = 520.0
+offset_bottom = 1109.0
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("4_k53q1")
-theme_override_font_sizes/font_size = 77
+theme_override_font_sizes/font_size = 50
 text = "\"R\" Restart"
+
+[node name="Restart Info2" type="Label" parent="CanvasLayer" unique_id=48187217]
+offset_left = 10.0
+offset_top = 964.0
+offset_right = 520.0
+offset_bottom = 1042.0
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("4_k53q1")
+theme_override_font_sizes/font_size = 50
+text = "\"l\" Skip Level"
 
 [node name="SpeedParticles" type="CPUParticles2D" parent="." unique_id=1691356526]
 position = Vector2(0, 26)
+emitting = false
 amount = 20
 texture = ExtResource("4_gwnis")
 lifetime = 2.5
@@ -73,6 +94,26 @@ scale_amount_min = 0.4
 scale_amount_max = 0.7
 scale_amount_curve = SubResource("Curve_btcbx")
 color_initial_ramp = SubResource("Gradient_gwnis")
+
+[node name="HyperSpeedParticles" type="CPUParticles2D" parent="." unique_id=1326491829]
+position = Vector2(0, 26)
+emitting = false
+amount = 20
+texture = SubResource("CompressedTexture2D_k53q1")
+lifetime = 2.5
+speed_scale = 4.58
+randomness = 0.15
+emission_shape = 3
+emission_rect_extents = Vector2(191.05, 0)
+particle_flag_align_y = true
+direction = Vector2(0, 1)
+spread = 2.76
+gravity = Vector2(0, 0)
+initial_velocity_min = 102.89
+initial_velocity_max = 229.24
+scale_amount_max = 1.4
+scale_amount_curve = SubResource("Curve_fhl08")
+color_initial_ramp = SubResource("Gradient_vtle1")
 
 [node name="GoalCheckFront" type="Area2D" parent="." unique_id=1284778011]
 collision_layer = 8

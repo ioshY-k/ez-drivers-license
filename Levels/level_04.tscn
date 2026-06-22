@@ -7,8 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_3mdkx"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="6_8w6fg"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="7_np8y1"]
+[ext_resource type="AudioStream" uid="uid://bgfic1m2hc0al" path="res://Sounds/The final boss.wav" id="8_424uw"]
+[ext_resource type="Script" uid="uid://b1jav7l14cyek" path="res://Dialog/dialog06.gd" id="9_d7i4m"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="10_2v171"]
 
-[node name="Level04" unique_id=525293221 instance=ExtResource("1_5ttfp")]
+[node name="Level04" unique_id=525293221 node_paths=PackedStringArray("goals") instance=ExtResource("1_5ttfp")]
+goals = [NodePath("FinalGoal")]
 camera_zoom = 0.25
 
 [node name="LevelSprite" parent="." index="0" unique_id=1581375976]
@@ -881,3 +885,30 @@ autowrap_mode = 2
 [node name="Honk" type="AudioStreamPlayer" parent="." index="147" unique_id=665553551]
 stream = ExtResource("7_np8y1")
 pitch_scale = 1.59
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="148" unique_id=1944492765]
+stream = ExtResource("8_424uw")
+volume_db = -10.0
+autoplay = true
+
+[node name="DialogCanvas1" type="CanvasLayer" parent="." index="149" unique_id=550989547]
+script = ExtResource("9_d7i4m")
+
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas1" index="0" unique_id=1146177299]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("10_2v171")
+
+[node name="DialogText" type="Label" parent="DialogCanvas1" index="1" unique_id=192351540]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("6_8w6fg")
+theme_override_font_sizes/font_size = 46
+vertical_alignment = 1
+autowrap_mode = 2

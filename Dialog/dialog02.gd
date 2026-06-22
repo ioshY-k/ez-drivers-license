@@ -13,7 +13,7 @@ func _ready() -> void:
 func _on_dialog_trigger_body_entered(body: Node2D) -> void:
 	start_dialog.emit()
 	await get_tree().create_timer(5).timeout
-	%TutorialAnimationPlayer.play("Tutorial")
+	%TutorialAnimationPlayer.play("Turn")
 
 func swap_mouse_frame():
 	%MouseTutorialSprite.frame = 1

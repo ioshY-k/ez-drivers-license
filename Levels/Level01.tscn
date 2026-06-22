@@ -9,10 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
 [ext_resource type="PackedScene" uid="uid://dabbknjqm7m8y" path="res://Objects/DeathZone.tscn" id="7_v44il"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
-[ext_resource type="Script" uid="uid://d2ppta76mlill" path="res://Dialog/dialog02.gd" id="10_rg61p"]
+[ext_resource type="Script" uid="uid://pbp1mwdwtrhv" path="res://Dialog/dialog01b.gd" id="10_6m3et"]
 [ext_resource type="Texture2D" uid="uid://cwqj1i5jehijp" path="res://UI/TutorialMouse.svg" id="11_jgx74"]
 [ext_resource type="Texture2D" uid="uid://b4iwa6fv63bde" path="res://UI/TutorialMouseReversed.svg" id="12_6m3et"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="13_6m3et"]
+[ext_resource type="AudioStream" uid="uid://cv57slwtcvc1b" path="res://Sounds/1 Bit adventure.wav" id="14_fyt5t"]
 
 [sub_resource type="Animation" id="Animation_jgx74"]
 length = 0.001
@@ -162,15 +163,15 @@ position = Vector2(-1271, -1513)
 rotation = 0.0008345023
 scale = Vector2(3.2204745, 2.8317366)
 
-[node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=402335558]
+[node name="IntroDialog" type="CanvasLayer" parent="." unique_id=402335558]
 script = ExtResource("7_c8o6p")
 
-[node name="DialogBox" type="Sprite2D" parent="DialogCanvas1" unique_id=264914267]
+[node name="DialogBox" type="Sprite2D" parent="IntroDialog" unique_id=264914267]
 position = Vector2(844, 220)
 scale = Vector2(1.1805139, 0.61717284)
 texture = ExtResource("7_ruw55")
 
-[node name="DialogText" type="Label" parent="DialogCanvas1" unique_id=2101077533]
+[node name="DialogText" type="Label" parent="IntroDialog" unique_id=2101077533]
 custom_minimum_size = Vector2(870.96, 200)
 offset_left = 442.0
 offset_top = 123.0
@@ -178,7 +179,7 @@ offset_right = 1312.96
 offset_bottom = 323.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 27
+theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("8_v44il")
 theme_override_font_sizes/font_size = 46
 vertical_alignment = 1
@@ -186,7 +187,7 @@ autowrap_mode = 2
 
 [node name="DialogCanvas2" type="CanvasLayer" parent="." unique_id=1938387961]
 unique_name_in_owner = true
-script = ExtResource("10_rg61p")
+script = ExtResource("10_6m3et")
 
 [node name="DialogBox" type="Sprite2D" parent="DialogCanvas2" unique_id=858218801]
 position = Vector2(844, 220)
@@ -301,5 +302,10 @@ autowrap_mode = 2
 [node name="Honk" type="AudioStreamPlayer" parent="." unique_id=2038404236]
 stream = ExtResource("13_6m3et")
 pitch_scale = 1.59
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1026313788]
+stream = ExtResource("14_fyt5t")
+volume_db = -10.0
+autoplay = true
 
 [connection signal="body_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_body_entered"]

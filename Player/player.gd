@@ -5,6 +5,7 @@ class_name Player extends CharacterBody2D
 @onready var crashed_timer: Timer = $CrashedTimer
 @onready var speedometer: Speedometer = $CanvasLayer/Speedometer
 @onready var speed_particles: CPUParticles2D = $SpeedParticles
+@onready var hyper_speed_particles: CPUParticles2D = $HyperSpeedParticles
 
 
 var speed = 0
@@ -66,7 +67,7 @@ func move_player(delta):
 	if speed > GameConsts.PLAYER_SPEED_THRESHOLD_FAST:
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)
 		speed_particles.emitting = true
-		print("speedy ")
+		#print("speedy ")
 	elif speed > GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 		is_first_acceleration = false
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)
@@ -87,7 +88,12 @@ func move_player(delta):
 	if speed == 0:
 		is_first_acceleration = true
 	
-	velocity = Vector2(0, -1).rotated(rotation) * speed
+	if speed <= GameConsts.PLAYER_MAX_VELOCITY - 10:
+		velocity = Vector2(0, -1).rotated(rotation) * speed
+		hyper_speed_particles.emitting = false
+	else:
+		velocity = Vector2(0, -1).rotated(rotation) * speed * 1.6
+		hyper_speed_particles.emitting = true
 	
 	move_and_slide()
 	

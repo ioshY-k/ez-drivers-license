@@ -10,6 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="8_sl3bh"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="9_c6h1j"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="10_77qhy"]
+[ext_resource type="AudioStream" uid="uid://c7vpajiy2dqm1" path="res://Sounds/Hip hop pop.wav" id="11_q8n88"]
+[ext_resource type="Script" uid="uid://cbdyxa12ihhce" path="res://Dialog/dialog07.gd" id="12_mvbqm"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="13_y1f64"]
 
 [node name="Level02" type="Node2D" unique_id=752677405 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_hia0g")
@@ -40,10 +43,14 @@ scale = Vector2(2.5313625, 0.80522335)
 position = Vector2(4014, 1462)
 
 [node name="Goal2" parent="." unique_id=206343919 instance=ExtResource("4_sl3bh")]
-position = Vector2(2604, 1898)
+position = Vector2(2625.0002, 1984)
+rotation = 0.008219433
+scale = Vector2(0.6674952, 0.48354694)
 
 [node name="FinalGoal" parent="." unique_id=1351538883 instance=ExtResource("5_c6h1j")]
-position = Vector2(3231, 1899)
+position = Vector2(3408, 1983)
+rotation = 0.022769324
+scale = Vector2(0.6290285, 0.47288984)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2146640016]
 position = Vector2(2110.9998, 2021.0001)
@@ -154,3 +161,30 @@ autowrap_mode = 2
 [node name="Honk" type="AudioStreamPlayer" parent="." unique_id=1626982915]
 stream = ExtResource("10_77qhy")
 pitch_scale = 1.59
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1265193166]
+stream = ExtResource("11_q8n88")
+volume_db = -10.0
+autoplay = true
+
+[node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=1352379985]
+script = ExtResource("12_mvbqm")
+
+[node name="DialogBox" type="Sprite2D" parent="DialogCanvas1" unique_id=1106727653]
+position = Vector2(844, 220)
+scale = Vector2(1.1805139, 0.61717284)
+texture = ExtResource("13_y1f64")
+
+[node name="DialogText" type="Label" parent="DialogCanvas1" unique_id=1976290846]
+custom_minimum_size = Vector2(870.96, 200)
+offset_left = 442.0
+offset_top = 123.0
+offset_right = 1312.96
+offset_bottom = 323.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_c6h1j")
+theme_override_font_sizes/font_size = 46
+vertical_alignment = 1
+autowrap_mode = 2
