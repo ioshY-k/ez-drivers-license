@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://tnvvg414kgfq"]
 
-[node name="SceneHandler" type="Node2D" unique_id=1258734176]
+[ext_resource type="Script" uid="uid://cpikwe1qeqng6" path="res://SceneHandler/scene_handler.gd" id="1_gp7cg"]
 
-[node name="Node2D" type="Node2D" parent="." unique_id=645224760]
+[node name="SceneHandler" type="Node2D" unique_id=1258734176]
+script = ExtResource("1_gp7cg")
+
+[node name="Node" type="Node" parent="." unique_id=1983131382]

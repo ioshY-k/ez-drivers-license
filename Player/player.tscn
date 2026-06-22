@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2cb7shxky4j" path="res://Player/player_sprite.tscn" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://b5dq2qpj4orwi" path="res://UI/speedometer.tscn" id="3_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c277tpnvhyean" path="res://Resources/Speed Particle.png" id="4_gwnis"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
 radius = 39.5
@@ -42,6 +43,16 @@ z_index = 5
 [node name="Speedometer" parent="CanvasLayer" unique_id=1646272472 instance=ExtResource("3_btcbx")]
 position = Vector2(1564, 831)
 scale = Vector2(1.14, 1.14)
+
+[node name="Restart Info" type="Label" parent="CanvasLayer" unique_id=1031473705]
+offset_left = 807.0
+offset_top = 953.0
+offset_right = 1317.0
+offset_bottom = 1031.0
+theme_override_constants/outline_size = 41
+theme_override_fonts/font = ExtResource("4_k53q1")
+theme_override_font_sizes/font_size = 77
+text = "\"R\" Restart"
 
 [node name="SpeedParticles" type="CPUParticles2D" parent="." unique_id=1691356526]
 position = Vector2(0, 26)

@@ -24,13 +24,15 @@ func _on_player_died():
 	call_deferred("reload_scene")
 
 func reload_scene():
-	get_tree().reload_current_scene()
+	get_tree().current_scene.reload_level()
 	
 func _on_goal_entered(goal: Goal):
 	print(goal.name + " entered")
 	goals.pop_front()
 	if not goals.is_empty():
 		goals[0].activate()
+	else:
+		SignalBus.all_goals_reached.emit()
 	var tween = get_tree().create_tween()
 	tween.tween_property(goal.blink_effect, "modulate:a", 1, 0.2)
 	tween.tween_property(goal, "modulate:a", 0, 0.2)

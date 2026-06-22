@@ -6,4 +6,5 @@ func path_start():
 	var tween = get_tree().create_tween()
 	tween.tween_property(path_follow_2d, "progress_ratio", 1, 50)
 	await tween.finished
-	get_tree().reload_current_scene()
+	print("finished")
+	get_tree().current_scene.reload_level()
