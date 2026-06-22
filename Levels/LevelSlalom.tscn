@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="9_3ng75"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="9_mbeth"]
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="10_6dloo"]
+[ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="11_gghj8"]
 
 [node name="Level Slalom" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_57vux")
@@ -70,31 +71,6 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 27
 theme_override_fonts/font = ExtResource("9_mbeth")
 theme_override_font_sizes/font_size = 46
-vertical_alignment = 1
-autowrap_mode = 2
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=577276413]
-custom_minimum_size = Vector2(500, 100)
-offset_left = -35.0
-offset_top = 866.0
-offset_right = 465.0
-offset_bottom = 966.0
-color = Color(0.59666675, 0.56, 1, 1)
-
-[node name="DialogText" type="Label" parent="ColorRect" unique_id=1350669183]
-custom_minimum_size = Vector2(870.96, 200)
-layout_mode = 0
-offset_left = -178.0
-offset_top = -39.0
-offset_right = 692.96
-offset_bottom = 161.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 15
-theme_override_fonts/font = ExtResource("9_mbeth")
-theme_override_font_sizes/font_size = 71
-text = "Test 01/10"
-horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
 
@@ -188,3 +164,81 @@ scale = Vector2(1.7787346, 1.7704622)
 position = Vector2(18830, -924.0001)
 rotation = 1.5707964
 scale = Vector2(1.7787346, 1.7704622)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=361260987]
+custom_minimum_size = Vector2(500, 100)
+offset_left = -3214.0
+offset_top = 718.0
+offset_right = -2714.0
+offset_bottom = 818.0
+scale = Vector2(2.4, 2.4)
+color = Color(0.18232056, 0.7429522, 0.40819153, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=1302719881]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.120000005, 0.5, 0.27200004, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect" unique_id=1928452733]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_mbeth")
+theme_override_font_sizes/font_size = 71
+text = "Test 4/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1444599515]
+custom_minimum_size = Vector2(500, 100)
+offset_left = -3214.0
+offset_top = 1104.0
+offset_right = -2714.0
+offset_bottom = 1204.0
+scale = Vector2(2.4, 2.4)
+color = Color(0.18232056, 0.7429522, 0.40819153, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=1765271553]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.120000005, 0.5, 0.27200004, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect2" unique_id=1271203703]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_mbeth")
+theme_override_font_sizes/font_size = 71
+text = "Slalom"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Honk" type="AudioStreamPlayer" parent="." unique_id=127742537]
+stream = ExtResource("11_gghj8")
+pitch_scale = 1.59

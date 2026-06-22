@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="6_tbwc5"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_2yvhy"]
 [ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
+[ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="9_hd63s"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd63s"]
 _data = {
@@ -110,3 +111,83 @@ gravity = Vector2(0, 0)
 scale_amount_min = 8.04
 scale_amount_max = 8.04
 scale_amount_curve = SubResource("Curve_bv6uq")
+
+[node name="ColorRect" type="ColorRect" parent="." index="11" unique_id=1289513186]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 465.00006
+offset_top = 3478.027
+offset_right = 975.275
+offset_bottom = 3578.027
+rotation = -1.5436583
+scale = Vector2(2.035, 2.035)
+color = Color(0.9971983, 0.403968, 0.43963748, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" index="0" unique_id=521933821]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.71, 0.2911, 0.31902665, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect" index="1" unique_id=1516035706]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_tbwc5")
+theme_override_font_sizes/font_size = 71
+text = "Test 3/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." index="12" unique_id=1812370938]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 815.0
+offset_top = 3478.027
+offset_right = 1325.2749
+offset_bottom = 3578.027
+rotation = -1.5436583
+scale = Vector2(2.035, 2.035)
+color = Color(0.9971983, 0.403968, 0.43963748, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" index="0" unique_id=1646434474]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.71, 0.2911, 0.31902665, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect2" index="1" unique_id=74011179]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_tbwc5")
+theme_override_font_sizes/font_size = 71
+text = "RACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Honk" type="AudioStreamPlayer" parent="." index="13" unique_id=219199264]
+stream = ExtResource("9_hd63s")
+pitch_scale = 1.59

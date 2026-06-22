@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://bb4rp1s6w4u8f"]
 
 [ext_resource type="Script" uid="uid://c1wy2k6c06c1k" path="res://goal.gd" id="1_bhrk7"]
+[ext_resource type="Texture2D" uid="uid://begffnw4j04x" path="res://Objects/GoalTexture.svg" id="2_kyyj3"]
+[ext_resource type="Texture2D" uid="uid://brw8uimpebnw0" path="res://Objects/GoalFrame.svg" id="3_3j5ms"]
+[ext_resource type="Texture2D" uid="uid://dnx77kv2xcov6" path="res://Objects/GoalFrameBlink.svg" id="4_lrm46"]
 
 [sub_resource type="Gradient" id="Gradient_kyyj3"]
 offsets = PackedFloat32Array(0.6009804)
@@ -12,10 +15,50 @@ gradient = SubResource("Gradient_kyyj3")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_edw11"]
 size = Vector2(160, 47)
 
+[sub_resource type="Animation" id="Animation_3j5ms"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-22.62929, -92.2422)]
+}
+
+[sub_resource type="Animation" id="Animation_lrm46"]
+resource_name = "default"
+length = 4.0
+loop_mode = 1
+step = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D/ColorRect:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-22.62929, -92.2422), Vector2(8.672888, -136.39633)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vsvlu"]
+_data = {
+&"RESET": SubResource("Animation_3j5ms"),
+&"default": SubResource("Animation_lrm46")
+}
+
 [node name="Goal" type="Node2D" unique_id=1373093036]
 script = ExtResource("1_bhrk7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=294341241]
+clip_children = 1
 position = Vector2(321, 136.75)
 scale = Vector2(10.03125, 4.2578125)
 texture = SubResource("GradientTexture2D_edw11")
@@ -30,6 +73,30 @@ collision_mask = 8
 position = Vector2(69.99999, 13.5)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_edw11")
+
+[node name="ColorRect" type="TextureRect" parent="Sprite2D" unique_id=341707639]
+offset_left = -22.62929
+offset_top = -92.2422
+offset_right = 176.9907
+offset_bottom = 65.0228
+rotation = 0.76219654
+texture = ExtResource("2_kyyj3")
+stretch_mode = 1
+
+[node name="Frame" type="Sprite2D" parent="." unique_id=354055364]
+position = Vector2(321, 140)
+scale = Vector2(0.83, 0.83)
+texture = ExtResource("3_3j5ms")
+
+[node name="GoalAnimationPlayer" type="AnimationPlayer" parent="." unique_id=120534688]
+libraries/ = SubResource("AnimationLibrary_vsvlu")
+autoplay = &"default"
+
+[node name="BlinkEffect" type="Sprite2D" parent="." unique_id=2036432714]
+modulate = Color(18.892157, 18.892157, 18.892157, 0)
+position = Vector2(321, 140)
+scale = Vector2(0.825, 0.825)
+texture = ExtResource("4_lrm46")
 
 [connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="area_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_exited"]

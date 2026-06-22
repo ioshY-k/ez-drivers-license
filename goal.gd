@@ -1,6 +1,7 @@
 class_name Goal extends Node2D
 
 var collision_count = 0
+@onready var blink_effect: Sprite2D = $BlinkEffect
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_DISABLED

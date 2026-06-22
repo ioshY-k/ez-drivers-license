@@ -40,8 +40,8 @@ z_index = 5
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1446688658]
 
 [node name="Speedometer" parent="CanvasLayer" unique_id=1646272472 instance=ExtResource("3_btcbx")]
-position = Vector2(1630.0001, 778.00006)
-scale = Vector2(1.015, 1.015)
+position = Vector2(1564, 831)
+scale = Vector2(1.14, 1.14)
 
 [node name="SpeedParticles" type="CPUParticles2D" parent="." unique_id=1691356526]
 position = Vector2(0, 26)

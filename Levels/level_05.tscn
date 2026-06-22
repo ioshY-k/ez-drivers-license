@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://uqdn3xy0358r" path="res://Resources/Highway.svg" id="2_b6t52"]
 [ext_resource type="PackedScene" uid="uid://b77oxf6milxqp" path="res://Objects/car.tscn" id="3_br6mg"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_4t8un"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="5_af376"]
+[ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="6_af376"]
 
 [node name="Level05" unique_id=525293221 instance=ExtResource("1_td6ov")]
 camera_zoom = 0.25
@@ -789,3 +791,88 @@ scale = Vector2(0.56, 100)
 [node name="Barrier2" parent="." index="142" unique_id=373625437 instance=ExtResource("5_4t8un")]
 position = Vector2(14754, 59911)
 scale = Vector2(0.56, 38)
+
+[node name="Barrier4" parent="." index="143" unique_id=410264877 instance=ExtResource("5_4t8un")]
+position = Vector2(17984, 94567.99)
+rotation = 2.732677
+scale = Vector2(0.56, 10.735)
+
+[node name="ColorRect" type="ColorRect" parent="." index="144" unique_id=1940120054]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 15477.0
+offset_top = 97127.0
+offset_right = 15977.0
+offset_bottom = 97227.0
+scale = Vector2(2.822432, 2.822432)
+color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" index="0" unique_id=1955745268]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.14, 0.14, 0.14, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect" index="1" unique_id=1233982129]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = 12.754822
+offset_top = 11.338898
+offset_right = 883.71484
+offset_bottom = 211.3389
+scale = Vector2(0.55418646, 0.55418646)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_af376")
+theme_override_font_sizes/font_size = 129
+text = "Test Bonus"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." index="145" unique_id=123572192]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 15477.0
+offset_top = 97534.0
+offset_right = 15977.0
+offset_bottom = 97634.0
+scale = Vector2(2.822432, 2.822432)
+color = Color(0.25882354, 0.25882354, 0.25882354, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" index="0" unique_id=1849254987]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.14, 0.14, 0.14, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect2" index="1" unique_id=1713414816]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = 12.754822
+offset_top = 11.338898
+offset_right = 883.71484
+offset_bottom = 211.3389
+scale = Vector2(0.55418646, 0.55418646)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("5_af376")
+theme_override_font_sizes/font_size = 105
+text = "the first day"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Honk" type="AudioStreamPlayer" parent="." index="146" unique_id=1538651731]
+stream = ExtResource("6_af376")
+pitch_scale = 1.59

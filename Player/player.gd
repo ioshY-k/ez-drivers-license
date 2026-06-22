@@ -66,7 +66,7 @@ func move_player(delta):
 	if speed > GameConsts.PLAYER_SPEED_THRESHOLD_FAST:
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)
 		speed_particles.emitting = true
-		#print("speedy ")
+		print("speedy ")
 	elif speed > GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 		is_first_acceleration = false
 		speed = max(speed - GameConsts.PLAYER_FRICTION_VALUE * 2  * delta, 0)

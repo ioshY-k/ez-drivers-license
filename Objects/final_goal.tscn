@@ -10,14 +10,18 @@ colors = PackedColorArray(0.93, 0.558, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_v44il"]
 gradient = SubResource("Gradient_r55q3")
 
+[sub_resource type="Curve" id="Curve_hia0g"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.8861702, 0.88801575), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
 [node name="FinalGoal" unique_id=1373093036 instance=ExtResource("1_0v25u")]
 
 [node name="Sprite2D" parent="." index="0" unique_id=294341241]
 texture = SubResource("GradientTexture2D_v44il")
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="Sprite2D" index="0" unique_id=1601007547]
-position = Vector2(0, 0.05871582)
-scale = Vector2(0.39476633, 1.7191926)
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." index="4" unique_id=1601007547]
+position = Vector2(321, 137)
+scale = Vector2(3.9599998, 7.3199997)
 amount = 52
 texture = ExtResource("2_r55q3")
 emission_shape = 3
@@ -27,6 +31,7 @@ radial_accel_min = 79.78
 radial_accel_max = 79.78
 angle_min = -319.7
 angle_max = 59.8
-scale_amount_min = 0.01
-scale_amount_max = 0.05
-color = Color(0.6957926, 0.49344128, 5.7756904e-07, 1)
+scale_amount_min = 0.1
+scale_amount_max = 0.15
+scale_amount_curve = SubResource("Curve_hia0g")
+color = Color(0.5580467, 0.94, 0.50759995, 1)

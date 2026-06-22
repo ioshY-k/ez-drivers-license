@@ -1,17 +1,18 @@
 [gd_scene format=3 uid="uid://dugyrmw88lsdj"]
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_ruw55"]
-[ext_resource type="Texture2D" uid="uid://dkwu1ie8bsyiw" path="res://Levels/Level1.svg" id="2_ruw55"]
+[ext_resource type="Texture2D" uid="uid://rqtofx63psxa" path="res://Levels/Level1.svg" id="2_ruw55"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_c8o6p"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_s42oh"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_6m3et"]
 [ext_resource type="Script" uid="uid://c3n1k2l25athm" path="res://Dialog/dialog01.gd" id="7_c8o6p"]
-[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="7_ruw55"]
 [ext_resource type="PackedScene" uid="uid://dabbknjqm7m8y" path="res://Objects/DeathZone.tscn" id="7_v44il"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="8_v44il"]
 [ext_resource type="Script" uid="uid://d2ppta76mlill" path="res://Dialog/dialog02.gd" id="10_rg61p"]
 [ext_resource type="Texture2D" uid="uid://cwqj1i5jehijp" path="res://UI/TutorialMouse.svg" id="11_jgx74"]
 [ext_resource type="Texture2D" uid="uid://b4iwa6fv63bde" path="res://UI/TutorialMouseReversed.svg" id="12_6m3et"]
+[ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="13_6m3et"]
 
 [sub_resource type="Animation" id="Animation_jgx74"]
 length = 0.001
@@ -157,8 +158,9 @@ scale = Vector2(0.83965796, 2.9702802)
 position = Vector2(-301, 1415)
 
 [node name="FinalGoal" parent="." unique_id=1373093036 instance=ExtResource("7_6m3et")]
-position = Vector2(-1833.0001, -1207)
-scale = Vector2(4.892196, 1.7799824)
+position = Vector2(-1271, -1513)
+rotation = 0.0008345023
+scale = Vector2(3.2204745, 2.8317366)
 
 [node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=402335558]
 script = ExtResource("7_c8o6p")
@@ -226,11 +228,22 @@ shape = SubResource("RectangleShape2D_bv6uq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=577276413]
 custom_minimum_size = Vector2(500, 100)
-offset_left = -35.0
+offset_left = -1097.0
 offset_top = 866.0
-offset_right = 465.0
+offset_right = -597.0
 offset_bottom = 966.0
 color = Color(0.59666675, 0.56, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=563883137]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.39380008, 0.36960003, 0.66, 1)
 
 [node name="DialogText" type="Label" parent="ColorRect" unique_id=1350669183]
 custom_minimum_size = Vector2(870.96, 200)
@@ -244,9 +257,49 @@ theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("8_v44il")
 theme_override_font_sizes/font_size = 71
-text = "Test 01/10"
+text = "Test 1/6"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=993225484]
+custom_minimum_size = Vector2(500, 100)
+offset_left = -1097.0
+offset_top = 994.0
+offset_right = -597.0
+offset_bottom = 1094.0
+color = Color(0.59666675, 0.56, 1, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=7334283]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.39380008, 0.36960003, 0.66, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect2" unique_id=144107800]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("8_v44il")
+theme_override_font_sizes/font_size = 71
+text = "Crosswalk"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Honk" type="AudioStreamPlayer" parent="." unique_id=2038404236]
+stream = ExtResource("13_6m3et")
+pitch_scale = 1.59
 
 [connection signal="body_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_body_entered"]

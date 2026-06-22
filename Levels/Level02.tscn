@@ -6,10 +6,15 @@
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="3_0nsvq"]
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="4_sl3bh"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_c6h1j"]
+[ext_resource type="Texture2D" uid="uid://dxealy66dpwuk" path="res://Resources/Car.png" id="7_0nsvq"]
+[ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="8_sl3bh"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="9_c6h1j"]
+[ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="10_77qhy"]
 
 [node name="Level02" type="Node2D" unique_id=752677405 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_hia0g")
 goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("FinalGoal")]
+camera_zoom = 0.405
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=586640640]
 position = Vector2(3580.0002, 1165)
@@ -27,9 +32,9 @@ rotation = -1.5707964
 scale = Vector2(2.5200024, 0.84000003)
 
 [node name="Barrier2" parent="." unique_id=2096588233 instance=ExtResource("3_0nsvq")]
-position = Vector2(4341.9995, 2002)
+position = Vector2(4267, 2002)
 rotation = -1.5707964
-scale = Vector2(2.8124754, 0.96319604)
+scale = Vector2(2.5313625, 0.80522335)
 
 [node name="Goal" parent="." unique_id=1373093036 instance=ExtResource("4_sl3bh")]
 position = Vector2(4014, 1462)
@@ -38,4 +43,114 @@ position = Vector2(4014, 1462)
 position = Vector2(2604, 1898)
 
 [node name="FinalGoal" parent="." unique_id=1351538883 instance=ExtResource("5_c6h1j")]
-position = Vector2(3228, 1884)
+position = Vector2(3231, 1899)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2146640016]
+position = Vector2(2110.9998, 2021.0001)
+rotation = 1.5707964
+scale = Vector2(1.5441624, 1.6053406)
+texture = ExtResource("7_0nsvq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=572477445]
+position = Vector2(4396, 2021.0001)
+rotation = 1.5707964
+scale = Vector2(1.5441624, 1.6053406)
+texture = ExtResource("7_0nsvq")
+
+[node name="Pylon" parent="." unique_id=1246131004 instance=ExtResource("8_sl3bh")]
+position = Vector2(4803, 1640)
+
+[node name="Pylon2" parent="." unique_id=339539854 instance=ExtResource("8_sl3bh")]
+position = Vector2(4803, 1400)
+
+[node name="Pylon3" parent="." unique_id=909685831 instance=ExtResource("8_sl3bh")]
+position = Vector2(4803, 1151)
+
+[node name="Pylon4" parent="." unique_id=984844626 instance=ExtResource("8_sl3bh")]
+position = Vector2(4803, 908)
+
+[node name="Pylon5" parent="." unique_id=130922597 instance=ExtResource("8_sl3bh")]
+position = Vector2(4803, 668)
+
+[node name="Pylon6" parent="." unique_id=214284558 instance=ExtResource("8_sl3bh")]
+position = Vector2(4803, 419)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=840207467]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 1447.0
+offset_top = 1692.0
+offset_right = 1947.0
+offset_bottom = 1792.0
+rotation = -4.712389
+scale = Vector2(1.86, 1.86)
+color = Color(0.26865843, 0.68587404, 0.8164951, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=2039887422]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.15179999, 0.38808674, 0.46, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect" unique_id=1147144999]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -178.0
+offset_top = -39.0
+offset_right = 692.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_c6h1j")
+theme_override_font_sizes/font_size = 71
+text = "Test 6/6"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=1479352441]
+custom_minimum_size = Vector2(500, 100)
+offset_left = 1138.0001
+offset_top = 1711.0
+offset_right = 1638.0001
+offset_bottom = 1811.0
+rotation = -4.712389
+scale = Vector2(1.86, 1.86)
+color = Color(0.26865843, 0.68587404, 0.8164951, 1)
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=1780540266]
+show_behind_parent = true
+layout_mode = 0
+offset_left = -20.0
+offset_top = 26.999998
+offset_right = 20.0
+offset_bottom = 67.0
+rotation = -0.1294988
+scale = Vector2(13.12621, 2.6628075)
+color = Color(0.15179999, 0.38808674, 0.46, 1)
+
+[node name="DialogText" type="Label" parent="ColorRect2" unique_id=1681247128]
+custom_minimum_size = Vector2(870.96, 200)
+layout_mode = 0
+offset_left = -182.0
+offset_top = -39.0
+offset_right = 688.96
+offset_bottom = 161.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("9_c6h1j")
+theme_override_font_sizes/font_size = 48
+text = "parallel parking"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Honk" type="AudioStreamPlayer" parent="." unique_id=1626982915]
+stream = ExtResource("10_77qhy")
+pitch_scale = 1.59
