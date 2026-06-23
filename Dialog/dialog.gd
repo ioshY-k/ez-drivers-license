@@ -49,6 +49,8 @@ func close_dialog():
 		get_parent().add_child(dialog1)
 		get_parent().add_child(dialog2)
 		get_parent().add_child(dialog3)
+	if name == "MouseTutorialDialog":
+		%TutorialAnimationPlayer.play("Tutorial")
 		
 		
 	queue_free()

@@ -8,6 +8,7 @@
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="6_af376"]
 [ext_resource type="AudioStream" uid="uid://bgfic1m2hc0al" path="res://Sounds/The final boss.wav" id="7_0r02p"]
 [ext_resource type="Script" uid="uid://cu1lraj842knm" path="res://Levels/Credits.gd" id="8_qw7aq"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="9_56cqm"]
 
 [node name="Level05" unique_id=525293221 instance=ExtResource("1_td6ov")]
 camera_zoom = 0.25
@@ -1118,3 +1119,12 @@ theme_override_font_sizes/font_size = 20
 text = "Music by Xanderwood - Font by deepak dogra - Car from pngwing.com - Honk sound from freesound.org - Racetrack from PNGEgg"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." index="152" unique_id=1905513472]
+z_index = -100
+offset_left = -21431.0
+offset_top = -26172.0
+offset_right = 46902.0
+offset_bottom = 149610.0
+texture = ExtResource("9_56cqm")
+stretch_mode = 1

@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="9_hd63s"]
 [ext_resource type="AudioStream" uid="uid://d0csqvsuoudsa" path="res://Sounds/Danger ahead.wav" id="10_mpd7r"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="11_o8pqd"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd63s"]
 _data = {
@@ -70,29 +71,28 @@ vertical_alignment = 1
 autowrap_mode = 2
 
 [node name="Goal" parent="." index="5" unique_id=1373093036 instance=ExtResource("6_tbwc5")]
-position = Vector2(-4331.0005, 210)
-rotation = -0.45397565
-scale = Vector2(1.2727997, 2.1893866)
+position = Vector2(-4410, 121.00011)
+rotation = -0.39970705
+scale = Vector2(1.4031163, 2.2771957)
 
 [node name="Goal2" parent="." index="6" unique_id=1079176198 instance=ExtResource("6_tbwc5")]
-position = Vector2(1050, -2525)
+position = Vector2(1039.9999, -2494)
 rotation = -0.78160655
-scale = Vector2(1.2727997, 2.1893866)
+scale = Vector2(1.4149843, 2.3429797)
 
 [node name="Goal3" parent="." index="7" unique_id=154616795 instance=ExtResource("6_tbwc5")]
-position = Vector2(-283.00012, -6198)
-rotation = -1.3628358
-scale = Vector2(1.2727997, 2.1893866)
+position = Vector2(-463.99994, -6124.9995)
+rotation = -1.4269135
+scale = Vector2(1.3818239, 2.3216372)
 
 [node name="Goal4" parent="." index="8" unique_id=1423390316 instance=ExtResource("6_tbwc5")]
-position = Vector2(7292.001, -2527)
-rotation = 0.28755474
-scale = Vector2(1.2727997, 2.1893866)
+position = Vector2(7162.0005, -2879)
+scale = Vector2(1.4538838, 2.2781286)
 
 [node name="FinalGoal" parent="." index="9" unique_id=1211964796 instance=ExtResource("7_2yvhy")]
-position = Vector2(-554, 1776)
+position = Vector2(-545.00006, 1909.9999)
 rotation = -1.5732765
-scale = Vector2(1.112031, 3.7202227)
+scale = Vector2(1.4254289, 3.740976)
 
 [node name="TimeChallengePath" type="Path2D" parent="." index="10" unique_id=79783818]
 unique_name_in_owner = true
@@ -197,3 +197,12 @@ pitch_scale = 1.59
 stream = ExtResource("10_mpd7r")
 volume_db = -10.0
 autoplay = true
+
+[node name="TextureRect" type="TextureRect" parent="." index="15" unique_id=440634281]
+z_index = -100
+offset_left = -13080.0
+offset_top = -10307.0
+offset_right = 16031.0
+offset_bottom = 6473.0
+texture = ExtResource("11_o8pqd")
+stretch_mode = 1

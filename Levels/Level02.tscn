@@ -13,6 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://c7vpajiy2dqm1" path="res://Sounds/Hip hop pop.wav" id="11_q8n88"]
 [ext_resource type="Script" uid="uid://cbdyxa12ihhce" path="res://Dialog/dialog07.gd" id="12_mvbqm"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="13_y1f64"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="14_y1f64"]
 
 [node name="Level02" type="Node2D" unique_id=752677405 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_hia0g")
@@ -188,3 +189,12 @@ theme_override_fonts/font = ExtResource("9_c6h1j")
 theme_override_font_sizes/font_size = 46
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1140947669]
+z_index = -100
+offset_left = -8664.0
+offset_top = -7138.0
+offset_right = 20447.0
+offset_bottom = 9642.0
+texture = ExtResource("14_y1f64")
+stretch_mode = 1

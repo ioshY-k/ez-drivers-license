@@ -10,6 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bgfic1m2hc0al" path="res://Sounds/The final boss.wav" id="8_424uw"]
 [ext_resource type="Script" uid="uid://b1jav7l14cyek" path="res://Dialog/dialog06.gd" id="9_d7i4m"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="10_2v171"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
 
 [node name="Level04" unique_id=525293221 node_paths=PackedStringArray("goals") instance=ExtResource("1_5ttfp")]
 goals = [NodePath("FinalGoal")]
@@ -912,3 +913,12 @@ theme_override_fonts/font = ExtResource("6_8w6fg")
 theme_override_font_sizes/font_size = 46
 vertical_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." index="150" unique_id=614386541]
+z_index = -100
+offset_left = -14975.0
+offset_top = -16290.0
+offset_right = 42552.0
+offset_bottom = 127466.0
+texture = ExtResource("11_2v171")
+stretch_mode = 1

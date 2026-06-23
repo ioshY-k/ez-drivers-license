@@ -15,7 +15,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Restart"):
 		reload_scene()
-	if Input.is_action_just_pressed("Skip"):
+	if Input.is_action_just_pressed("Skip") and not name == "Level1":
 		SignalBus.all_goals_reached.emit()
 	if Input.is_action_just_pressed("Honk"):
 		$Honk.pitch_scale = randf_range(1.5,1.7)
