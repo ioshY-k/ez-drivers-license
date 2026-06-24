@@ -41,7 +41,7 @@ collision_mask = 17
 motion_mode = 1
 script = ExtResource("1_4ntmi")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=794997672]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=794997672 groups=["Camera"]]
 ignore_rotation = false
 rotation_smoothing_enabled = true
 
