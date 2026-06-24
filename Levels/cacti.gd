@@ -7,4 +7,4 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	for child in get_children():
-		child.global_rotation
+		child.global_rotation = player_cam.global_rotation
