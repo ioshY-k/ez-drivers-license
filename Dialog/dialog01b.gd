@@ -15,6 +15,7 @@ func _ready() -> void:
 
 
 func _on_dialog_trigger_body_entered(body: Node2D) -> void:
+	body.speed = 0
 	start_dialog.emit()
 
 func swap_mouse_frame():

@@ -265,28 +265,28 @@ rotation = 3.1415925
 scale = Vector2(0.83965796, 33.755)
 
 [node name="FinalGoal" parent="Barriers" unique_id=1373093036 instance=ExtResource("6_yqeoj")]
-position = Vector2(33522.383, -1987.562)
+position = Vector2(32315.922, -3164.1792)
 rotation = 1.0628265
-scale = Vector2(5.5797563, 7.5179725)
+scale = Vector2(10.846534, 9.629723)
 
 [node name="Goal" parent="Barriers" unique_id=661221782 instance=ExtResource("12_n6dkh")]
-position = Vector2(-656.7164, -38099.504)
-scale = Vector2(2.0927913, 4.0943685)
+position = Vector2(-1544.776, -38099.5)
+scale = Vector2(4.7031584, 5.205055)
 
 [node name="Goal2" parent="Barriers" unique_id=1330651724 instance=ExtResource("12_n6dkh")]
-position = Vector2(20485.074, -62194.027)
+position = Vector2(20514.928, -64661.688)
 rotation = 1.6263001
-scale = Vector2(2.653026, 7.7486715)
+scale = Vector2(10.77016, 8.69688)
 
 [node name="Goal3" parent="Barriers" unique_id=1868544799 instance=ExtResource("12_n6dkh")]
-position = Vector2(60808.453, -53676.62)
+position = Vector2(63679.11, -53796.016)
 rotation = 2.7993402
-scale = Vector2(2.6193702, 6.376971)
+scale = Vector2(12.744938, 7.388262)
 
 [node name="Goal4" parent="Barriers" unique_id=1821332003 instance=ExtResource("12_n6dkh")]
-position = Vector2(28159.205, -16696.518)
+position = Vector2(30689.053, -17402.986)
 rotation = 2.7993402
-scale = Vector2(2.5399153, 6.137442)
+scale = Vector2(11.408826, 5.0571437)
 
 [node name="DialogCanvas1" type="CanvasLayer" parent="." unique_id=402335558]
 script = ExtResource("6_slvgb")
