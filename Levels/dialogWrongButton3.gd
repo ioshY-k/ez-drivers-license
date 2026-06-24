@@ -8,11 +8,16 @@ func _ready() -> void:
 		"That's not the gas Pedal!",
 		
 	]
+	SignalBus.wrong_button_dialog_triggered.connect(add_mouse_hint)
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("WrongButton3") and not button_pressed:
 		button_pressed = true
 		start_dialog.emit()
 		await get_tree().create_timer(1.3).timeout
+		SignalBus.wrong_button_dialog_triggered.emit()
 		close_dialog()
 		
+
+func add_mouse_hint():
+	sentences[0] = "Use your mouse!"

@@ -181,10 +181,10 @@ scale = Vector2(1.7787346, 1.7704622)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=361260987]
 custom_minimum_size = Vector2(500, 100)
-offset_left = -3214.0
-offset_top = 718.0
-offset_right = -2714.0
-offset_bottom = 818.0
+offset_left = -3435.0
+offset_top = 715.0
+offset_right = -2935.0
+offset_bottom = 815.0
 scale = Vector2(2.4, 2.4)
 color = Color(0.18232056, 0.7429522, 0.40819153, 1)
 
@@ -218,10 +218,10 @@ autowrap_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1444599515]
 custom_minimum_size = Vector2(500, 100)
-offset_left = -3214.0
-offset_top = 1104.0
-offset_right = -2714.0
-offset_bottom = 1204.0
+offset_left = -3435.0
+offset_top = 1101.0
+offset_right = -2935.0
+offset_bottom = 1201.0
 scale = Vector2(2.4, 2.4)
 color = Color(0.18232056, 0.7429522, 0.40819153, 1)
 
@@ -261,99 +261,6 @@ pitch_scale = 1.59
 stream = ExtResource("12_57vux")
 volume_db = -10.0
 autoplay = true
-
-[node name="Line2D" type="Line2D" parent="." unique_id=400172487]
-position = Vector2(101, 12)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D3" type="Line2D" parent="." unique_id=713830218]
-position = Vector2(4643, 12)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D4" type="Line2D" parent="." unique_id=1574654958]
-position = Vector2(10214, 12)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D5" type="Line2D" parent="." unique_id=125212362]
-position = Vector2(14134, 12)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D6" type="Line2D" parent="." unique_id=1031683030]
-position = Vector2(16757, 12)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D7" type="Line2D" parent="." unique_id=446430269]
-position = Vector2(19277, 12)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D2" type="Line2D" parent="." unique_id=1268942857]
-position = Vector2(2336, 584)
-scale = Vector2(1, -1)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D8" type="Line2D" parent="." unique_id=412704136]
-position = Vector2(8391, 584)
-scale = Vector2(1, -1)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D9" type="Line2D" parent="." unique_id=1118466886]
-position = Vector2(12646, 584)
-scale = Vector2(1, -1)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D10" type="Line2D" parent="." unique_id=1601869697]
-position = Vector2(15430, 584)
-scale = Vector2(1, -1)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
-
-[node name="Line2D11" type="Line2D" parent="." unique_id=1993272265]
-position = Vector2(17990, 584)
-scale = Vector2(1, -1)
-points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
-width = 51.43
-joint_mode = 2
-begin_cap_mode = 2
-end_cap_mode = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1084154536]
 z_index = -100
@@ -584,3 +491,96 @@ position = Vector2(3788, -17667.002)
 scale = Vector2(1, 6.4799986)
 texture = ExtResource("15_bjrhs")
 flip_h = true
+
+[node name="Line2D" type="Line2D" parent="Leitplanke6" unique_id=400172487]
+position = Vector2(-15784, -17655)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D3" type="Line2D" parent="Leitplanke6" unique_id=713830218]
+position = Vector2(-11242, -17655)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D4" type="Line2D" parent="Leitplanke6" unique_id=1574654958]
+position = Vector2(-5671, -17655)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D5" type="Line2D" parent="Leitplanke6" unique_id=125212362]
+position = Vector2(-1751, -17655)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D6" type="Line2D" parent="Leitplanke6" unique_id=1031683030]
+position = Vector2(872, -17655)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D7" type="Line2D" parent="Leitplanke6" unique_id=446430269]
+position = Vector2(3392, -17655)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D2" type="Line2D" parent="Leitplanke6" unique_id=1268942857]
+position = Vector2(-13549, -17083)
+scale = Vector2(1, -1)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D8" type="Line2D" parent="Leitplanke6" unique_id=412704136]
+position = Vector2(-7494, -17083)
+scale = Vector2(1, -1)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D9" type="Line2D" parent="Leitplanke6" unique_id=1118466886]
+position = Vector2(-3239, -17083)
+scale = Vector2(1, -1)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D10" type="Line2D" parent="Leitplanke6" unique_id=1601869697]
+position = Vector2(-455, -17083)
+scale = Vector2(1, -1)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Line2D11" type="Line2D" parent="Leitplanke6" unique_id=1993272265]
+position = Vector2(2105, -17083)
+scale = Vector2(1, -1)
+points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
+width = 51.43
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
