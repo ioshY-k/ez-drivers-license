@@ -19,7 +19,6 @@ var camera_rotation = 0
 
 func _ready() -> void:
 	player_camera.make_current()
-	#camera_rotation = camera.rotation
 	SignalBus.freeze_player.connect(func():
 		set_process_mode(Node.PROCESS_MODE_DISABLED)
 	)

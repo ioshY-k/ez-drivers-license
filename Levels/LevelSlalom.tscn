@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="10_6dloo"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="11_gghj8"]
 [ext_resource type="AudioStream" uid="uid://mptyawkg1m21" path="res://Sounds/Explorer of the realm.wav" id="12_57vux"]
-[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="13_big0a"]
+[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="13_big0a"]
 
 [node name="Level Slalom" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_57vux")
