@@ -7,6 +7,7 @@ class_name Player extends CharacterBody2D
 @onready var speed_particles: CPUParticles2D = $SpeedParticles
 @onready var hyper_speed_particles: CPUParticles2D = $HyperSpeedParticles
 @onready var camera: Camera2D = $Camera2D
+@onready var tire_track_particles: CPUParticles2D = $TireTrackParticles
 
 
 var speed = 0
@@ -52,12 +53,15 @@ func turn_player(delta):
 			crash_player()
 			return
 		rotation_modifier -= GameConsts.PLAYER_ROTATION_VALUE * delta
+		tire_track_particles.emitting = true
 	elif Input.is_action_pressed("TurnRight"):
 		if speed > 0 and speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 			crash_player()
 			return
 		rotation_modifier += GameConsts.PLAYER_ROTATION_VALUE * delta
-		
+		tire_track_particles.emitting = true
+	else:
+		tire_track_particles.emitting = false
 	if rotation_modifier == 0:
 		if is_player_turning:
 			camera_rotation = rotation

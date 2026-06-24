@@ -33,6 +33,10 @@ _limits = [0.0, 10.0, 0.0, 1.0]
 _data = [Vector2(0, 10), 0.0, 0.0, 0, 0, Vector2(1, 10), 0.0, 0.0, 0, 0]
 point_count = 2
 
+[sub_resource type="Gradient" id="Gradient_reerk"]
+offsets = PackedFloat32Array(0, 0.75875795, 1)
+colors = PackedColorArray(0.15, 0.15, 0.15, 1, 0.46, 0.46, 0.46, 1, 0.37, 0.37, 0.37, 0)
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_podkt"]
 
 [node name="Player" type="CharacterBody2D" unique_id=226948684]
@@ -123,7 +127,9 @@ scale_amount_curve = SubResource("Curve_fhl08")
 color_initial_ramp = SubResource("Gradient_vtle1")
 
 [node name="TireTrackParticles" type="CPUParticles2D" parent="." unique_id=205519108]
+z_index = 15
 position = Vector2(0, 125)
+emitting = false
 amount = 1000
 texture = ExtResource("6_fhl08")
 lifetime = 1.43
@@ -135,6 +141,7 @@ scale_amount_max = 0.1
 split_scale = true
 scale_curve_x = null
 scale_curve_y = SubResource("Curve_vtle1")
+color_ramp = SubResource("Gradient_reerk")
 
 [node name="GoalCheckFront" type="Area2D" parent="." unique_id=1284778011]
 collision_layer = 8
