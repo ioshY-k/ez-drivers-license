@@ -4,8 +4,8 @@ extends "res://Objects/death_object.gd"
 @export var speed = 1700
 @export var is_reverse = false
 
-#func _ready() -> void:
-	#starting_position = position
+func _ready() -> void:
+	position.x += randf_range(-60, 60)
 
 func _process(delta: float) -> void:
 	if not is_reverse:
