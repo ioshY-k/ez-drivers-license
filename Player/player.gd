@@ -19,12 +19,19 @@ var camera_rotation = 0
 
 func _ready() -> void:
 	player_camera.make_current()
+	camera_rotation = rotation
+	camera.global_rotation = rotation
+	camera.rotation_smoothing_enabled = false
+
 	SignalBus.freeze_player.connect(func():
 		set_process_mode(Node.PROCESS_MODE_DISABLED)
 	)
 	SignalBus.unfreeze_player.connect(func():
 		set_process_mode(Node.PROCESS_MODE_INHERIT)
 	)
+	
+	await get_tree().process_frame
+	camera.rotation_smoothing_enabled = true
 
 func _process(delta: float) -> void:
 	if not is_player_crashed:
