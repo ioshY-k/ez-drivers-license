@@ -55,7 +55,10 @@ func turn_player(delta):
 	rotation_modifier = min(rotation_modifier, 0.03)
 	rotation_modifier = max(rotation_modifier, -0.03)
 		
-	rotation = fmod(rotation + rotation_modifier, 2*PI)
+	if speed > 0:
+		rotation = fmod(rotation + rotation_modifier, 2*PI)
+	else: 
+		rotation = fmod(rotation - rotation_modifier, 2*PI)
 	
 	
 func move_player(delta):	
