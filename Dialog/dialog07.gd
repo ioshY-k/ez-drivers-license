@@ -4,10 +4,8 @@ extends Dialog
 func _ready() -> void:
 	super._ready()
 	sentences = [
-		"here we are",
-		"the final challenge",
-		"True mastery of the balance bike",
-		"Are you worthy?",
+		"here we are. the final challenge",
+		"True mastery of the balance bike. Are you worthy?",
 		"show them who you are kid!",
 	]
 	start_dialog.emit()

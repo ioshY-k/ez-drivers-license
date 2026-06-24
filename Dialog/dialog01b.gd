@@ -8,9 +8,7 @@ func _ready() -> void:
 		"using your short bean fingers ain't gonna bring you far",
 		"Now stop joking around and place that mouse wheel on the tabletop.",
 		"You heard me, your mouse must be upside down!",
-		"How else would you generate enough spin?",
-		"Now come over here before your bike turns to rust halfway!",
-		
+		"How else would you generate enough spin?"
 	]
 
 

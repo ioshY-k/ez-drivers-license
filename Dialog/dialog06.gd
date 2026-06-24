@@ -6,8 +6,7 @@ func _ready() -> void:
 	sentences = [
 		"Okidoke, you know this one",
 		"use the merge lane to get up to speed",
-		"Then merge into the traffic and follow the road",
+		"Then merge into the traffic and follow the road to the first exit you see",
 		"no worries, they are at least as scared of you as you are of them!",
-		"just hold the lane and Take the first exit you see",
 	]
 	start_dialog.emit()

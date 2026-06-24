@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hvdf04w2ydc5"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_5ttfp"]
-[ext_resource type="Texture2D" uid="uid://uqdn3xy0358r" path="res://Resources/Highway.svg" id="2_yvass"]
+[ext_resource type="Texture2D" uid="uid://dc2umjih3rx2s" path="res://Resources/Highway.svg" id="2_yvass"]
 [ext_resource type="PackedScene" uid="uid://b77oxf6milxqp" path="res://Objects/car.tscn" id="3_3mdkx"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_8w6fg"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_3mdkx"]
@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://bgfic1m2hc0al" path="res://Sounds/The final boss.wav" id="8_424uw"]
 [ext_resource type="Script" uid="uid://b1jav7l14cyek" path="res://Dialog/dialog06.gd" id="9_d7i4m"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="10_2v171"]
-[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
+[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="12_4m14n"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="13_j2due"]
 [ext_resource type="Texture2D" uid="uid://dtnc56js4f4yl" path="res://Resources/Zaun.svg" id="14_o33au"]
@@ -809,7 +809,7 @@ position = Vector2(14754, 59911)
 scale = Vector2(0.56, 38)
 
 [node name="FinalGoal" parent="." index="144" unique_id=1373093036 instance=ExtResource("5_3mdkx")]
-position = Vector2(18330.002, 21353)
+position = Vector2(18330.002, 22524)
 scale = Vector2(1.2, 3.439961)
 
 [node name="ColorRect" type="ColorRect" parent="." index="145" unique_id=1434305863]

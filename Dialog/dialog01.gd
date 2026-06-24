@@ -6,7 +6,7 @@ func _ready() -> void:
 	sentences = [
 		"Aight Kid, todays the day!",
 		"Last series of tests.",
-		"You remember how to steer this beauty I hope?",
+		"You remember how to drive this beauty I hope?",
 		"Your old trusty Balance Bike was sometimes a stubborn brat after all!",
 		"Lets warm up with an appetizer.",
 		"Paddle your way back there over the crosswalk.",

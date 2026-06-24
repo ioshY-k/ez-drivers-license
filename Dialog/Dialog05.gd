@@ -4,11 +4,10 @@ extends Dialog
 func _ready() -> void:
 	super._ready()
 	sentences = [
-		"Ahh the good Stuff",
-		"A classic",
-		"Think you got it in you?",
+		"Ahh the good Stuff. A classic...",
 		"Remember you'll fall over if you turn with too little speed",
-		"don't do that",
+		"That's the red zone in your speedometer",
+		"... So don't do that",
 		"Good luck!",
 		
 	]

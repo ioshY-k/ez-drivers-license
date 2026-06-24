@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dh0dei3tysdtp"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_8o1xt"]
-[ext_resource type="Texture2D" uid="uid://b1sxtick8fiul" path="res://Resources/Racing Track.png" id="2_d5gt1"]
+[ext_resource type="Texture2D" uid="uid://dgokt6x2kkmrv" path="res://Resources/Racing Track.png" id="2_d5gt1"]
 [ext_resource type="Script" uid="uid://dacuppaktthj0" path="res://Dialog/dialog04.gd" id="3_x7q1b"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="4_mei6w"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="5_tbwc5"]
@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="9_hd63s"]
 [ext_resource type="AudioStream" uid="uid://d0csqvsuoudsa" path="res://Sounds/Danger ahead.wav" id="10_mpd7r"]
-[ext_resource type="Texture2D" uid="uid://bmskg7ipyf3oq" path="res://Resources/SteinTile.svg" id="11_o8pqd"]
+[ext_resource type="Texture2D" uid="uid://k0tkd7aeypqg" path="res://Resources/SteinTile.svg" id="11_o8pqd"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd63s"]
 _data = {

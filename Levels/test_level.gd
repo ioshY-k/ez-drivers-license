@@ -21,6 +21,10 @@ func _process(delta: float) -> void:
 		$Honk.pitch_scale = randf_range(1.5,1.7)
 		$Honk.play()
 	
+	if not goals.is_empty():
+		print(rad_to_deg(player.arrow.global_rotation))
+		player.arrow.global_rotation = player.global_position.angle_to_point(goals[0].global_position)
+	
 
 func _on_player_died():
 	call_deferred("reload_scene")

@@ -5,10 +5,9 @@ func _ready() -> void:
 	super._ready()
 	dialog_ended.connect(start_path)
 	sentences = [
-		"Doing great so far. next up:",
-		"The timed section",
+		"Doing great so far. next up: The timed section",
 		"Be faster than the marking and the drivers license is almost yours",
-		"go go get 'em kid!",
+		"You. Are. Speed.",
 	]
 	start_dialog.emit()
 

@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c277tpnvhyean" path="res://Resources/Speed Particle.png" id="4_gwnis"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
 [ext_resource type="Texture2D" uid="uid://coak3f2fu0v7b" path="res://Resources/TireTrack 2.png" id="6_fhl08"]
+[ext_resource type="Texture2D" uid="uid://cxhemi3hl1qmp" path="res://Resources/Arrow.png" id="7_vtle1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
 radius = 39.5
@@ -44,6 +45,13 @@ script = ExtResource("1_4ntmi")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=794997672 groups=["Camera"]]
 ignore_rotation = false
 rotation_smoothing_enabled = true
+rotation_smoothing_speed = 3.0
+
+[node name="Arrow" type="Sprite2D" parent="." unique_id=1088019396]
+modulate = Color(1, 1, 1, 0.6156863)
+scale = Vector2(0.715, 0.715)
+texture = ExtResource("7_vtle1")
+offset = Vector2(0, -643.97205)
 
 [node name="CrashedTimer" type="Timer" parent="." unique_id=1795844274]
 one_shot = true

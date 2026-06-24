@@ -15,7 +15,7 @@
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="13_6m3et"]
 [ext_resource type="AudioStream" uid="uid://cv57slwtcvc1b" path="res://Sounds/1 Bit adventure.wav" id="14_fyt5t"]
 [ext_resource type="Script" uid="uid://i48bhe4glel1" path="res://Dialog/mouse_tutorial_sprite.gd" id="15_saryc"]
-[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="16_rnap0"]
+[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="16_rnap0"]
 [ext_resource type="Texture2D" uid="uid://dtnc56js4f4yl" path="res://Resources/Zaun.svg" id="17_yno6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6uq"]

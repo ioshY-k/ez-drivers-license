@@ -4,8 +4,7 @@ extends Dialog
 func _ready() -> void:
 	super._ready()
 	sentences = [
-		"I sure hope you know how to do turns cause thats...",
-		"well that's what comping up now. Turns.",
+		"I sure hope you know how to do turns... cause... They are coming up now.",
 		"Just lean right into them and you will follow them eazy peezy",
 		"You heard me: Lean your mouse left and right to make turns...",
 	]

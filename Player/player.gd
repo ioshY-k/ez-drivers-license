@@ -7,6 +7,7 @@ class_name Player extends CharacterBody2D
 @onready var speed_particles: CPUParticles2D = $SpeedParticles
 @onready var hyper_speed_particles: CPUParticles2D = $HyperSpeedParticles
 @onready var camera: Camera2D = $Camera2D
+@onready var arrow: Sprite2D = $Arrow
 
 
 var speed = 0
@@ -149,7 +150,6 @@ func crash_player():
 	rotation_modifier = 0
 	player_sprite.fall_right_animation()
 	crashed_timer.start()
-
 
 func _on_crashed_timer_timeout() -> void:
 	is_player_crashed = false

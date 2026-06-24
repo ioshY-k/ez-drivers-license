@@ -13,7 +13,7 @@
 [ext_resource type="AudioStream" uid="uid://c7vpajiy2dqm1" path="res://Sounds/Hip hop pop.wav" id="11_q8n88"]
 [ext_resource type="Script" uid="uid://cbdyxa12ihhce" path="res://Dialog/dialog07.gd" id="12_mvbqm"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="13_y1f64"]
-[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="14_y1f64"]
+[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="14_y1f64"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="15_v8uoy"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="16_ptdb3"]
 
