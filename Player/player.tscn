@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b5dq2qpj4orwi" path="res://UI/speedometer.tscn" id="3_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c277tpnvhyean" path="res://Resources/Speed Particle.png" id="4_gwnis"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
+[ext_resource type="Texture2D" uid="uid://coak3f2fu0v7b" path="res://Resources/TireTrack 2.png" id="6_fhl08"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
 radius = 39.5
@@ -26,6 +27,11 @@ point_count = 4
 
 [sub_resource type="Gradient" id="Gradient_vtle1"]
 colors = PackedColorArray(0.22937626, 0.6837274, 0.88113135, 1, 1, 1, 1, 1)
+
+[sub_resource type="Curve" id="Curve_vtle1"]
+_limits = [0.0, 10.0, 0.0, 1.0]
+_data = [Vector2(0, 10), 0.0, 0.0, 0, 0, Vector2(1, 10), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_podkt"]
 
@@ -115,6 +121,20 @@ initial_velocity_max = 229.24
 scale_amount_max = 1.4
 scale_amount_curve = SubResource("Curve_fhl08")
 color_initial_ramp = SubResource("Gradient_vtle1")
+
+[node name="TireTrackParticles" type="CPUParticles2D" parent="." unique_id=205519108]
+position = Vector2(0, 125)
+amount = 1000
+texture = ExtResource("6_fhl08")
+lifetime = 1.43
+fract_delta = false
+particle_flag_align_y = true
+gravity = Vector2(0, 0)
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+split_scale = true
+scale_curve_x = null
+scale_curve_y = SubResource("Curve_vtle1")
 
 [node name="GoalCheckFront" type="Area2D" parent="." unique_id=1284778011]
 collision_layer = 8
