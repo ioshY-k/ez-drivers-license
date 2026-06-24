@@ -8,6 +8,7 @@ class_name Player extends CharacterBody2D
 @onready var hyper_speed_particles: CPUParticles2D = $HyperSpeedParticles
 @onready var camera: Camera2D = $Camera2D
 @onready var tire_track_particles: CPUParticles2D = $TireTrackParticles
+@onready var arrow: Sprite2D = $Arrow
 
 
 var speed = 0
