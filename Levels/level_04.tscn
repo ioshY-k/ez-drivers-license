@@ -1,16 +1,20 @@
 [gd_scene format=3 uid="uid://hvdf04w2ydc5"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_5ttfp"]
-[ext_resource type="Texture2D" uid="uid://cmgce675n6wwe" path="res://Resources/Highway.svg" id="2_yvass"]
+[ext_resource type="Texture2D" uid="uid://uqdn3xy0358r" path="res://Resources/Highway.svg" id="2_yvass"]
 [ext_resource type="PackedScene" uid="uid://b77oxf6milxqp" path="res://Objects/car.tscn" id="3_3mdkx"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_8w6fg"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_3mdkx"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="6_8w6fg"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="6_8w6fg"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="7_np8y1"]
 [ext_resource type="AudioStream" uid="uid://bgfic1m2hc0al" path="res://Sounds/The final boss.wav" id="8_424uw"]
 [ext_resource type="Script" uid="uid://b1jav7l14cyek" path="res://Dialog/dialog06.gd" id="9_d7i4m"]
-[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="10_2v171"]
-[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="10_2v171"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
+[ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="12_4m14n"]
+[ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="13_j2due"]
+[ext_resource type="Texture2D" uid="uid://dtnc56js4f4yl" path="res://Resources/Zaun.svg" id="14_o33au"]
+[ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="15_3b5fx"]
 
 [node name="Level04" unique_id=525293221 node_paths=PackedStringArray("goals") instance=ExtResource("1_5ttfp")]
 goals = [NodePath("FinalGoal")]
@@ -924,3 +928,217 @@ offset_bottom = 127466.0
 texture = ExtResource("11_2v171")
 stretch_mode = 1
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." index="151" unique_id=1433079261]
+position = Vector2(14308, 87358)
+texture = ExtResource("12_4m14n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." index="152" unique_id=5746715]
+position = Vector2(14308, 75953)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." index="153" unique_id=484906137]
+position = Vector2(14308, 57240)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." index="154" unique_id=377741138]
+position = Vector2(14307, 41639)
+texture = ExtResource("12_4m14n")
+flip_v = true
+
+[node name="Sprite2D4" type="Sprite2D" parent="." index="155" unique_id=608090748]
+position = Vector2(14308, 48431)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." index="156" unique_id=237063519]
+position = Vector2(13929.5, 87362.41)
+texture = ExtResource("12_4m14n")
+flip_h = true
+
+[node name="Sprite2D7" type="Sprite2D" parent="." index="157" unique_id=604125916]
+position = Vector2(13929.5, 75957.41)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D8" type="Sprite2D" parent="." index="158" unique_id=215039262]
+position = Vector2(13929.5, 57244.402)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="." index="159" unique_id=937024981]
+position = Vector2(13934, 110254)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="." index="160" unique_id=1934464583]
+position = Vector2(13934, 91587)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D13" type="Sprite2D" parent="." index="161" unique_id=2060612253]
+position = Vector2(13934, 29362.998)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="." index="162" unique_id=568438130]
+position = Vector2(13934, 10541)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="." index="163" unique_id=879909847]
+position = Vector2(14333.5, 16269)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+
+[node name="Sprite2D24" type="Sprite2D" parent="." index="164" unique_id=1194141788]
+position = Vector2(14333.5, 10259)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." index="165" unique_id=1951003379]
+position = Vector2(13928.5, 41643.402)
+texture = ExtResource("12_4m14n")
+flip_h = true
+flip_v = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="." index="166" unique_id=904106084]
+position = Vector2(13929.5, 48435.402)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="." index="167" unique_id=267208014]
+position = Vector2(12598.5, 75953.81)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D16" type="Sprite2D" parent="." index="168" unique_id=1844236132]
+position = Vector2(12598.5, 57240.805)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D17" type="Sprite2D" parent="." index="169" unique_id=1657956402]
+position = Vector2(12603, 110250.41)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D18" type="Sprite2D" parent="." index="170" unique_id=302849751]
+position = Vector2(12603, 91583.41)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D19" type="Sprite2D" parent="." index="171" unique_id=1070877067]
+position = Vector2(12603, 29359.4)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D20" type="Sprite2D" parent="." index="172" unique_id=1857906661]
+position = Vector2(12603, 10537.402)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="." index="173" unique_id=1439580141]
+position = Vector2(12597.5, 41639.805)
+texture = ExtResource("12_4m14n")
+flip_h = true
+flip_v = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="." index="174" unique_id=403985742]
+position = Vector2(12598.5, 48431.805)
+scale = Vector2(1, 51.559845)
+texture = ExtResource("13_j2due")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="." index="175" unique_id=1679551278]
+position = Vector2(12603, 3655)
+texture = ExtResource("12_4m14n")
+flip_h = true
+flip_v = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="." index="176" unique_id=1851692641]
+position = Vector2(13934, 3655)
+texture = ExtResource("12_4m14n")
+flip_h = true
+flip_v = true
+
+[node name="Sprite2D27" type="Sprite2D" parent="." index="177" unique_id=1157430639]
+position = Vector2(14333, 3475)
+texture = ExtResource("12_4m14n")
+flip_v = true
+
+[node name="Sprite2D28" type="Sprite2D" parent="." index="178" unique_id=1416769755]
+position = Vector2(15485.002, 88034)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Sprite2D29" type="Sprite2D" parent="." index="179" unique_id=1155238413]
+position = Vector2(16220, 89716)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Sprite2D30" type="Sprite2D" parent="." index="180" unique_id=1182623095]
+position = Vector2(16943.998, 91400)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Sprite2D31" type="Sprite2D" parent="." index="181" unique_id=241040404]
+position = Vector2(17691.002, 93094.01)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Sprite2D32" type="Sprite2D" parent="." index="182" unique_id=1052492304]
+position = Vector2(18423.002, 94765)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Sprite2D33" type="Sprite2D" parent="." index="183" unique_id=528630533]
+position = Vector2(19178.002, 96506)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Sprite2D34" type="Sprite2D" parent="." index="184" unique_id=1804524794]
+position = Vector2(19913, 98197.01)
+rotation = -0.4119721
+texture = ExtResource("14_o33au")
+
+[node name="Pylon" parent="." index="185" unique_id=1630655600 instance=ExtResource("15_3b5fx")]
+position = Vector2(13782, 5457)
+
+[node name="Pylon7" parent="." index="186" unique_id=303474674 instance=ExtResource("15_3b5fx")]
+position = Vector2(13613, 5457)
+scale = Vector2(0.93, 1)
+
+[node name="Pylon2" parent="." index="187" unique_id=1014514074 instance=ExtResource("15_3b5fx")]
+position = Vector2(13954, 5457)
+scale = Vector2(0.93, 1)
+
+[node name="Pylon3" parent="." index="188" unique_id=1100641754 instance=ExtResource("15_3b5fx")]
+position = Vector2(14124, 5457)
+scale = Vector2(0.93, 1)
+
+[node name="Pylon4" parent="." index="189" unique_id=1671870826 instance=ExtResource("15_3b5fx")]
+position = Vector2(14295, 5457)
+scale = Vector2(0.93, 1)
+
+[node name="Pylon5" parent="." index="190" unique_id=2019722034 instance=ExtResource("15_3b5fx")]
+position = Vector2(14466, 5457)
+scale = Vector2(0.93, 1)
+
+[node name="Pylon6" parent="." index="191" unique_id=1832269554 instance=ExtResource("15_3b5fx")]
+position = Vector2(14635, 5457)
+scale = Vector2(0.93, 1)

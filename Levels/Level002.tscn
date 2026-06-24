@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_n6dkh"]
 [ext_resource type="Texture2D" uid="uid://lcfvc8mfmu8l" path="res://Levels/Level002.svg" id="2_slvgb"]
+[ext_resource type="Texture2D" uid="uid://0vi5xe6syjga" path="res://Resources/Wüstetile.svg" id="3_niiwg"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_rgo1w"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_jnfuo"]
 [ext_resource type="Script" uid="uid://ddpw864yl2jru" path="res://Dialog/dialog03.gd" id="6_slvgb"]
@@ -15,7 +16,11 @@
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="13_ehb8o"]
 [ext_resource type="AudioStream" uid="uid://c23t1lvwkjqad" path="res://Sounds/Air assault.wav" id="14_rgo1w"]
 [ext_resource type="Texture2D" uid="uid://bvkfon5e115m4" path="res://Resources/TrainCactus.svg" id="15_vth87"]
+[ext_resource type="Script" uid="uid://m11cacxeppm" path="res://Levels/cacti.gd" id="16_ti4f7"]
 [ext_resource type="Texture2D" uid="uid://dyyvc07wp24wf" path="res://Resources/TrainCactus2.svg" id="16_yqeoj"]
+[ext_resource type="Texture2D" uid="uid://dtd8jj7m3mx5o" path="res://Levels/Level002street.svg" id="18_y0ggj"]
+[ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="20_hxx5s"]
+[ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="21_8vucy"]
 
 [sub_resource type="Animation" id="Animation_jgx74"]
 length = 0.001
@@ -200,6 +205,14 @@ position = Vector2(10361.001, -11548.001)
 scale = Vector2(2.035, 2.035)
 texture = ExtResource("2_slvgb")
 
+[node name="TextureRect" type="TextureRect" parent="." unique_id=468780941]
+offset_left = -6175.0
+offset_top = -28469.0
+offset_right = 27706.0
+offset_bottom = 5335.0
+texture = ExtResource("3_niiwg")
+stretch_mode = 1
+
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("3_rgo1w")]
 z_index = 0
 position = Vector2(-293, 937)
@@ -240,7 +253,7 @@ rotation = 0.84461063
 scale = Vector2(0.83965796, 33.755)
 
 [node name="Barrier9" parent="Barriers" unique_id=665787422 instance=ExtResource("4_jnfuo")]
-position = Vector2(17924, 4119)
+position = Vector2(17922.885, 5258.707)
 rotation = 1.5908043
 scale = Vector2(0.83965796, 33.755)
 
@@ -340,9 +353,9 @@ shape = SubResource("RectangleShape2D_bv6uq")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=156875636]
 custom_minimum_size = Vector2(500, 100)
-offset_left = -2023.0
+offset_left = -2103.0
 offset_top = 613.0
-offset_right = -1523.0
+offset_right = -1603.0
 offset_bottom = 713.0
 scale = Vector2(2.07, 2.07)
 color = Color(1, 0.8386667, 0.56, 1)
@@ -377,9 +390,9 @@ autowrap_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=63333359]
 custom_minimum_size = Vector2(500, 100)
-offset_left = -2023.0
+offset_left = -2103.0
 offset_top = 946.0
-offset_right = -1523.0
+offset_right = -1603.0
 offset_bottom = 1046.0
 scale = Vector2(2.07, 2.07)
 color = Color(1, 0.8386667, 0.56, 1)
@@ -421,129 +434,457 @@ stream = ExtResource("14_rgo1w")
 volume_db = -10.0
 autoplay = true
 
-[node name="Cactus" type="Sprite2D" parent="." unique_id=1494380678]
+[node name="Cacti" type="Node2D" parent="." unique_id=1746353453]
+script = ExtResource("16_ti4f7")
+
+[node name="Cactus" type="Sprite2D" parent="Cacti" unique_id=1494380678]
 position = Vector2(347, 61)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus2" type="Sprite2D" parent="." unique_id=1214047750]
+[node name="Cactus2" type="Sprite2D" parent="Cacti" unique_id=1214047750]
 position = Vector2(-1767.9998, -2427)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus3" type="Sprite2D" parent="." unique_id=649458761]
+[node name="Cactus3" type="Sprite2D" parent="Cacti" unique_id=649458761]
 position = Vector2(502.99976, -4083)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus4" type="Sprite2D" parent="." unique_id=1457149515]
+[node name="Cactus4" type="Sprite2D" parent="Cacti" unique_id=1457149515]
 position = Vector2(572, -9856)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus5" type="Sprite2D" parent="." unique_id=1628862203]
+[node name="Cactus5" type="Sprite2D" parent="Cacti" unique_id=1628862203]
 position = Vector2(1265, -17094)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus6" type="Sprite2D" parent="." unique_id=1156591714]
+[node name="Cactus6" type="Sprite2D" parent="Cacti" unique_id=1156591714]
 position = Vector2(164.00012, -20925)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus7" type="Sprite2D" parent="." unique_id=162705894]
+[node name="Cactus7" type="Sprite2D" parent="Cacti" unique_id=162705894]
 position = Vector2(5069.9995, -21774)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus8" type="Sprite2D" parent="." unique_id=383363003]
+[node name="Cactus8" type="Sprite2D" parent="Cacti" unique_id=383363003]
 position = Vector2(15645, -23577)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus9" type="Sprite2D" parent="." unique_id=309765157]
+[node name="Cactus9" type="Sprite2D" parent="Cacti" unique_id=309765157]
 position = Vector2(22345, -20959)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus10" type="Sprite2D" parent="." unique_id=1173667659]
+[node name="Cactus10" type="Sprite2D" parent="Cacti" unique_id=1173667659]
 position = Vector2(24642.002, -20985)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus11" type="Sprite2D" parent="." unique_id=144071417]
+[node name="Cactus11" type="Sprite2D" parent="Cacti" unique_id=144071417]
 position = Vector2(18245.002, -15282.002)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus12" type="Sprite2D" parent="." unique_id=692428837]
+[node name="Cactus12" type="Sprite2D" parent="Cacti" unique_id=692428837]
 position = Vector2(14188.002, -10193.999)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus13" type="Sprite2D" parent="." unique_id=583249101]
+[node name="Cactus13" type="Sprite2D" parent="Cacti" unique_id=583249101]
 position = Vector2(8875, -7351)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus14" type="Sprite2D" parent="." unique_id=1376658060]
+[node name="Cactus14" type="Sprite2D" parent="Cacti" unique_id=1376658060]
 position = Vector2(12775.001, -1960)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("15_vth87")
 
-[node name="Cactus15" type="Sprite2D" parent="." unique_id=1742867375]
+[node name="Cactus15" type="Sprite2D" parent="Cacti" unique_id=1742867375]
 position = Vector2(13659, -4907)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus16" type="Sprite2D" parent="." unique_id=741795687]
+[node name="Cactus16" type="Sprite2D" parent="Cacti" unique_id=741795687]
 position = Vector2(10911.001, -9778)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus17" type="Sprite2D" parent="." unique_id=1900149050]
+[node name="Cactus17" type="Sprite2D" parent="Cacti" unique_id=1900149050]
 position = Vector2(17767, -14814)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus18" type="Sprite2D" parent="." unique_id=1802189776]
+[node name="Cactus18" type="Sprite2D" parent="Cacti" unique_id=1802189776]
 position = Vector2(23644.002, -18680)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus19" type="Sprite2D" parent="." unique_id=958515491]
+[node name="Cactus19" type="Sprite2D" parent="Cacti" unique_id=958515491]
 position = Vector2(17984.002, -21454)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus20" type="Sprite2D" parent="." unique_id=1486212568]
+[node name="Cactus20" type="Sprite2D" parent="Cacti" unique_id=1486212568]
 position = Vector2(12159, -23968)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus21" type="Sprite2D" parent="." unique_id=698217953]
+[node name="Cactus21" type="Sprite2D" parent="Cacti" unique_id=698217953]
 position = Vector2(2980.002, -22269)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus22" type="Sprite2D" parent="." unique_id=1744978635]
+[node name="Cactus22" type="Sprite2D" parent="Cacti" unique_id=1744978635]
 position = Vector2(2876.0002, -17658)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus23" type="Sprite2D" parent="." unique_id=319289417]
+[node name="Cactus23" type="Sprite2D" parent="Cacti" unique_id=319289417]
 position = Vector2(-677.9995, -10787)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus24" type="Sprite2D" parent="." unique_id=1791465852]
+[node name="Cactus24" type="Sprite2D" parent="Cacti" unique_id=1791465852]
 position = Vector2(1590.9998, -2726)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
 
-[node name="Cactus25" type="Sprite2D" parent="." unique_id=1888159408]
+[node name="Cactus25" type="Sprite2D" parent="Cacti" unique_id=1888159408]
 position = Vector2(2054.9998, -4763)
 scale = Vector2(4.0227065, 3.685494)
 texture = ExtResource("16_yqeoj")
+
+[node name="ParkingLot2" type="Sprite2D" parent="." unique_id=1395359490]
+position = Vector2(10361.001, -11548.001)
+scale = Vector2(2.035, 2.035)
+texture = ExtResource("18_y0ggj")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=681965957]
+position = Vector2(9, -8880)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1865870799]
+position = Vector2(9, -15942)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=478774968]
+position = Vector2(9, -14535)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=529370058]
+position = Vector2(9, -12234)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D5" type="Sprite2D" parent="." unique_id=367518989]
+position = Vector2(9, -10238)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D6" type="Sprite2D" parent="." unique_id=636274663]
+position = Vector2(9, -8348)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D7" type="Sprite2D" parent="." unique_id=660097001]
+position = Vector2(9, -5916)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D8" type="Sprite2D" parent="." unique_id=1907682379]
+position = Vector2(9, -2741)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D9" type="Sprite2D" parent="." unique_id=1900144723]
+position = Vector2(9, 1084)
+texture = ExtResource("21_8vucy")
+
+[node name="Sprite2D19" type="Sprite2D" parent="." unique_id=1387646361]
+position = Vector2(662.3685, -26052.172)
+rotation = 0.100486085
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="." unique_id=2020309233]
+position = Vector2(780.0001, -27234.002)
+rotation = 0.100486085
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="." unique_id=362517256]
+position = Vector2(609.9999, -25528)
+rotation = 0.100486085
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="." unique_id=1291101869]
+position = Vector2(361.00012, -23055.002)
+rotation = 0.100486085
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="." unique_id=288507613]
+position = Vector2(58.000122, -20057.002)
+rotation = 0.100486085
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D27" type="Sprite2D" parent="." unique_id=467658882]
+position = Vector2(-330, -16211.001)
+rotation = 0.100486085
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D10" type="Sprite2D" parent="." unique_id=1725523613]
+position = Vector2(-441.5, -8822.156)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
+
+[node name="Sprite2D11" type="Sprite2D" parent="." unique_id=1263071591]
+position = Vector2(-441.5, -15884.156)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D12" type="Sprite2D" parent="." unique_id=903091793]
+position = Vector2(-441.5, -14477.156)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D13" type="Sprite2D" parent="." unique_id=828400912]
+position = Vector2(-441.5, -12176.156)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D14" type="Sprite2D" parent="." unique_id=36269451]
+position = Vector2(-441.5, -10180.156)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D15" type="Sprite2D" parent="." unique_id=225598034]
+position = Vector2(-441.5, -8290.156)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D16" type="Sprite2D" parent="." unique_id=1186856928]
+position = Vector2(-441.5, -5858.1563)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D17" type="Sprite2D" parent="." unique_id=1763066753]
+position = Vector2(-441.5, -2683.1563)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D18" type="Sprite2D" parent="." unique_id=1304438262]
+position = Vector2(-441.5, 1141.8438)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Leitplanke" type="Node2D" parent="." unique_id=1548687371]
+position = Vector2(-9655.001, -28462)
+rotation = 1.455843
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke" unique_id=321672466]
+position = Vector2(3788, -10432)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke" unique_id=1388586727]
+position = Vector2(3788, -13994)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke" unique_id=445671626]
+position = Vector2(3788, -16883)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke" unique_id=557848522]
+position = Vector2(3788, -20107)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke" unique_id=1210964058]
+position = Vector2(3788, -23644)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke" unique_id=2045679535]
+position = Vector2(3788, -27441)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke" unique_id=1069181000]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
+
+[node name="Leitplanke2" type="Node2D" parent="." unique_id=1436741505]
+position = Vector2(11478.999, -36563)
+rotation = 2.2038653
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke2" unique_id=1446125492]
+position = Vector2(3788, -10432)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke2" unique_id=482499929]
+position = Vector2(3788, -13994)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke2" unique_id=423282283]
+position = Vector2(3788, -16883)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke2" unique_id=670475763]
+position = Vector2(3788, -20107)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke2" unique_id=605482717]
+position = Vector2(3788, -23644)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke2" unique_id=983505815]
+position = Vector2(3788, -27441)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke2" unique_id=491429073]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
+
+[node name="Leitplanke3" type="Node2D" parent="." unique_id=171870306]
+position = Vector2(30834.002, -30716)
+rotation = 3.354542
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke3" unique_id=1705392143]
+position = Vector2(3788, -10432)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke3" unique_id=1681112770]
+position = Vector2(3788, -13994)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke3" unique_id=2109878428]
+position = Vector2(3788, -16883)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke3" unique_id=307758694]
+position = Vector2(3788, -20107)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke3" unique_id=887552146]
+position = Vector2(3788, -23644)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke3" unique_id=690145552]
+position = Vector2(3788, -27441)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke3" unique_id=1060219968]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
+
+[node name="Leitplanke4" type="Node2D" parent="." unique_id=922224624]
+position = Vector2(31198.002, -9615)
+rotation = 3.9644668
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke4" unique_id=1020501268]
+position = Vector2(3788, -10432)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke4" unique_id=1393755922]
+position = Vector2(3788, -13994)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke4" unique_id=1823350293]
+position = Vector2(3788, -16883)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke4" unique_id=1045883831]
+position = Vector2(3788, -20107)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke4" unique_id=1147653801]
+position = Vector2(3788, -23644)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke4" unique_id=289464167]
+position = Vector2(3788, -27441)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke4" unique_id=1496845782]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
+
+[node name="Leitplanke5" type="Node2D" parent="." unique_id=1051162957]
+position = Vector2(23513, 5872.0005)
+rotation = 4.7350125
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke5" unique_id=1833077131]
+position = Vector2(3788, -10432)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke5" unique_id=1686644788]
+position = Vector2(3788, -13994)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke5" unique_id=651148360]
+position = Vector2(3788, -16883)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke5" unique_id=547270691]
+position = Vector2(3788, -20107)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke5" unique_id=693812288]
+position = Vector2(3788, -23644)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke5" unique_id=6796351]
+position = Vector2(3788, -27441)
+texture = ExtResource("21_8vucy")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke5" unique_id=674580437]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("20_hxx5s")
+flip_h = true
 
 [connection signal="body_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_body_entered"]
