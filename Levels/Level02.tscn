@@ -14,6 +14,8 @@
 [ext_resource type="Script" uid="uid://cbdyxa12ihhce" path="res://Dialog/dialog07.gd" id="12_mvbqm"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="13_y1f64"]
 [ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="14_y1f64"]
+[ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="15_v8uoy"]
+[ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="16_ptdb3"]
 
 [node name="Level02" type="Node2D" unique_id=752677405 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_hia0g")
@@ -22,6 +24,46 @@ camera_zoom = 0.405
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=586640640]
 position = Vector2(3580.0002, 1165)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot2" type="Sprite2D" parent="." unique_id=383691045]
+position = Vector2(8683, 1165)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot3" type="Sprite2D" parent="." unique_id=600087826]
+position = Vector2(-2749, 1165)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot4" type="Sprite2D" parent="." unique_id=971484337]
+position = Vector2(3580.0002, -1799.3027)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot5" type="Sprite2D" parent="." unique_id=558710443]
+position = Vector2(8683, -1799.3027)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot6" type="Sprite2D" parent="." unique_id=549605157]
+position = Vector2(-2749, -1799.3027)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot7" type="Sprite2D" parent="." unique_id=103607468]
+position = Vector2(3580.0002, 4418.698)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot8" type="Sprite2D" parent="." unique_id=701783381]
+position = Vector2(8683, 4418.698)
+scale = Vector2(2.4778337, 2.4778333)
+texture = ExtResource("1_q1mvm")
+
+[node name="ParkingLot9" type="Sprite2D" parent="." unique_id=1143919380]
+position = Vector2(-2749, 4418.698)
 scale = Vector2(2.4778337, 2.4778333)
 texture = ExtResource("1_q1mvm")
 
@@ -198,3 +240,76 @@ offset_right = 20447.0
 offset_bottom = 9642.0
 texture = ExtResource("14_y1f64")
 stretch_mode = 1
+
+[node name="Leitplanke5" type="Node2D" parent="." unique_id=2142310900]
+position = Vector2(-13782, -3193)
+rotation = 1.5707964
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke5" unique_id=2045487368]
+position = Vector2(3788, -10432)
+texture = ExtResource("15_v8uoy")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke5" unique_id=782364776]
+position = Vector2(3788, -13994)
+texture = ExtResource("15_v8uoy")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke5" unique_id=368618891]
+position = Vector2(3788, -16883)
+texture = ExtResource("15_v8uoy")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke5" unique_id=1060467654]
+position = Vector2(3788, -20107)
+texture = ExtResource("15_v8uoy")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke5" unique_id=2090124330]
+position = Vector2(3788, -23644)
+texture = ExtResource("15_v8uoy")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke5" unique_id=1607904253]
+position = Vector2(3788, -27441)
+texture = ExtResource("15_v8uoy")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke5" unique_id=1905985510]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("16_ptdb3")
+flip_h = true
+
+[node name="Leitplanke6" type="Node2D" parent="." unique_id=1805412811]
+position = Vector2(-13782, -965)
+rotation = 1.5707964
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke6" unique_id=984296662]
+position = Vector2(3296.5007, -9851.844)
+texture = ExtResource("15_v8uoy")
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke6" unique_id=1052962757]
+position = Vector2(3296.5007, -13413.844)
+texture = ExtResource("15_v8uoy")
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke6" unique_id=1255200854]
+position = Vector2(3296.5007, -16302.844)
+texture = ExtResource("15_v8uoy")
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke6" unique_id=312967970]
+position = Vector2(3296.5007, -19526.844)
+texture = ExtResource("15_v8uoy")
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke6" unique_id=474815599]
+position = Vector2(3296.5007, -23063.844)
+texture = ExtResource("15_v8uoy")
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke6" unique_id=926774534]
+position = Vector2(3296.5007, -26860.844)
+texture = ExtResource("15_v8uoy")
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke6" unique_id=1102070569]
+position = Vector2(3296.5007, -19906.844)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("16_ptdb3")

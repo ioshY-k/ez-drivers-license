@@ -10,7 +10,7 @@
 [ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="9_hd63s"]
 [ext_resource type="AudioStream" uid="uid://d0csqvsuoudsa" path="res://Sounds/Danger ahead.wav" id="10_mpd7r"]
-[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="11_o8pqd"]
+[ext_resource type="Texture2D" uid="uid://bmskg7ipyf3oq" path="res://Resources/SteinTile.svg" id="11_o8pqd"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd63s"]
 _data = {

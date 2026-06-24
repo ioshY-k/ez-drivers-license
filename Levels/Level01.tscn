@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dugyrmw88lsdj"]
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_ruw55"]
-[ext_resource type="Texture2D" uid="uid://rqtofx63psxa" path="res://Levels/Level1.svg" id="2_ruw55"]
+[ext_resource type="Texture2D" uid="uid://cw2gwfkvsaf47" path="res://Levels/Levelslalom.svg" id="2_reerk"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_c8o6p"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="5_s42oh"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="7_6m3et"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://cv57slwtcvc1b" path="res://Sounds/1 Bit adventure.wav" id="14_fyt5t"]
 [ext_resource type="Script" uid="uid://i48bhe4glel1" path="res://Dialog/mouse_tutorial_sprite.gd" id="15_saryc"]
 [ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="16_rnap0"]
+[ext_resource type="Texture2D" uid="uid://dtnc56js4f4yl" path="res://Resources/Zaun.svg" id="17_yno6e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6uq"]
 size = Vector2(3115, 121)
@@ -162,9 +163,16 @@ animations = [{
 script = ExtResource("1_ruw55")
 goals = [NodePath("FinalGoal")]
 
+[node name="ParkingLot2" type="Sprite2D" parent="." unique_id=2041861502]
+modulate = Color(0.53, 0.53, 0.53, 1)
+position = Vector2(5119, 0)
+scale = Vector2(2.5245457, 2.6473532)
+texture = ExtResource("2_reerk")
+
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
+position = Vector2(5119, 0)
 scale = Vector2(2.4066217, 2.4066212)
-texture = ExtResource("2_ruw55")
+texture = ExtResource("2_reerk")
 
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("3_c8o6p")]
 z_index = 0
@@ -368,5 +376,23 @@ offset_right = 14136.0
 offset_bottom = 8554.0
 texture = ExtResource("16_rnap0")
 stretch_mode = 1
+
+[node name="Fence" type="Sprite2D" parent="." unique_id=405797962]
+position = Vector2(1751, 555)
+texture = ExtResource("17_yno6e")
+
+[node name="Fence2" type="Sprite2D" parent="." unique_id=1204886631]
+position = Vector2(1751, -1259)
+texture = ExtResource("17_yno6e")
+
+[node name="Fence3" type="Sprite2D" parent="." unique_id=856778445]
+position = Vector2(-2285, 581)
+texture = ExtResource("17_yno6e")
+flip_h = true
+
+[node name="Fence4" type="Sprite2D" parent="." unique_id=990085998]
+position = Vector2(-2285, -1251)
+texture = ExtResource("17_yno6e")
+flip_h = true
 
 [connection signal="body_entered" from="DialogTrigger" to="MouseTutorialDialog" method="_on_dialog_trigger_body_entered"]

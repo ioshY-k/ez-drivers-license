@@ -15,9 +15,6 @@
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="12_n6dkh"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="13_ehb8o"]
 [ext_resource type="AudioStream" uid="uid://c23t1lvwkjqad" path="res://Sounds/Air assault.wav" id="14_rgo1w"]
-[ext_resource type="Texture2D" uid="uid://bvkfon5e115m4" path="res://Resources/TrainCactus.svg" id="15_vth87"]
-[ext_resource type="Script" uid="uid://m11cacxeppm" path="res://Levels/cacti.gd" id="16_ti4f7"]
-[ext_resource type="Texture2D" uid="uid://dyyvc07wp24wf" path="res://Resources/TrainCactus2.svg" id="16_yqeoj"]
 [ext_resource type="Texture2D" uid="uid://dtd8jj7m3mx5o" path="res://Levels/Level002street.svg" id="18_y0ggj"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="20_hxx5s"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="21_8vucy"]
@@ -212,6 +209,11 @@ offset_right = 27706.0
 offset_bottom = 5335.0
 texture = ExtResource("3_niiwg")
 stretch_mode = 1
+
+[node name="ParkingLot2" type="Sprite2D" parent="." unique_id=1395359490]
+position = Vector2(10361.001, -11548.001)
+scale = Vector2(2.035, 2.035)
+texture = ExtResource("18_y0ggj")
 
 [node name="Player" parent="." unique_id=952234042 instance=ExtResource("3_rgo1w")]
 z_index = 0
@@ -433,139 +435,6 @@ pitch_scale = 1.59
 stream = ExtResource("14_rgo1w")
 volume_db = -10.0
 autoplay = true
-
-[node name="Cacti" type="Node2D" parent="." unique_id=1746353453]
-script = ExtResource("16_ti4f7")
-
-[node name="Cactus" type="Sprite2D" parent="Cacti" unique_id=1494380678]
-position = Vector2(347, 61)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus2" type="Sprite2D" parent="Cacti" unique_id=1214047750]
-position = Vector2(-1767.9998, -2427)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus3" type="Sprite2D" parent="Cacti" unique_id=649458761]
-position = Vector2(502.99976, -4083)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus4" type="Sprite2D" parent="Cacti" unique_id=1457149515]
-position = Vector2(572, -9856)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus5" type="Sprite2D" parent="Cacti" unique_id=1628862203]
-position = Vector2(1265, -17094)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus6" type="Sprite2D" parent="Cacti" unique_id=1156591714]
-position = Vector2(164.00012, -20925)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus7" type="Sprite2D" parent="Cacti" unique_id=162705894]
-position = Vector2(5069.9995, -21774)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus8" type="Sprite2D" parent="Cacti" unique_id=383363003]
-position = Vector2(15645, -23577)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus9" type="Sprite2D" parent="Cacti" unique_id=309765157]
-position = Vector2(22345, -20959)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus10" type="Sprite2D" parent="Cacti" unique_id=1173667659]
-position = Vector2(24642.002, -20985)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus11" type="Sprite2D" parent="Cacti" unique_id=144071417]
-position = Vector2(18245.002, -15282.002)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus12" type="Sprite2D" parent="Cacti" unique_id=692428837]
-position = Vector2(14188.002, -10193.999)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus13" type="Sprite2D" parent="Cacti" unique_id=583249101]
-position = Vector2(8875, -7351)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus14" type="Sprite2D" parent="Cacti" unique_id=1376658060]
-position = Vector2(12775.001, -1960)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("15_vth87")
-
-[node name="Cactus15" type="Sprite2D" parent="Cacti" unique_id=1742867375]
-position = Vector2(13659, -4907)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus16" type="Sprite2D" parent="Cacti" unique_id=741795687]
-position = Vector2(10911.001, -9778)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus17" type="Sprite2D" parent="Cacti" unique_id=1900149050]
-position = Vector2(17767, -14814)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus18" type="Sprite2D" parent="Cacti" unique_id=1802189776]
-position = Vector2(23644.002, -18680)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus19" type="Sprite2D" parent="Cacti" unique_id=958515491]
-position = Vector2(17984.002, -21454)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus20" type="Sprite2D" parent="Cacti" unique_id=1486212568]
-position = Vector2(12159, -23968)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus21" type="Sprite2D" parent="Cacti" unique_id=698217953]
-position = Vector2(2980.002, -22269)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus22" type="Sprite2D" parent="Cacti" unique_id=1744978635]
-position = Vector2(2876.0002, -17658)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus23" type="Sprite2D" parent="Cacti" unique_id=319289417]
-position = Vector2(-677.9995, -10787)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus24" type="Sprite2D" parent="Cacti" unique_id=1791465852]
-position = Vector2(1590.9998, -2726)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="Cactus25" type="Sprite2D" parent="Cacti" unique_id=1888159408]
-position = Vector2(2054.9998, -4763)
-scale = Vector2(4.0227065, 3.685494)
-texture = ExtResource("16_yqeoj")
-
-[node name="ParkingLot2" type="Sprite2D" parent="." unique_id=1395359490]
-position = Vector2(10361.001, -11548.001)
-scale = Vector2(2.035, 2.035)
-texture = ExtResource("18_y0ggj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=681965957]
 position = Vector2(9, -8880)

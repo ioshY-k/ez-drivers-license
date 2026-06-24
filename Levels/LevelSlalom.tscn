@@ -12,7 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="10_6dloo"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="11_gghj8"]
 [ext_resource type="AudioStream" uid="uid://mptyawkg1m21" path="res://Sounds/Explorer of the realm.wav" id="12_57vux"]
-[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="13_big0a"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="13_big0a"]
+[ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="14_ldv1n"]
+[ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="15_bjrhs"]
 
 [node name="Level Slalom" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_57vux")
@@ -20,7 +22,17 @@ goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("Goal3"), NodePath("Goal4
 camera_zoom = 0.35
 
 [node name="ParkingLot" type="Sprite2D" parent="." unique_id=530808693]
-position = Vector2(17789, 309.00006)
+position = Vector2(11158.002, 309.00006)
+scale = Vector2(2.4066217, 2.4066212)
+texture = ExtResource("2_3ng75")
+
+[node name="ParkingLot2" type="Sprite2D" parent="." unique_id=1519758963]
+position = Vector2(13753.001, -2716.0002)
+scale = Vector2(2.4066217, 2.4066212)
+texture = ExtResource("2_3ng75")
+
+[node name="ParkingLot3" type="Sprite2D" parent="." unique_id=920152344]
+position = Vector2(13753.001, 3442.0007)
 scale = Vector2(2.4066217, 2.4066212)
 texture = ExtResource("2_3ng75")
 
@@ -40,7 +52,7 @@ rotation = -1.5707964
 scale = Vector2(0.945, 30.125)
 
 [node name="Barrier3" parent="." unique_id=1526119120 instance=ExtResource("4_ldv1n")]
-position = Vector2(-1895.9996, 810)
+position = Vector2(-2013.9999, 810)
 rotation = -3.1415927
 scale = Vector2(0.83965796, 2.9702802)
 
@@ -351,3 +363,224 @@ offset_right = 27062.0
 offset_bottom = 4970.0
 texture = ExtResource("13_big0a")
 stretch_mode = 1
+
+[node name="Leitplanke" type="Node2D" parent="." unique_id=948588502]
+position = Vector2(-11597, -4351)
+rotation = 1.5707964
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke" unique_id=992520989]
+position = Vector2(3788, -10432)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke" unique_id=183086369]
+position = Vector2(3788, -13994)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke" unique_id=2001769084]
+position = Vector2(3788, -16883)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke" unique_id=839385693]
+position = Vector2(3788, -20107)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke" unique_id=1383297473]
+position = Vector2(3788, -23644)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke" unique_id=713605713]
+position = Vector2(3788, -27441)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke" unique_id=1349779912]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("15_bjrhs")
+flip_h = true
+
+[node name="Leitplanke2" type="Node2D" parent="." unique_id=318990258]
+position = Vector2(-5878, -4351)
+rotation = 1.5707964
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke2" unique_id=140601513]
+position = Vector2(3788, -10432)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke2" unique_id=794822344]
+position = Vector2(3788, -13994)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke2" unique_id=997284518]
+position = Vector2(3788, -16883)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke2" unique_id=905633954]
+position = Vector2(3788, -20107)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke2" unique_id=1482892380]
+position = Vector2(3788, -23644)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke2" unique_id=1838366822]
+position = Vector2(3788, -27441)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke2" unique_id=1137982144]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("15_bjrhs")
+flip_h = true
+
+[node name="Leitplanke3" type="Node2D" parent="." unique_id=1892274249]
+position = Vector2(-11597, 4945)
+rotation = 1.5707964
+scale = Vector2(-1, 1)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke3" unique_id=920064904]
+position = Vector2(3788, -10432)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke3" unique_id=2072620162]
+position = Vector2(3788, -13994)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke3" unique_id=802454766]
+position = Vector2(3788, -16883)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke3" unique_id=1603484962]
+position = Vector2(3788, -20107)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke3" unique_id=1533229300]
+position = Vector2(3788, -23644)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke3" unique_id=218236376]
+position = Vector2(3788, -27441)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke3" unique_id=410066793]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("15_bjrhs")
+flip_h = true
+
+[node name="Leitplanke4" type="Node2D" parent="." unique_id=1875005326]
+position = Vector2(-5878, 4945)
+rotation = 1.5707964
+scale = Vector2(-1, 1)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke4" unique_id=1742415545]
+position = Vector2(3788, -10432)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke4" unique_id=277730734]
+position = Vector2(3788, -13994)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke4" unique_id=347862653]
+position = Vector2(3788, -16883)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke4" unique_id=563321714]
+position = Vector2(3788, -20107)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke4" unique_id=1358415548]
+position = Vector2(3788, -23644)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke4" unique_id=1475186462]
+position = Vector2(3788, -27441)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke4" unique_id=701691398]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("15_bjrhs")
+flip_h = true
+
+[node name="Leitplanke5" type="Node2D" parent="." unique_id=63175082]
+position = Vector2(-5408, 17667)
+
+[node name="Sprite2D20" type="Sprite2D" parent="Leitplanke5" unique_id=281993165]
+position = Vector2(3788, -10432)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D22" type="Sprite2D" parent="Leitplanke5" unique_id=739486739]
+position = Vector2(3788, -13994)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D23" type="Sprite2D" parent="Leitplanke5" unique_id=1773474185]
+position = Vector2(3788, -16883)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke5" unique_id=1144635389]
+position = Vector2(3788, -20107)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D25" type="Sprite2D" parent="Leitplanke5" unique_id=2043547783]
+position = Vector2(3788, -23644)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke5" unique_id=797873970]
+position = Vector2(3788, -27441)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke5" unique_id=906367923]
+position = Vector2(3788, -20487)
+scale = Vector2(1, 45.760002)
+texture = ExtResource("15_bjrhs")
+flip_h = true
+
+[node name="Leitplanke6" type="Node2D" parent="." unique_id=497570345]
+position = Vector2(15885, 17667)
+
+[node name="Sprite2D24" type="Sprite2D" parent="Leitplanke6" unique_id=1634483420]
+position = Vector2(3788, -17925)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+flip_v = true
+
+[node name="Sprite2D26" type="Sprite2D" parent="Leitplanke6" unique_id=971582085]
+position = Vector2(3790, -16876)
+texture = ExtResource("14_ldv1n")
+flip_h = true
+
+[node name="Sprite2D21" type="Sprite2D" parent="Leitplanke6" unique_id=478777943]
+position = Vector2(3788, -17667.002)
+scale = Vector2(1, 6.4799986)
+texture = ExtResource("15_bjrhs")
+flip_h = true
