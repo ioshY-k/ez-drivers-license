@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cy2cb7shxky4j" path="res://Player/player_sprite.tscn" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://b5dq2qpj4orwi" path="res://UI/speedometer.tscn" id="3_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c277tpnvhyean" path="res://Resources/Speed Particle.png" id="4_gwnis"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
 radius = 39.5
@@ -37,6 +37,7 @@ script = ExtResource("1_4ntmi")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=794997672]
 ignore_rotation = false
+rotation_smoothing_enabled = true
 
 [node name="CrashedTimer" type="Timer" parent="." unique_id=1795844274]
 one_shot = true

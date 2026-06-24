@@ -6,32 +6,37 @@ class_name Player extends CharacterBody2D
 @onready var speedometer: Speedometer = $CanvasLayer/Speedometer
 @onready var speed_particles: CPUParticles2D = $SpeedParticles
 @onready var hyper_speed_particles: CPUParticles2D = $HyperSpeedParticles
+@onready var camera: Camera2D = $Camera2D
 
 
 var speed = 0
 var rotation_modifier = 0
-var player_crashed = false
+var is_player_crashed = false
 var is_first_acceleration = true
+var is_player_turning = false
+var camera_rotation = 0
+
 
 func _ready() -> void:
 	player_camera.make_current()
+	#camera_rotation = camera.rotation
 	SignalBus.freeze_player.connect(func():
 		set_process_mode(Node.PROCESS_MODE_DISABLED)
-		)
+	)
 	SignalBus.unfreeze_player.connect(func():
 		set_process_mode(Node.PROCESS_MODE_INHERIT)
-		)
+	)
 
 func _process(delta: float) -> void:
-	if not player_crashed:
+	if not is_player_crashed:
 		move_player(delta)
 		turn_player(delta)
 	animate_player()
 	animate_speedometer()
 	
-	#print(velocity, speed)
+	camera.global_rotation = camera_rotation
 	
-	
+
 func turn_player(delta):
 	if speed >= 0 and is_first_acceleration:
 		return
@@ -46,6 +51,14 @@ func turn_player(delta):
 			crash_player()
 			return
 		rotation_modifier += GameConsts.PLAYER_ROTATION_VALUE * delta
+		
+	if rotation_modifier == 0:
+		if is_player_turning:
+			camera_rotation = rotation
+			is_player_turning = false
+		return
+	
+	is_player_turning = true
 	
 	if rotation_modifier > 0:
 		rotation_modifier = max(rotation_modifier - 0.1 * delta, 0)
@@ -125,7 +138,7 @@ func animate_speedometer():
 	speedometer.animate_needle(speed)
 	
 func crash_player():
-	player_crashed = true
+	is_player_crashed = true
 	speed = 0
 	rotation_modifier = 0
 	player_sprite.fall_right_animation()
@@ -133,6 +146,6 @@ func crash_player():
 
 
 func _on_crashed_timer_timeout() -> void:
-	player_crashed = false
+	is_player_crashed = false
 	player_sprite.is_falling = false
 	player_sprite.feet_stand_anim()
