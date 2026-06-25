@@ -60,16 +60,14 @@ func turn_player(delta):
 			crash_player()
 			return
 		rotation_modifier -= GameConsts.PLAYER_ROTATION_VALUE * delta
-		tire_track_particles.emitting = true
 	elif Input.is_action_pressed("TurnRight"):
 		if speed > 0 and speed < GameConsts.PLAYER_SPEED_THRESHOLD_SLOW:
 			crash_player()
 			return
 		rotation_modifier += GameConsts.PLAYER_ROTATION_VALUE * delta
-		tire_track_particles.emitting = true
-	else:
-		tire_track_particles.emitting = false
+		
 	if rotation_modifier == 0:
+		tire_track_particles.emitting = false
 		if is_player_turning:
 			camera_rotation = rotation
 			is_player_turning = false
@@ -87,6 +85,7 @@ func turn_player(delta):
 		
 	if speed > 0:
 		rotation = fmod(rotation + rotation_modifier, 2*PI)
+		tire_track_particles.emitting = true
 	else: 
 		rotation = fmod(rotation - rotation_modifier, 2*PI)
 	
@@ -168,6 +167,7 @@ func crash_player():
 	rotation_modifier = 0
 	player_sprite.fall_right_animation()
 	crashed_timer.start()
+	tire_track_particles.emitting = false
 
 
 func _on_crashed_timer_timeout() -> void:
