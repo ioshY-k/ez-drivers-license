@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://d10stk7423wh2"]
+
+[ext_resource type="Script" uid="uid://co830us72n5m" path="res://Objects/cactus_2.gd" id="1_7138l"]
+[ext_resource type="Texture2D" uid="uid://bn5uwrm2jr7s" path="res://Resources/cactus 2.png" id="2_btwdo"]
+
+[node name="Cactus 2" type="Node2D" unique_id=2031785276]
+script = ExtResource("1_7138l")
+
+[node name="CactusSprite" type="Sprite2D" parent="." unique_id=2019464696]
+texture = ExtResource("2_btwdo")
