@@ -17,6 +17,8 @@ var is_player_crashed = false
 var is_first_acceleration = true
 var is_player_turning = false
 var camera_rotation = 0
+var current_goal_pos: Vector2
+var distance_to_goal = 0
 
 
 func _ready() -> void:
@@ -31,6 +33,9 @@ func _ready() -> void:
 	SignalBus.unfreeze_player.connect(func():
 		set_process_mode(Node.PROCESS_MODE_INHERIT)
 	)
+	SignalBus.all_goals_reached.connect(func():
+		arrow.hide()
+	)
 	
 	await get_tree().process_frame
 	camera.rotation_smoothing_enabled = true
@@ -42,6 +47,12 @@ func _process(delta: float) -> void:
 	animate_player()
 	animate_speedometer()
 	
+	arrow.global_rotation = PI/2 + self.global_position.angle_to_point(current_goal_pos)
+	distance_to_goal = self.global_position.distance_to(current_goal_pos)
+	if distance_to_goal < 1800:
+		arrow.modulate.a = 0.5 * (distance_to_goal - 900) / 900
+	else:
+		arrow.modulate.a = 0.5
 	camera.global_rotation = camera_rotation
 	
 

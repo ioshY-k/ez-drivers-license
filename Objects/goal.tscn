@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bb4rp1s6w4u8f"]
 
 [ext_resource type="Script" uid="uid://c1wy2k6c06c1k" path="res://goal.gd" id="1_bhrk7"]
-[ext_resource type="Texture2D" uid="uid://begffnw4j04x" path="res://Objects/GoalTexture.svg" id="2_kyyj3"]
-[ext_resource type="Texture2D" uid="uid://brw8uimpebnw0" path="res://Objects/GoalFrame.svg" id="3_3j5ms"]
+[ext_resource type="Texture2D" uid="uid://tldw6udga2in" path="res://Objects/GoalTexture.svg" id="2_kyyj3"]
+[ext_resource type="Texture2D" uid="uid://x7vpkcta42xq" path="res://Objects/GoalFrame.svg" id="3_3j5ms"]
 [ext_resource type="Texture2D" uid="uid://dnx77kv2xcov6" path="res://Objects/GoalFrameBlink.svg" id="4_lrm46"]
 
 [sub_resource type="Gradient" id="Gradient_kyyj3"]

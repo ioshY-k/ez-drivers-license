@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://cy2cb7shxky4j" path="res://Player/player_sprite.tscn" id="2_4ntmi"]
 [ext_resource type="PackedScene" uid="uid://b5dq2qpj4orwi" path="res://UI/speedometer.tscn" id="3_btcbx"]
 [ext_resource type="Texture2D" uid="uid://c277tpnvhyean" path="res://Resources/Speed Particle.png" id="4_gwnis"]
-[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
-[ext_resource type="Texture2D" uid="uid://coak3f2fu0v7b" path="res://Resources/TireTrack 2.png" id="6_fhl08"]
-[ext_resource type="Texture2D" uid="uid://cxhemi3hl1qmp" path="res://Resources/Arrow.png" id="7_vtle1"]
+[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="4_k53q1"]
+[ext_resource type="Texture2D" uid="uid://dqtgb2i6j1f4m" path="res://Resources/TireTrack 2.png" id="6_fhl08"]
+[ext_resource type="Texture2D" uid="uid://d32j4pe0vwsd2" path="res://Resources/Arrow.png" id="7_vtle1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gwnis"]
 radius = 39.5

@@ -10,6 +10,7 @@ func _ready() -> void:
 	SignalBus.goal_entered.connect(_on_goal_entered)
 	if not goals.is_empty():
 		goals[0].activate()
+		player.current_goal_pos = goals[0].frame.global_position
 	player.player_camera.zoom = Vector2(camera_zoom, camera_zoom)
 	
 func _process(delta: float) -> void:
@@ -20,11 +21,6 @@ func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("Honk"):
 		$Honk.pitch_scale = randf_range(1.5,1.7)
 		$Honk.play()
-	
-	if not goals.is_empty():
-		print(rad_to_deg(player.arrow.global_rotation))
-		player.arrow.global_rotation = player.global_position.angle_to_point(goals[0].global_position)
-	
 
 func _on_player_died():
 	call_deferred("reload_scene")
@@ -37,6 +33,7 @@ func _on_goal_entered(goal: Goal):
 	goals.pop_front()
 	if not goals.is_empty():
 		goals[0].activate()
+		player.current_goal_pos = goals[0].frame.global_position
 	else:
 		SignalBus.all_goals_reached.emit()
 	var tween = get_tree().create_tween()
