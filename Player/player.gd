@@ -46,13 +46,8 @@ func _process(delta: float) -> void:
 		turn_player(delta)
 	animate_player()
 	animate_speedometer()
+	animate_arrow()
 	
-	arrow.global_rotation = PI/2 + self.global_position.angle_to_point(current_goal_pos)
-	distance_to_goal = self.global_position.distance_to(current_goal_pos)
-	if distance_to_goal < 1800:
-		arrow.modulate.a = 0.5 * (distance_to_goal - 900) / 900
-	else:
-		arrow.modulate.a = 0.5
 	camera.global_rotation = camera_rotation
 	
 
@@ -158,6 +153,14 @@ func animate_player():
 
 func animate_speedometer():
 	speedometer.animate_needle(speed)
+	
+func animate_arrow():
+	arrow.global_rotation = PI/2 + self.global_position.angle_to_point(current_goal_pos)
+	distance_to_goal = self.global_position.distance_to(current_goal_pos)
+	if distance_to_goal < 1800:
+		arrow.modulate.a = 0.5 * (distance_to_goal - 900) / 900
+	else:
+		arrow.modulate.a = 0.5
 	
 func crash_player():
 	is_player_crashed = true
