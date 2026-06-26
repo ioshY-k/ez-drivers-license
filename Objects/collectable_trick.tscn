@@ -5,6 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dvwovtivccwxy" path="res://Resources/MouseTrick.svg" id="3_rq1g1"]
 [ext_resource type="FontFile" uid="uid://cswtuj430x3vv" path="res://Dialog/graffiposter.ttf" id="4_haecw"]
 
+[sub_resource type="Curve" id="Curve_podkt"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.19019139, 1), 0.0, 0.0, 0, 0, Vector2(0.30143538, 0), 0.0, 0.0, 0, 0, Vector2(0.44736838, 1), 0.0, 0.0, 0, 0, Vector2(0.6016746, 0), 0.0, 0.0, 0, 0, Vector2(0.7356459, 1), 0.0, 0.0, 0, 0, Vector2(0.89114827, 0), 0.0, 0.0, 0, 0]
+point_count = 7
+
 [sub_resource type="Curve" id="Curve_edw11"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.23390897, 0.54790425), 0.0, 0.0, 0, 0, Vector2(0.67346936, 0.82798827), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 4
@@ -76,10 +80,25 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_edw11"]
-radius = 155.38983
+radius = 130.67401
 
 [node name="CollectableTrick" type="Node2D" unique_id=237106534]
 script = ExtResource("1_wwwfg")
+
+[node name="CollectParticle" type="CPUParticles2D" parent="." unique_id=1480264496]
+emitting = false
+amount = 17
+texture = ExtResource("2_362je")
+one_shot = true
+explosiveness = 0.93
+lifetime_randomness = 0.56
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_min = 150.6
+initial_velocity_max = 300.14
+scale_amount_curve = SubResource("Curve_podkt")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=934603673]
 amount = 2
@@ -109,6 +128,7 @@ autoplay = &"mouse_trick"
 collision_layer = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=77282955]
+scale = Vector2(1.585, 1.585)
 shape = SubResource("CircleShape2D_edw11")
 
 [node name="NewTrick" type="Label" parent="." unique_id=1537047114]

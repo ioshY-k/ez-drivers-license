@@ -1,19 +1,19 @@
 [gd_scene format=3 uid="uid://ce5vxovhmcpf"]
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_hia0g"]
-[ext_resource type="Texture2D" uid="uid://dkwu1ie8bsyiw" path="res://Levels/Level1.svg" id="1_q1mvm"]
+[ext_resource type="Texture2D" uid="uid://rqtofx63psxa" path="res://Levels/Level1.svg" id="1_q1mvm"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="2_hia0g"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="3_0nsvq"]
 [ext_resource type="PackedScene" uid="uid://bb4rp1s6w4u8f" path="res://Objects/goal.tscn" id="4_sl3bh"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_c6h1j"]
 [ext_resource type="Texture2D" uid="uid://dxealy66dpwuk" path="res://Resources/Car.png" id="7_0nsvq"]
 [ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="8_sl3bh"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="9_c6h1j"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="9_c6h1j"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="10_77qhy"]
 [ext_resource type="AudioStream" uid="uid://c7vpajiy2dqm1" path="res://Sounds/Hip hop pop.wav" id="11_q8n88"]
 [ext_resource type="Script" uid="uid://cbdyxa12ihhce" path="res://Dialog/dialog07.gd" id="12_mvbqm"]
-[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="13_y1f64"]
-[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="14_y1f64"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="13_y1f64"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="14_y1f64"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="15_v8uoy"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="16_ptdb3"]
 
@@ -137,9 +137,9 @@ position = Vector2(4803, 419)
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=840207467]
 custom_minimum_size = Vector2(500, 100)
-offset_left = 1447.0
+offset_left = 1075.9999
 offset_top = 1692.0
-offset_right = 1947.0
+offset_right = 1575.9999
 offset_bottom = 1792.0
 rotation = -4.712389
 scale = Vector2(1.86, 1.86)
@@ -175,9 +175,9 @@ autowrap_mode = 2
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=1479352441]
 custom_minimum_size = Vector2(500, 100)
-offset_left = 1138.0001
+offset_left = 767.0
 offset_top = 1711.0
-offset_right = 1638.0001
+offset_right = 1267.0
 offset_bottom = 1811.0
 rotation = -4.712389
 scale = Vector2(1.86, 1.86)

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dh0dei3tysdtp"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_8o1xt"]
-[ext_resource type="Texture2D" uid="uid://dgokt6x2kkmrv" path="res://Resources/Racing Track.png" id="2_d5gt1"]
+[ext_resource type="Texture2D" uid="uid://b1sxtick8fiul" path="res://Resources/Racing Track.png" id="2_d5gt1"]
 [ext_resource type="Script" uid="uid://dacuppaktthj0" path="res://Dialog/dialog04.gd" id="3_x7q1b"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="4_mei6w"]
 [ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="5_tbwc5"]
@@ -10,7 +10,10 @@
 [ext_resource type="Script" uid="uid://ceafn4vgm5ufy" path="res://Levels/level2path.gd" id="8_2yvhy"]
 [ext_resource type="AudioStream" uid="uid://fn2xahckvssf" path="res://Resources/honk.wav" id="9_hd63s"]
 [ext_resource type="AudioStream" uid="uid://d0csqvsuoudsa" path="res://Sounds/Danger ahead.wav" id="10_mpd7r"]
-[ext_resource type="Texture2D" uid="uid://k0tkd7aeypqg" path="res://Resources/SteinTile.svg" id="11_o8pqd"]
+[ext_resource type="Texture2D" uid="uid://bmskg7ipyf3oq" path="res://Resources/SteinTile.svg" id="11_o8pqd"]
+[ext_resource type="PackedScene" uid="uid://dtt7ym40muqhu" path="res://Objects/collectable_trick.tscn" id="12_co6yb"]
+[ext_resource type="Texture2D" uid="uid://b4iwa6fv63bde" path="res://UI/TutorialMouseReversed.svg" id="14_0eiq6"]
+[ext_resource type="Texture2D" uid="uid://4bwmkyv4nb36" path="res://Resources/X.svg" id="14_47cqq"]
 
 [sub_resource type="Curve2D" id="Curve2D_hd63s"]
 _data = {
@@ -21,6 +24,115 @@ point_count = 23
 [sub_resource type="Curve" id="Curve_bv6uq"]
 _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.17712179, 1), 0.0, 0.0, 0, 0, Vector2(0.82287824, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 4
+
+[sub_resource type="Animation" id="Animation_syh4h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Node2D/MouseLeft:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1422, 324.99997)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Node2D/MouseLeft:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1.51, 1.51)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Node2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_0eiq6"]
+resource_name = "Trick"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667, 6.8, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Node2D/MouseLeft:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.56666666, 1.9666667, 2.4, 2.9666667, 4.3666673, 4.7333336, 5.3, 6.7000003),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1422, 324.99997), Vector2(1423, 414), Vector2(1423, 223.99995), Vector2(1422, 324.99997), Vector2(1423, 414), Vector2(1423, 223.99995), Vector2(1422, 324.99997), Vector2(1423, 414), Vector2(1423, 223.99995)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Node2D/MouseLeft:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7666666, 1.7, 2.1333334, 2.4, 3.1666667, 4.1000004, 4.533334, 4.7333336, 5.5000005, 6.433334, 6.8666673),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1.51, 1.51), Vector2(1.135, 1.135), Vector2(1.135, 1.135), Vector2(1.5, 1.5), Vector2(1.51, 1.51), Vector2(1.135, 1.135), Vector2(1.135, 1.135), Vector2(1.5, 1.5), Vector2(1.51, 1.51), Vector2(1.135, 1.135), Vector2(1.135, 1.135), Vector2(1.5, 1.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Node2D:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.7666667, 1, 1.2333333, 1.3666668, 1.6000001, 3.2333336, 3.466667, 3.8333333, 3.966667, 5.566667, 5.8, 5.933334, 6.166667, 6.320772, 6.5541058),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1, 1), Vector2(1.045, 1), Vector2(1.01, 1), Vector2(1.045, 1), Vector2(1.01, 1), Vector2(1.045, 1), Vector2(1.01, 1), Vector2(1.01, 1), Vector2(1.045, 1), Vector2(1.045, 1), Vector2(1.01, 1), Vector2(1.045, 1), Vector2(1.01, 1), Vector2(1.045, 1), Vector2(1.01, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ggbv1"]
+_data = {
+&"RESET": SubResource("Animation_syh4h"),
+&"Trick": SubResource("Animation_0eiq6")
+}
 
 [node name="AbstractLevel" unique_id=525293221 node_paths=PackedStringArray("goals") instance=ExtResource("1_8o1xt")]
 goals = [NodePath("Goal"), NodePath("Goal2"), NodePath("Goal3"), NodePath("Goal4"), NodePath("FinalGoal")]
@@ -206,3 +318,107 @@ offset_right = 16031.0
 offset_bottom = 6473.0
 texture = ExtResource("11_o8pqd")
 stretch_mode = 1
+
+[node name="CollectableTrick" parent="." index="16" unique_id=237106534 instance=ExtResource("12_co6yb")]
+position = Vector2(453.99988, -441)
+rotation = 1.8198123
+scale = Vector2(1.515, 1.515)
+
+[node name="TrickAnimation" type="AnimationPlayer" parent="CollectableTrick" index="6" unique_id=547211163]
+libraries/ = SubResource("AnimationLibrary_ggbv1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CollectableTrick/TrickAnimation" index="0" unique_id=53423318]
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick/TrickAnimation/CanvasLayer" index="0" unique_id=1083200407]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="0" unique_id=2003932773]
+offset_left = 1088.0
+offset_top = 33.0
+offset_right = 1856.0
+offset_bottom = 534.0
+color = Color(0, 0, 0, 0.6039216)
+
+[node name="ColorRect2" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="1" unique_id=615298457]
+offset_left = 1065.0
+offset_top = 56.0
+offset_right = 1833.0
+offset_bottom = 557.0
+color = Color(0.51, 0.51, 0.51, 0.53333336)
+
+[node name="Label" type="Label" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="2" unique_id=729315272]
+offset_left = 1081.0
+offset_top = 62.0
+offset_right = 1846.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("5_tbwc5")
+theme_override_font_sizes/font_size = 44
+text = "No gas and turns
+at once"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="3" unique_id=897111264]
+
+[node name="MouseLeft" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D/Node2D" index="0" unique_id=897860480]
+position = Vector2(1422, 324.99997)
+scale = Vector2(1.51, 1.51)
+texture = ExtResource("14_0eiq6")
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="4" unique_id=1560467895]
+modulate = Color(1, 1, 1, 0.5803922)
+position = Vector2(1461, 324)
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("14_47cqq")
+
+[node name="CollectableTrick2" parent="." index="17" unique_id=1104919917 instance=ExtResource("12_co6yb")]
+position = Vector2(453.99988, -441)
+rotation = 1.8198123
+scale = Vector2(1.515, 1.515)
+
+[node name="TrickAnimation" type="AnimationPlayer" parent="CollectableTrick2" index="6" unique_id=324723924]
+libraries/ = SubResource("AnimationLibrary_ggbv1")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CollectableTrick2/TrickAnimation" index="0" unique_id=610718642]
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick2/TrickAnimation/CanvasLayer" index="0" unique_id=1992264326]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" index="0" unique_id=2053375442]
+offset_left = 1088.0
+offset_top = 33.0
+offset_right = 1856.0
+offset_bottom = 534.0
+color = Color(0, 0, 0, 0.6039216)
+
+[node name="ColorRect2" type="ColorRect" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" index="1" unique_id=874212200]
+offset_left = 1065.0
+offset_top = 56.0
+offset_right = 1833.0
+offset_bottom = 557.0
+color = Color(0.51, 0.51, 0.51, 0.53333336)
+
+[node name="Label" type="Label" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" index="2" unique_id=930988957]
+offset_left = 1081.0
+offset_top = 62.0
+offset_right = 1846.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("5_tbwc5")
+theme_override_font_sizes/font_size = 44
+text = "No gas and turns
+at once"
+horizontal_alignment = 1
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" index="3" unique_id=1737376187]
+
+[node name="MouseLeft" type="Sprite2D" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D/Node2D" index="0" unique_id=918698853]
+position = Vector2(1422, 324.99997)
+scale = Vector2(1.51, 1.51)
+texture = ExtResource("14_0eiq6")
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" index="4" unique_id=198845516]
+modulate = Color(1, 1, 1, 0.5803922)
+position = Vector2(1461, 324)
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("14_47cqq")

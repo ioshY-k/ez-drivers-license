@@ -15,6 +15,47 @@
 [ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="13_big0a"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="14_ldv1n"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="15_bjrhs"]
+[ext_resource type="PackedScene" uid="uid://dtt7ym40muqhu" path="res://Objects/collectable_trick.tscn" id="16_xlx4b"]
+[ext_resource type="Texture2D" uid="uid://du87bwgm5x60c" path="res://UI/instrumenttutorial.svg" id="17_mbeth"]
+[ext_resource type="Texture2D" uid="uid://4bwmkyv4nb36" path="res://Resources/X.svg" id="18_cjnlg"]
+[ext_resource type="Texture2D" uid="uid://df3muok7x0qey" path="res://UI/instrumenttutorial2.svg" id="19_s63pj"]
+
+[sub_resource type="Animation" id="Animation_uufyd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a8ynp"]
+resource_name = "Trick"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 6.766667, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vfod8"]
+_data = {
+&"RESET": SubResource("Animation_uufyd"),
+&"Trick": SubResource("Animation_a8ynp")
+}
 
 [node name="Level Slalom" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_57vux")
@@ -90,39 +131,51 @@ autowrap_mode = 2
 
 [node name="Pylon" parent="." unique_id=1246131004 instance=ExtResource("9_3ng75")]
 position = Vector2(-626, 338)
+rotation = 1.5707964
 
 [node name="Pylon2" parent="." unique_id=178084624 instance=ExtResource("9_3ng75")]
 position = Vector2(2434, 338)
+rotation = 1.5707964
 
 [node name="Pylon3" parent="." unique_id=1333161943 instance=ExtResource("9_3ng75")]
 position = Vector2(5492, 338)
+rotation = 1.5707964
 
 [node name="Pylon4" parent="." unique_id=1508205617 instance=ExtResource("9_3ng75")]
 position = Vector2(7816, 338)
+rotation = 1.5707964
 
 [node name="Pylon5" parent="." unique_id=78795911 instance=ExtResource("9_3ng75")]
 position = Vector2(9999, 338)
+rotation = 1.5707964
 
 [node name="Pylon6" parent="." unique_id=921470548 instance=ExtResource("9_3ng75")]
 position = Vector2(11888, 338)
+rotation = 1.5707964
 
 [node name="Pylon7" parent="." unique_id=382175390 instance=ExtResource("9_3ng75")]
 position = Vector2(13355, 323)
+rotation = 1.5707964
 
 [node name="Pylon8" parent="." unique_id=1126615333 instance=ExtResource("9_3ng75")]
 position = Vector2(14655, 323)
+rotation = 1.5707964
 
 [node name="Pylon9" parent="." unique_id=488715581 instance=ExtResource("9_3ng75")]
 position = Vector2(15885, 323)
+rotation = 1.5707964
 
 [node name="Pylon10" parent="." unique_id=1591436918 instance=ExtResource("9_3ng75")]
 position = Vector2(17151, 323)
+rotation = 1.5707964
 
 [node name="Pylon11" parent="." unique_id=148072240 instance=ExtResource("9_3ng75")]
 position = Vector2(18432, 323)
+rotation = 1.5707964
 
 [node name="Pylon12" parent="." unique_id=2025381799 instance=ExtResource("9_3ng75")]
 position = Vector2(19034, 323)
+rotation = 1.5707964
 
 [node name="Goal" parent="." unique_id=1037399301 instance=ExtResource("10_6dloo")]
 position = Vector2(-386, -912.00006)
@@ -541,7 +594,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Line2D2" type="Line2D" parent="Leitplanke6" unique_id=1268942857]
-position = Vector2(-13549, -17083)
+position = Vector2(-14598, -17038)
 scale = Vector2(1, -1)
 points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
 width = 51.43
@@ -550,7 +603,7 @@ begin_cap_mode = 2
 end_cap_mode = 2
 
 [node name="Line2D8" type="Line2D" parent="Leitplanke6" unique_id=412704136]
-position = Vector2(-7494, -17083)
+position = Vector2(-8199, -17047)
 scale = Vector2(1, -1)
 points = PackedVector2Array(-1436, 19, -1437, -221, -1043, -221, -1135, -149, -1137, -292, -1048, -227)
 width = 51.43
@@ -584,3 +637,90 @@ width = 51.43
 joint_mode = 2
 begin_cap_mode = 2
 end_cap_mode = 2
+
+[node name="CollectableTrick" parent="." unique_id=237106534 instance=ExtResource("16_xlx4b")]
+position = Vector2(-1334, -602)
+
+[node name="TrickAnimation" type="AnimationPlayer" parent="CollectableTrick" unique_id=2029058171]
+libraries/ = SubResource("AnimationLibrary_vfod8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CollectableTrick/TrickAnimation" unique_id=424538168]
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick/TrickAnimation/CanvasLayer" unique_id=2099530016]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=428639054]
+offset_left = 1088.0
+offset_top = 33.0
+offset_right = 1856.0
+offset_bottom = 534.0
+color = Color(0, 0, 0, 0.6039216)
+
+[node name="ColorRect2" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1944863062]
+offset_left = 1065.0
+offset_top = 56.0
+offset_right = 1833.0
+offset_bottom = 557.0
+color = Color(0.51, 0.51, 0.51, 0.53333336)
+
+[node name="Label" type="Label" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=275380062]
+offset_left = 1081.0
+offset_top = 62.0
+offset_right = 1846.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("9_mbeth")
+theme_override_font_sizes/font_size = 51
+text = "can't turn while Red"
+horizontal_alignment = 1
+
+[node name="Sprite2D2" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1038304446]
+position = Vector2(1461, 324)
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("17_mbeth")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D/Sprite2D2" unique_id=1409318671]
+modulate = Color(1, 1, 1, 0.5803922)
+position = Vector2(-135.41669, 5.5555573)
+scale = Vector2(1.0000001, 1.0000001)
+texture = ExtResource("18_cjnlg")
+
+[node name="CollectableTrick2" parent="." unique_id=1325942806 instance=ExtResource("16_xlx4b")]
+position = Vector2(1718, 1050.9999)
+rotation = 1.8301331
+
+[node name="TrickAnimation" type="AnimationPlayer" parent="CollectableTrick2" unique_id=1637302084]
+libraries/ = SubResource("AnimationLibrary_vfod8")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CollectableTrick2/TrickAnimation" unique_id=1086944340]
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick2/TrickAnimation/CanvasLayer" unique_id=2097292444]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" unique_id=168123405]
+offset_left = 1088.0
+offset_top = 33.0
+offset_right = 1856.0
+offset_bottom = 534.0
+color = Color(0, 0, 0, 0.6039216)
+
+[node name="ColorRect2" type="ColorRect" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" unique_id=1439138016]
+offset_left = 1065.0
+offset_top = 56.0
+offset_right = 1833.0
+offset_bottom = 557.0
+color = Color(0.51, 0.51, 0.51, 0.53333336)
+
+[node name="Label" type="Label" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" unique_id=893311690]
+offset_left = 1090.0
+offset_top = 69.0
+offset_right = 1855.0
+offset_bottom = 176.0
+theme_override_fonts/font = ExtResource("9_mbeth")
+theme_override_font_sizes/font_size = 51
+text = "better turns
+while slow"
+
+[node name="Sprite2D2" type="Sprite2D" parent="CollectableTrick2/TrickAnimation/CanvasLayer/Node2D" unique_id=574954724]
+position = Vector2(1461, 324)
+scale = Vector2(1.44, 1.44)
+texture = ExtResource("19_s63pj")

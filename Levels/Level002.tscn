@@ -20,6 +20,10 @@
 [ext_resource type="PackedScene" uid="uid://d10stk7423wh2" path="res://Objects/cactus_2.tscn" id="20_hjpak"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="20_hxx5s"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="21_8vucy"]
+[ext_resource type="PackedScene" uid="uid://dtt7ym40muqhu" path="res://Objects/collectable_trick.tscn" id="21_t8hbc"]
+[ext_resource type="Texture2D" uid="uid://c0eekwdpjs8bx" path="res://Resources/Check.svg" id="22_31h5c"]
+[ext_resource type="Texture2D" uid="uid://4bwmkyv4nb36" path="res://Resources/X.svg" id="23_owctu"]
+[ext_resource type="Texture2D" uid="uid://ckpw4nwdpoyj4" path="res://Resources/Mouse.svg" id="24_5hejw"]
 
 [sub_resource type="Animation" id="Animation_jgx74"]
 length = 0.001
@@ -193,6 +197,91 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bv6uq"]
 size = Vector2(3115, 121)
+
+[sub_resource type="Animation" id="Animation_n7l0s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D/MouseLeft:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1285, 264.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrickAnimation/CanvasLayer/Node2D/MouseRight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1653, 264.99997)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_a4idk"]
+resource_name = "Trick"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D/MouseLeft:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 0.8333334, 1.2666667, 1.7666667, 2.2, 2.5666668, 2.966667, 3.4, 3.8333335, 4.3333335, 4.766667, 5.066667, 5.466667, 5.9000006, 6.333334, 6.833334, 7.2666674),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1195.304, 286.79028), Vector2(1235, 289.79028), Vector2(1188, 269.99997), Vector2(1195.304, 286.79028), Vector2(1235, 289.79028), Vector2(1188, 269.99997), Vector2(1195.304, 286.79028), Vector2(1235, 289.79028), Vector2(1188, 269.99997), Vector2(1195.304, 286.79028), Vector2(1235, 289.79028), Vector2(1188, 269.99997), Vector2(1195.304, 286.79028), Vector2(1235, 289.79028), Vector2(1188, 269.99997), Vector2(1195.304, 286.79028), Vector2(1235, 289.79028), Vector2(1188, 269.99997)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrickAnimation/CanvasLayer/Node2D/MouseRight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.2333332, 1.7333332, 2.1, 3.6666665, 4.0666666, 4.4333334, 6, 6.866667, 7.133333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1563.304, 286.79028), Vector2(1707.0002, 289.79028), Vector2(1620.0002, 220.79028), Vector2(1563.304, 286.79028), Vector2(1707.0002, 289.79028), Vector2(1620.0002, 220.79028), Vector2(1563.304, 286.79028), Vector2(1707.0002, 289.79028), Vector2(1620.0002, 220.79028), Vector2(1707.0002, 289.79028)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.10000001, 5.866667, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l8im0"]
+_data = {
+&"RESET": SubResource("Animation_n7l0s"),
+&"Trick": SubResource("Animation_a4idk")
+}
 
 [node name="Level2" type="Node2D" unique_id=238132011 node_paths=PackedStringArray("goals")]
 script = ExtResource("1_n6dkh")
@@ -949,5 +1038,63 @@ position = Vector2(1707, -22826)
 
 [node name="Cactus 61" parent="." unique_id=1944845844 instance=ExtResource("20_hjpak")]
 position = Vector2(13694, -13436)
+
+[node name="CollectableTrick" parent="." unique_id=237106534 instance=ExtResource("21_t8hbc")]
+position = Vector2(-223, -142)
+
+[node name="TrickAnimation" type="AnimationPlayer" parent="CollectableTrick" unique_id=602612756]
+libraries/ = SubResource("AnimationLibrary_l8im0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CollectableTrick/TrickAnimation" unique_id=221647943]
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick/TrickAnimation/CanvasLayer" unique_id=259236037]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=994714355]
+offset_left = 1088.0
+offset_top = 33.0
+offset_right = 1856.0
+offset_bottom = 534.0
+color = Color(0, 0, 0, 0.6039216)
+
+[node name="ColorRect2" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1933674390]
+offset_left = 1065.0
+offset_top = 56.0
+offset_right = 1833.0
+offset_bottom = 557.0
+color = Color(0.51, 0.51, 0.51, 0.53333336)
+
+[node name="Sprite2D" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1048794901]
+position = Vector2(1666, 415)
+texture = ExtResource("22_31h5c")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=182090283]
+position = Vector2(1267, 415)
+texture = ExtResource("23_owctu")
+
+[node name="Label" type="Label" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1980424050]
+offset_left = 1081.0
+offset_top = 62.0
+offset_right = 1846.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("9_hjpak")
+theme_override_font_sizes/font_size = 44
+text = "Slow and long
+Movements"
+horizontal_alignment = 1
+
+[node name="MouseLeft" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1704550560]
+position = Vector2(1285, 264.99997)
+rotation = -2.8958435
+scale = Vector2(1.51, 1.51)
+texture = ExtResource("24_5hejw")
+flip_h = true
+
+[node name="MouseRight" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" unique_id=1277126942]
+position = Vector2(1653, 264.99997)
+rotation = -2.8958435
+scale = Vector2(1.51, 1.51)
+texture = ExtResource("24_5hejw")
+flip_h = true
 
 [connection signal="body_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_body_entered"]

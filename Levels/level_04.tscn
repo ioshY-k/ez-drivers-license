@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://hvdf04w2ydc5"]
 
 [ext_resource type="PackedScene" uid="uid://bsyknb62rd6hb" path="res://Levels/abstract_level.tscn" id="1_5ttfp"]
-[ext_resource type="Texture2D" uid="uid://dc2umjih3rx2s" path="res://Resources/Highway.svg" id="2_yvass"]
+[ext_resource type="Texture2D" uid="uid://uqdn3xy0358r" path="res://Resources/Highway.svg" id="2_yvass"]
 [ext_resource type="PackedScene" uid="uid://b77oxf6milxqp" path="res://Objects/car.tscn" id="3_3mdkx"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_8w6fg"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="5_3mdkx"]
@@ -10,11 +10,100 @@
 [ext_resource type="AudioStream" uid="uid://bgfic1m2hc0al" path="res://Sounds/The final boss.wav" id="8_424uw"]
 [ext_resource type="Script" uid="uid://b1jav7l14cyek" path="res://Dialog/dialog06.gd" id="9_d7i4m"]
 [ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="10_2v171"]
-[ext_resource type="Texture2D" uid="uid://cglxs3k43plbx" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
+[ext_resource type="Texture2D" uid="uid://dj4ibfk6utw2q" path="res://Resources/BackgroundTexture.svg" id="11_2v171"]
 [ext_resource type="Texture2D" uid="uid://dlmc8r8vmt7t5" path="res://Resources/Leitplanke Ende.svg" id="12_4m14n"]
 [ext_resource type="Texture2D" uid="uid://dd1avcjx5xq18" path="res://Resources/Leitplanke Mitte.svg" id="13_j2due"]
 [ext_resource type="Texture2D" uid="uid://dtnc56js4f4yl" path="res://Resources/Zaun.svg" id="14_o33au"]
 [ext_resource type="PackedScene" uid="uid://cnk2mdvilya2w" path="res://Objects/pylon.tscn" id="15_3b5fx"]
+[ext_resource type="PackedScene" uid="uid://dtt7ym40muqhu" path="res://Objects/collectable_trick.tscn" id="16_gew8q"]
+[ext_resource type="Texture2D" uid="uid://dmvhfun677o4c" path="res://UI/instrumenttutorial3.svg" id="18_gew8q"]
+[ext_resource type="Texture2D" uid="uid://dsfc6i3gnfhjy" path="res://UI/Needle.svg" id="19_pojku"]
+[ext_resource type="Texture2D" uid="uid://ckpw4nwdpoyj4" path="res://Resources/Mouse.svg" id="19_qcajc"]
+
+[sub_resource type="Animation" id="Animation_uax8e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrickAnimation/CanvasLayer/Node2D/MouseRight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1563.304, 286.79028)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Sprite2D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-2.151512]
+}
+
+[sub_resource type="Animation" id="Animation_cyawq"]
+resource_name = "Trick"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TrickAnimation/CanvasLayer/Node2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 6.866667, 7),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TrickAnimation/CanvasLayer/Node2D/MouseRight:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.7881393e-07, 1.4666667, 1.7333333, 2, 3.8666666, 4.0666666, 4.3, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1563.304, 286.79028), Vector2(1707.0002, 289.79028), Vector2(1620.0002, 220.79028), Vector2(1563.304, 286.79028), Vector2(1707.0002, 289.79028), Vector2(1620.0002, 220.79028), Vector2(1563.304, 286.79028), Vector2(1707.0002, 289.79028)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("TrickAnimation/CanvasLayer/Node2D/Sprite2D2:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.20000002, 0.33333334, 0.5, 0.6333334, 0.8000001, 0.9666667, 1.1333334, 1.4666667, 2, 2.4, 2.5333335, 2.666667, 2.8333335, 2.966667, 3.1333337, 3.3000002, 3.466667, 3.8666668, 4.4, 4.666667, 4.8333335, 4.9666667, 5.1333337, 5.266667, 5.4333334, 5.6000004, 5.766667, 6.1333337, 6.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-2.151512, -2.322697, -2.205258, -2.1308475, -2.1908638, -2.3550072, -2.186334, -2.184514, -2.151512, -2.9098477, -2.151512, -2.322697, -2.205258, -2.1308475, -2.1908638, -2.3550072, -2.186334, -2.184514, -2.151512, -2.8928328, -2.151512, -2.322697, -2.205258, -2.1308475, -2.1908638, -2.3550072, -2.186334, -2.184514, -2.151512, -2.7181206]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_naiie"]
+_data = {
+&"RESET": SubResource("Animation_uax8e"),
+&"Trick": SubResource("Animation_cyawq")
+}
 
 [node name="Level04" unique_id=525293221 node_paths=PackedStringArray("goals") instance=ExtResource("1_5ttfp")]
 goals = [NodePath("FinalGoal")]
@@ -1142,3 +1231,59 @@ scale = Vector2(0.93, 1)
 [node name="Pylon6" parent="." index="191" unique_id=1832269554 instance=ExtResource("15_3b5fx")]
 position = Vector2(14635, 5457)
 scale = Vector2(0.93, 1)
+
+[node name="CollectableTrick" parent="." index="192" unique_id=237106534 instance=ExtResource("16_gew8q")]
+position = Vector2(15205.999, 98395)
+scale = Vector2(2.025, 2.025)
+
+[node name="TrickAnimation" type="AnimationPlayer" parent="CollectableTrick" index="6" unique_id=90960052]
+libraries/ = SubResource("AnimationLibrary_naiie")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="CollectableTrick/TrickAnimation" index="0" unique_id=1758101359]
+
+[node name="Node2D" type="Node2D" parent="CollectableTrick/TrickAnimation/CanvasLayer" index="0" unique_id=1086945042]
+modulate = Color(1, 1, 1, 0)
+
+[node name="ColorRect" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="0" unique_id=1291432714]
+offset_left = 1088.0
+offset_top = 33.0
+offset_right = 1856.0
+offset_bottom = 534.0
+color = Color(0, 0, 0, 0.6039216)
+
+[node name="ColorRect2" type="ColorRect" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="1" unique_id=1332509777]
+offset_left = 1065.0
+offset_top = 56.0
+offset_right = 1833.0
+offset_bottom = 557.0
+color = Color(0.51, 0.51, 0.51, 0.53333336)
+
+[node name="Label" type="Label" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="2" unique_id=1383554873]
+offset_left = 1081.0
+offset_top = 62.0
+offset_right = 1846.0
+offset_bottom = 153.0
+theme_override_fonts/font = ExtResource("6_8w6fg")
+theme_override_font_sizes/font_size = 44
+text = "swoop long and slow
+to stay blue"
+horizontal_alignment = 1
+
+[node name="MouseRight" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="3" unique_id=234191894]
+position = Vector2(1563.304, 286.79028)
+rotation = -2.8958435
+scale = Vector2(2.0339758, 1.9144697)
+texture = ExtResource("19_qcajc")
+offset = Vector2(0, -42.615)
+flip_h = true
+
+[node name="Sprite2D" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="4" unique_id=1785675457]
+position = Vector2(1177, 340)
+texture = ExtResource("18_gew8q")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CollectableTrick/TrickAnimation/CanvasLayer/Node2D" index="5" unique_id=870659362]
+position = Vector2(1277.0001, 346)
+rotation = -2.151512
+scale = Vector2(0.18, 0.18)
+texture = ExtResource("19_pojku")
+offset = Vector2(-388.88867, -5.555664)
