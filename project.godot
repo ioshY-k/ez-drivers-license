@@ -93,6 +93,7 @@ WrongButton3={
 2d_physics/layer_4="Goal"
 2d_physics/layer_5="Barriers"
 2d_physics/layer_6="DialogTrigger"
+2d_physics/layer_7="Collectable"
 
 [physics]
 

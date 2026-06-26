@@ -157,9 +157,9 @@ func animate_arrow():
 	arrow.global_rotation = PI/2 + self.global_position.angle_to_point(current_goal_pos)
 	distance_to_goal = self.global_position.distance_to(current_goal_pos)
 	if distance_to_goal < 1800:
-		arrow.modulate.a = 0.5 * (distance_to_goal - 900) / 900
+		arrow.modulate.a = 0.8 * (distance_to_goal - 900) / 900
 	else:
-		arrow.modulate.a = 0.5
+		arrow.modulate.a = 0.8
 	
 func crash_player():
 	is_player_crashed = true

@@ -1,7 +1,16 @@
 [gd_scene format=3 uid="uid://v605b7pqf5sp"]
 
-[ext_resource type="Texture2D" uid="uid://bonh0fptrlke1" path="res://Resources/Cactus 1.png" id="1_11s6t"]
+[ext_resource type="Texture2D" uid="uid://bu0gdw7rsh3no" path="res://Resources/Cactus 1.png" id="1_11s6t"]
 [ext_resource type="Script" uid="uid://mask5otcskef" path="res://Objects/cactus_sprite.gd" id="2_m5le2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jy7in"]
+radius = 252.19833
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_11s6t"]
+radius = 48.09366
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_m5le2"]
+radius = 99.08077
 
 [node name="Cactus 1" type="Node2D" unique_id=2031785276]
 
@@ -22,3 +31,27 @@ scale = Vector2(0.18431002, 0.18431002)
 texture = ExtResource("1_11s6t")
 offset = Vector2(2843.036, 1188.2155)
 script = ExtResource("2_m5le2")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=328452655]
+position = Vector2(271, -334)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=723901533]
+position = Vector2(-296, 300)
+shape = SubResource("CircleShape2D_jy7in")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1152798685]
+position = Vector2(271, -334)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=935984430]
+position = Vector2(243, 553)
+shape = SubResource("CircleShape2D_11s6t")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=609741154]
+position = Vector2(470, 11)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=1489440498]
+position = Vector2(243, 553)
+shape = SubResource("CircleShape2D_m5le2")

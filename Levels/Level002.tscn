@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://vulcaek0qdup"]
 
 [ext_resource type="Script" uid="uid://cqdlqbod16xwk" path="res://Levels/test_level.gd" id="1_n6dkh"]
-[ext_resource type="Texture2D" uid="uid://yjk40ju771wn" path="res://Levels/Level002.svg" id="2_slvgb"]
-[ext_resource type="Texture2D" uid="uid://bjniwhitcr0un" path="res://Resources/Wüstetile.svg" id="3_niiwg"]
+[ext_resource type="Texture2D" uid="uid://lcfvc8mfmu8l" path="res://Levels/Level002.svg" id="2_slvgb"]
+[ext_resource type="Texture2D" uid="uid://0vi5xe6syjga" path="res://Resources/Wüstetile.svg" id="3_niiwg"]
 [ext_resource type="PackedScene" uid="uid://be246vh2glg7k" path="res://Player/player.tscn" id="3_rgo1w"]
 [ext_resource type="PackedScene" uid="uid://5d2a6ldsammw" path="res://Objects/barrier.tscn" id="4_jnfuo"]
 [ext_resource type="Script" uid="uid://ddpw864yl2jru" path="res://Dialog/dialog03.gd" id="6_slvgb"]
 [ext_resource type="PackedScene" uid="uid://d4iomupoenli1" path="res://Objects/final_goal.tscn" id="6_yqeoj"]
-[ext_resource type="Texture2D" uid="uid://bn5ixepl8gej1" path="res://Dialog/DialogueBox.svg" id="8_y0ggj"]
-[ext_resource type="FontFile" uid="uid://bhqxs5h1746fd" path="res://Dialog/Heavitas.ttf" id="9_hjpak"]
+[ext_resource type="Texture2D" uid="uid://bephpsn38vqhd" path="res://Dialog/DialogueBox.svg" id="8_y0ggj"]
+[ext_resource type="FontFile" uid="uid://cfk0yx5ves4k3" path="res://Dialog/Heavitas.ttf" id="9_hjpak"]
 [ext_resource type="Script" uid="uid://d2ppta76mlill" path="res://Dialog/dialog02.gd" id="10_ti4f7"]
 [ext_resource type="Texture2D" uid="uid://cwqj1i5jehijp" path="res://UI/TutorialMouse.svg" id="11_hxx5s"]
 [ext_resource type="Texture2D" uid="uid://b4iwa6fv63bde" path="res://UI/TutorialMouseReversed.svg" id="12_8vucy"]
@@ -769,7 +769,7 @@ position = Vector2(-1366, -18097)
 position = Vector2(1139, -12996)
 
 [node name="Cactus 4" parent="." unique_id=575903264 instance=ExtResource("19_y0ggj")]
-position = Vector2(-1485, -5264)
+position = Vector2(-1901, -5333)
 
 [node name="Cactus 5" parent="." unique_id=1322798005 instance=ExtResource("19_y0ggj")]
 position = Vector2(-2228, -88)
@@ -781,13 +781,13 @@ position = Vector2(1299, 158)
 position = Vector2(2515, -17954)
 
 [node name="Cactus 8" parent="." unique_id=509959180 instance=ExtResource("19_y0ggj")]
-position = Vector2(1008, -21691)
+position = Vector2(3353, -19603)
 
 [node name="Cactus 9" parent="." unique_id=1033512592 instance=ExtResource("19_y0ggj")]
-position = Vector2(4476, -22167)
+position = Vector2(5000, -21442)
 
 [node name="Cactus 10" parent="." unique_id=519237681 instance=ExtResource("19_y0ggj")]
-position = Vector2(5156, -24887)
+position = Vector2(4727, -25459)
 
 [node name="Cactus 11" parent="." unique_id=2136225720 instance=ExtResource("19_y0ggj")]
 position = Vector2(10767, -19786)
@@ -796,13 +796,13 @@ position = Vector2(10767, -19786)
 position = Vector2(7231, -16692)
 
 [node name="Cactus 13" parent="." unique_id=766293183 instance=ExtResource("19_y0ggj")]
-position = Vector2(10189, -9925)
+position = Vector2(9600, -10254)
 
 [node name="Cactus 14" parent="." unique_id=927306792 instance=ExtResource("19_y0ggj")]
-position = Vector2(15222, -11931)
+position = Vector2(15374, -11005)
 
 [node name="Cactus 15" parent="." unique_id=1531690895 instance=ExtResource("19_y0ggj")]
-position = Vector2(21037, -17406)
+position = Vector2(20198, -18035)
 
 [node name="Cactus 16" parent="." unique_id=2065724320 instance=ExtResource("19_y0ggj")]
 position = Vector2(20833, -21895)
@@ -900,7 +900,7 @@ position = Vector2(16274.998, -2819)
 rotation = 1.9937845
 
 [node name="Cactus 44" parent="." unique_id=1015111868 instance=ExtResource("20_hjpak")]
-position = Vector2(10018, -7579.9995)
+position = Vector2(9548, -7985.9995)
 rotation = 1.9937845
 
 [node name="Cactus 45" parent="." unique_id=1468364902 instance=ExtResource("20_hjpak")]
@@ -921,16 +921,13 @@ position = Vector2(9033, -22507)
 position = Vector2(9305, -24955)
 
 [node name="Cactus 50" parent="." unique_id=1636936871 instance=ExtResource("20_hjpak")]
-position = Vector2(18622, -15706)
-
-[node name="Cactus 51" parent="." unique_id=609807565 instance=ExtResource("20_hjpak")]
-position = Vector2(13113, -10979)
+position = Vector2(18475, -16346)
 
 [node name="Cactus 52" parent="." unique_id=789283123 instance=ExtResource("20_hjpak")]
 position = Vector2(11685, -4620)
 
 [node name="Cactus 53" parent="." unique_id=496238904 instance=ExtResource("20_hjpak")]
-position = Vector2(768, -6123)
+position = Vector2(898, -6158)
 
 [node name="Cactus 54" parent="." unique_id=1474294999 instance=ExtResource("20_hjpak")]
 position = Vector2(-942, 2522)
@@ -947,13 +944,10 @@ position = Vector2(3713, -3596)
 [node name="Cactus 58" parent="." unique_id=860211314 instance=ExtResource("20_hjpak")]
 position = Vector2(2991, -6446)
 
-[node name="Cactus 59" parent="." unique_id=1116353133 instance=ExtResource("20_hjpak")]
-position = Vector2(1034, -16459)
-
 [node name="Cactus 60" parent="." unique_id=1730198578 instance=ExtResource("20_hjpak")]
-position = Vector2(2136, -22406)
+position = Vector2(1707, -22826)
 
 [node name="Cactus 61" parent="." unique_id=1944845844 instance=ExtResource("20_hjpak")]
-position = Vector2(13935, -13058)
+position = Vector2(13694, -13436)
 
 [connection signal="body_entered" from="DialogTrigger" to="DialogCanvas2" method="_on_dialog_trigger_body_entered"]

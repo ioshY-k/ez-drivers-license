@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://dtt7ym40muqhu"]
+
+[ext_resource type="Script" uid="uid://ci0k1o0ge4qt4" path="res://Objects/collectable_trick.gd" id="1_wwwfg"]
+[ext_resource type="Texture2D" uid="uid://coak3f2fu0v7b" path="res://Resources/TireTrack 2.png" id="2_362je"]
+[ext_resource type="Texture2D" uid="uid://dvwovtivccwxy" path="res://Resources/MouseTrick.svg" id="3_rq1g1"]
+[ext_resource type="FontFile" uid="uid://cswtuj430x3vv" path="res://Dialog/graffiposter.ttf" id="4_haecw"]
+
+[sub_resource type="Curve" id="Curve_edw11"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.23390897, 0.54790425), 0.0, 0.0, 0, 0, Vector2(0.67346936, 0.82798827), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_asr1h"]
+offsets = PackedFloat32Array(0, 0.8351911, 1)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_asr1h"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MouseTrick:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MouseTrick:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_putv6"]
+resource_name = "mouse_trick"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MouseTrick:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2333333, 3.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.60839266, 0.8155003]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MouseTrick:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6333334, 2.6333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.82, 1.82)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3h5k1"]
+_data = {
+&"RESET": SubResource("Animation_asr1h"),
+&"mouse_trick": SubResource("Animation_putv6")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_edw11"]
+radius = 155.38983
+
+[node name="CollectableTrick" type="Node2D" unique_id=237106534]
+script = ExtResource("1_wwwfg")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=934603673]
+amount = 2
+texture = ExtResource("2_362je")
+speed_scale = 0.5
+spread = 180.0
+gravity = Vector2(0, 0)
+scale_amount_min = 3.0
+scale_amount_max = 3.0
+scale_amount_curve = SubResource("Curve_edw11")
+color = Color(1, 1, 1, 0.45882353)
+color_ramp = SubResource("Gradient_asr1h")
+
+[node name="Shadow" type="Sprite2D" parent="." unique_id=616954855]
+modulate = Color(0, 0, 0, 0.6117647)
+scale = Vector2(1.645, 1.645)
+texture = ExtResource("2_362je")
+
+[node name="MouseTrick" type="Sprite2D" parent="." unique_id=1598256735]
+texture = ExtResource("3_rq1g1")
+
+[node name="CollectableAnim" type="AnimationPlayer" parent="." unique_id=1993887922]
+libraries/ = SubResource("AnimationLibrary_3h5k1")
+autoplay = &"mouse_trick"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=139261800]
+collision_layer = 64
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=77282955]
+shape = SubResource("CircleShape2D_edw11")
+
+[node name="NewTrick" type="Label" parent="." unique_id=1537047114]
+offset_left = -258.0
+offset_top = -226.0
+offset_right = 691.0
+offset_bottom = 31.0
+rotation = -0.24311389
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("4_haecw")
+theme_override_font_sizes/font_size = 102
+text = "Learn new
+   Trick"
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
